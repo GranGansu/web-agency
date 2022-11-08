@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Mi primer proyecto NEXT
+          Mi primer proyecto NEXT2
         </h1>
 
         <p className={styles.description}>
