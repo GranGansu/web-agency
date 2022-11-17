@@ -8,8 +8,8 @@ import Tarifas from '../components/Tarifas'
 import Pasos from '../components/Pasos'
 import Preguntas from '../components/Preguntas'
 //Fuentes
-import { Comfortaa, Barlow } from '@next/font/google'
-const comfort = Comfortaa({ preload: true, subsets: ['latin'] })
+import { Barlow } from '@next/font/google'
+/* const comfort = Comfortaa({ preload: true, subsets: ['latin'] }) */
 const barlow = Barlow({ preload: true, subsets: ['latin'], weight: '400' })
 
 export default function Home({ fuente }) {
@@ -23,7 +23,7 @@ export default function Home({ fuente }) {
       <main className={fuente + " relative z-10"}>
         <Header />
         <Banner />
-        <Pasos fuente={comfort} />
+        <Pasos fuente={fuente} />
         <Why />
         <Tarifas fuente={barlow} />
         <Hablemos />

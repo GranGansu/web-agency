@@ -13,7 +13,7 @@ const dispatcher = (state, action) => {
             return {}
     }
 }
-export default function Pasos({fuente}) {
+export default function Pasos({ fuente }) {
     const margen = "max-w-6xl m-auto p-4"
 
     const [ejemplo, dispatch] = useReducer(dispatcher, { dominio: 'pizza.es', tematica: 'restaurante', acciones: 'pedir pizza' })
@@ -38,10 +38,8 @@ export default function Pasos({fuente}) {
             <hr className="sm:hidden"></hr>
             <div className="items-center p-6 flex flex-col justify-start sm:justify-center sm:rounded text-center">
                 <h3 className="text-5xl text-red-500 font-bold mb-2 border-black w-12 h-12 flex justify-center items-center rounded-full  ">2</h3>
-                <ul className="leading-loose text-xl">
-                    <a href="#hablemos"><li className="mb-4 mt-4 ring text-black px-4 rounded w-fit m-auto">Hablemos</li></a>
-                    <li className="text-md">Resuelve <b>preguntas</b> y <b>expectativas</b></li>
-                </ul>
+                <a href="#hablemos"><p className="text-2xl mb-4 mt-4 ring text-black px-4 rounded w-fit m-auto">Hablemos</p></a>
+                <p className="text-md">Resuelve <b>preguntas</b> y <b>expectativas</b></p>
             </div>
         </div>
         <div className={`from-black via-black to-gray-600 p-8 rounded-xl border flex items-center justify-center relative bg-center text-black shadow-xl w-fit m-auto mt-24 mb-7 ring bg-none`}>
