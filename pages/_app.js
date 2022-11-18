@@ -1,10 +1,8 @@
-import { Fredoka, Barlow } from '@next/font/google'
+import { Karla } from '@next/font/google'
 import '../styles/globals.css'
-/* const comforta = Fredoka({ preload: true, subsets: ['latin'] }) */
-const comforta = Barlow({ preload: true, subsets: ['latin'], weight: '400' })
+const manrope = Karla({ preload: true, subsets: ['latin'], weight: '400' })
 function MyApp({ Component, pageProps }) {
-  const comfota = comforta.className
-  return <Component {...pageProps} fuente={comfota} />
+  return <Component {...pageProps} fuente={manrope.className} />
 }
 
 export default MyApp

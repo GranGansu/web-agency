@@ -7,10 +7,6 @@ import Why from '../components/Why'
 import Tarifas from '../components/Tarifas'
 import Pasos from '../components/Pasos'
 import Preguntas from '../components/Preguntas'
-//Fuentes
-import { Barlow } from '@next/font/google'
-/* const comfort = Comfortaa({ preload: true, subsets: ['latin'] }) */
-const barlow = Barlow({ preload: true, subsets: ['latin'], weight: '400' })
 
 export default function Home({ fuente }) {
   return (
@@ -25,7 +21,7 @@ export default function Home({ fuente }) {
         <Banner />
         <Pasos fuente={fuente} />
         <Why />
-        <Tarifas fuente={barlow} />
+        <Tarifas fuente={fuente} />
         <Hablemos />
         <Preguntas />
       </main>
