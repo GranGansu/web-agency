@@ -17,8 +17,9 @@ export default function Home({ fuente }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={fuente + " relative z-10"}>
-        <Header />
-        <Banner />
+        <div className="from-slate-100 to-transparent bg-gradient-to-b">
+          <Header />
+          <Banner /></div>
         <Pasos fuente={fuente} />
         <Why />
         <Tarifas fuente={fuente} />
