@@ -1,15 +1,38 @@
-import Image from 'next/image'
+import { motion } from 'framer-motion';
+import Img from './atoms/Img';
 
 export default function Header() {
-    return <div className={'max-w-6xl m-auto p-4'}>
-        <div className="mt-4 p-6 bg-white text-center rounded-xl shadow">
-            <ul className="flex flex-row text-4xl justify-center font-bold text-black">
-            <li  className="text-red-400">web/</li>
-            <li>tarifas/</li>
-            <li>faq</li>
-            </ul>
-            <hr className="sm:hidden my-2"></hr>
-            <h2 className="text-xl text-gray-400">Si <b>crees</b> que necesitas una web, <b>la necesitas</b></h2>
-        </div>
+  return (
+    <div className={'max-w-6xl m-auto sm:p-4'}>
+      <div className='sm:mt-4 p-2 sm:p-0 text-white text-center'>
+        <ul className='sm:space-x-4 gap-x-4 sm:space-y-0 flex sm:flex-row text-xl sm:text-xl justify-center font-bold p-4 items-center sm:items-start uppercase border-white w-fit '>
+          {/*           <li className='text-red-400  rounded '>minMAX</li> */}
+          <motion.li whileTap={{ scale: 1.1 }}>
+            <a href='#simulador'>
+              <div className='flex flex-col items-center'>
+                <Img src='visual.png' className='max-w-[50px]'></Img>
+                simulador
+              </div>
+            </a>
+          </motion.li>
+          <motion.li whileTap={{ scale: 1.1 }}>
+            <a href='#preguntas'>
+              <div className='flex flex-col items-center'>
+                <Img src='faqq.png' className='max-w-[50px]'></Img>
+                preguntas
+              </div>
+            </a>
+          </motion.li>
+          <motion.li whileTap={{ scale: 1.1 }}>
+            <a href='#tarifas'>
+              <div className='flex flex-col items-center'>
+                <Img src='prices.png' className='max-w-[50px]'></Img>
+                tarifas
+              </div>
+            </a>
+          </motion.li>
+        </ul>
+      </div>
     </div>
+  );
 }
