@@ -121,7 +121,7 @@ export default function WebApp() {
                 <li>Formularios</li>
                 <li>Recibe pagos con Tarjeta</li>
                 <li>Usuarios ilimitados</li>
-                <li>Adaptada a móviles y pc's</li>
+                <li>Adaptada a móviles y PC</li>
               </ul>
             </motion.div>
           )}
