@@ -73,7 +73,7 @@ export default function WebApp() {
       id='simulador'
       animated={{ backgroundImage: mostrar === 0 ? 'url(/img/phonebg.jpg)' : ' ' }}
       style={{ backgroundSize: 'cover', backgroundColor: 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)' }}
-      className='flex bg-cover flex-col py-6 gap-y-4 text-center relative max-h-fit pb-16 items-center justify-between'>
+      className='snap-start snap-normal flex bg-cover flex-col py-6 gap-y-4 text-center relative max-h-fit pb-16 items-center justify-between'>
       <motion.div
         animate={{ background: mostrar === 0 ? 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)' : 'linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)' }}
         style={{ background: 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)' }}
@@ -121,7 +121,7 @@ export default function WebApp() {
                 <li>Formularios</li>
                 <li>Recibe pagos con Tarjeta</li>
                 <li>Usuarios ilimitados</li>
-                <li>Adaptada a móviles y pc's</li>
+                <li>Adaptada a móviles y PC</li>
               </ul>
             </motion.div>
           )}

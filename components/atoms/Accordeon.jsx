@@ -13,7 +13,7 @@ export default function Accordeon(props) {
     boxShadow: 'none',
     borderBottom: 0,
     background: props.expanded ? '#ff000014' : '',
-    '&:nth-child(1)': {
+    '&:nth-of-type(1)': {
       borderTop: 0,
       borderBottom: 0,
     },
