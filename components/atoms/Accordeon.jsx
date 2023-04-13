@@ -12,6 +12,7 @@ export default function Accordeon(props) {
     borderTop: '1px solid red',
     boxShadow: 'none',
     borderBottom: 0,
+    '&:hover': { cursor: 'pointer', background: '#ff000008' },
     background: props.expanded ? '#ff000014' : '',
     '&:nth-of-type(1)': {
       borderTop: 0,

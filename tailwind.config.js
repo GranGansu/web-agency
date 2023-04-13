@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       backgroundImage: {
         green: 'url(/img/green.jpg)',
+        code: 'url(/img/happy.jpg)',
+        cartoon: 'url(/img/cartoon.jpg)',
       },
     },
   },

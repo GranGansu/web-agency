@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hablemos() {
   return (
-    <div className='bg-yellow-200 min-h-[40vh] py-10 flex items-center mb-6 h-screen relative shadow-md'>
+    <div className='bg-yellow-200 min-h-[40vh] py-10 flex items-center h-screen relative shadow-md'>
       <div className='m-auto max-w-6xl p-4 z-20 text-white'>
         <a id='hablemos'>
           <h3 className='text-3xl mb-2 font-bold'>Hablemos</h3>

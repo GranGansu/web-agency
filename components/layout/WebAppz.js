@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 
-export default function WebApp() {
+export default function WebAppz() {
   const app = (mostrar) => (
     <motion.div className='border-4 relative bg-white rounded-3xl h-[600px] w-[300px] shadow-xl flex flex-col'>
       <Image className='z-0 absolute w-full h-full left-0 top-0 rounded-2xl object-cover' src={`/img/webapp.jpg`} width='500' height='600' alt=''></Image>
@@ -69,15 +69,8 @@ export default function WebApp() {
   );
   const [mostrar, setMostrar] = useState(0);
   return (
-    <motion.div
-      id='simulador'
-      animated={{ backgroundImage: mostrar === 0 ? 'url(/img/phonebg.jpg)' : ' ' }}
-      style={{ backgroundSize: 'cover', backgroundColor: 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)' }}
-      className='snap-start snap-normal flex bg-cover flex-col py-6 gap-y-4 text-center relative max-h-fit pb-16 items-center justify-between bg-transparent'>
-      <motion.div
-        animate={{ background: mostrar === 0 ? 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)' : 'linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)' }}
-        style={{ background: 'linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)' }}
-        className='absolute left-0 top-0 z-20 w-full h-full from-transparent to-white bg-gradient-to-t'></motion.div>
+    <motion.div id='simulador' className=' flex bg-cover flex-col py-6 gap-y-4 text-center relative max-h-fit pb-16 items-center justify-between bg-transparent'>
+      <motion.div className='absolute left-0 top-0 z-20 w-full h-full'></motion.div>
       <div className='flex gap-x-4 mb-6 z-30'>
         <button
           onClick={() => {
@@ -94,7 +87,7 @@ export default function WebApp() {
           Web
         </button>
       </div>
-      <div className='text-left grid grid-cols-1  sm:flex text-black  gap-y-4  gap-x-6'>
+      <div className='text-left grid grid-cols-1  sm:flex text-white  gap-y-4  gap-x-6'>
         <AnimatePresence mode='popLayout'>
           {mostrar === 0 && (
             <motion.div
@@ -117,7 +110,7 @@ export default function WebApp() {
           {mostrar === 1 && (
             <motion.div className='z-30' key='2vv' exit={{ x: 1000, opacity: 0.5 }} initial={{ rotate: 20, x: 1000 }} animate={{ x: 0, rotate: 0 }}>
               {web()}
-              <ul className='text-2xl mx-4 gap-y-4 flex flex-col pt-4'>
+              <ul className='text-2xl mx-4 gap-y-4 flex flex-col pt-4 '>
                 <li>Formularios</li>
                 <li>Recibe pagos con Tarjeta</li>
                 <li>Usuarios ilimitados</li>

@@ -3,9 +3,9 @@ import { useState } from 'react';
 
 export default function FAQ() {
   const [expand, setExpand] = useState('');
-  const preguntas = ['Qué incluye una web?', 'Puedo editarla?', 'Qué gastos mensuales?', 'Qué es esto?'];
+  const preguntas = ['¿Qué incluye una web?', '¿Puedo editarla?', '¿Qué gastos mensuales?', '¿Qué es esto?', '¿Cuánto cuesta mantenrla?'];
   return (
-    <div id='preguntas'>
+    <div>
       {preguntas.map((p, key) => {
         return (
           <Accordeon

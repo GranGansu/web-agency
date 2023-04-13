@@ -1,8 +1,9 @@
 import Head from 'next/head';
 import Hablemos from '../components/Hablemos';
 import Header from '../components/Header';
-import { FAQ } from '../components/layout';
+import { FAQ, Testimonials } from '../components/layout';
 import WebApp from '../components/layout/WebApp';
+import WebAppz from '../components/layout/WebAppz';
 import Steps from '../components/organisms/Steps';
 import Interactive from '../components/organisms/Interactive';
 import Img from '../components/atoms/Img';
@@ -10,7 +11,7 @@ import { useInView, motion, AnimatePresence } from 'framer-motion';
 import { useRef } from 'react';
 import Footer from '../components/layout/Footer';
 
-export default function Home({ fuente }) {
+export default function Home({ fuente, fuente2 }) {
   const ref = useRef();
   const isInView = useInView(ref);
   return (
@@ -34,19 +35,20 @@ export default function Home({ fuente }) {
             </motion.div>
           )}
         </AnimatePresence>
-        <div id='home' className='bg-[#312b31] -mx-1 flex flex-col items-center'>
+        <div id='home' className='bg-[#312b31] from-red-400 to-[#312b31] bg-gradient-to-br -mx-1 flex flex-col items-center'>
           <Header />
           <div ref={ref}></div>
-          <Steps bg='#312b31' pct='100' img='monkey.jpg' p='Fabricamos tu Web, Tu App'></Steps>
+          <h1 className='text-3xl text-white'>Diseñamos tu</h1>
+          <WebAppz></WebAppz>
         </div>
         <div className='relative flex flex-col z-20 w-full '>
-          <Steps ul={['Soporte 24hs', 'Seguridad a tope', '100% online']} p=' '></Steps>
-          <WebApp></WebApp>
+          <Steps ul={['Soporte 24hs', 'Seguridad a tope', '100% online', 'Acepta pagos']}></Steps>
           <Steps bg='#312b31' pct='90' p='Cuéntanos tus ideas'></Steps>
           <Interactive></Interactive>
+          <Testimonials></Testimonials>
           <Steps bg='#312b31' pct='60' p='Empieza a recibir dinero'></Steps>
           <Hablemos />
-          <div className='max-w-6xl mx-auto mb-10'>
+          <div id='preguntas' className={fuente2 + ' '}>
             <FAQ />
           </div>
         </div>
