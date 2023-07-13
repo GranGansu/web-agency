@@ -31,7 +31,7 @@ export default function Testimonials() {
                   <Img className='w-36 z-10 rounded-full' src={`${op.img}.jpg`}></Img>
                 </div>
                 <p className='font-bold z-10'>{op.name}</p>
-                <p className='z-10'>"{op.message}"</p>
+                <p className='z-10'>&ldquo;{op.message}&rdquo;</p>
                 <div className='z-10 border p-2 px-4 rounded mt-4 text-sm text-center bg-white hover:cursor-pointer hover:border-blue-300'>Ver trabajo</div>
               </div>
             );

@@ -1,4 +1,4 @@
-import Head from 'next/head';
+/* import Head from 'next/head';
 //Componentes
 import Banner from '../components/layout/Banner';
 import Hablemos from '../components/Hablemos';
@@ -41,3 +41,4 @@ export default function Home({ fuente }) {
     </div>
   );
 }
+ */

@@ -64,7 +64,7 @@ export default function Interactive() {
                                 onClick={() => {
                                   setPaso((prev) => {
                                     prev.respuestas.push(question);
-                                    return { current: question[1], respuestas: prev.respuestas };
+                                    return { current: Number(question[1]), respuestas: prev.respuestas };
                                   });
                                 }}>
                                 {question[0]}

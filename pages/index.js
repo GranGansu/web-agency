@@ -44,11 +44,9 @@ export default function Home({ fuente, fuente2 }) {
         </div>
         <div className='relative flex flex-col z-20 w-full '>
           <Steps ul={['Soporte 24hs', 'Seguridad a tope', '100% online', 'Acepta pagos']}></Steps>
-
           <StepsIcons classy={fuente2} bg='#312b31' pct='1' p='Cuéntanos tus ideas' p2='Recibe las nuestras'></StepsIcons>
           <Interactive></Interactive>
           <Testimonials></Testimonials>
-          {/*        <Steps bg='#312b31' pct='60' p='Empieza a recibir dinero'></Steps> */}
           <Hablemos />
           <div id='preguntas' className={fuente2 + ' '}>
             <FAQ />

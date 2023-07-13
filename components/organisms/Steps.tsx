@@ -38,7 +38,7 @@ export default function Steps(step: Step) {
             })}
           </ul>
         )}
-        {step.pct === '100' && (
+        {step.pct === 100 && (
           <div className='uppercase flex flex-col font-bold sm:text-3xl items-center text-2xl'>
             {/*             <p className='mb-4 sm:text-6xl '>Fabricamos tu</p> */}
             <div className='flex '>
