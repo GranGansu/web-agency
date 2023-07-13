@@ -5,6 +5,7 @@ import { FAQ, Testimonials } from '../components/layout';
 import WebApp from '../components/layout/WebApp';
 import WebAppz from '../components/layout/WebAppz';
 import Steps from '../components/organisms/Steps';
+import StepsIcons from '../components/organisms/StepsIcons';
 import Interactive from '../components/organisms/Interactive';
 import Img from '../components/atoms/Img';
 import { useInView, motion, AnimatePresence } from 'framer-motion';
@@ -15,13 +16,13 @@ export default function Home({ fuente, fuente2 }) {
   const ref = useRef();
   const isInView = useInView(ref);
   return (
-    <div className='relative max-h-[100vh]'>
+    <div className='relative mfax-h-[100vh]'>
       <Head>
         <title>Fabricamos tu WEB - WERKWOB</title>
         <meta name='description' content='Creación páginas web' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className={fuente + ' relative z-10 overflow-x-hidden overflow-y-scroll max-h-[100vh] snap-proximity snap-y '}>
+      <main className={fuente + ' relative z-10 overflow-x-hidden overflow-y-scroll mafx-h-[100vh] snap-proximity snap-y '}>
         <AnimatePresence>
           {!isInView && (
             <motion.div
@@ -43,10 +44,11 @@ export default function Home({ fuente, fuente2 }) {
         </div>
         <div className='relative flex flex-col z-20 w-full '>
           <Steps ul={['Soporte 24hs', 'Seguridad a tope', '100% online', 'Acepta pagos']}></Steps>
-          <Steps bg='#312b31' pct='90' p='Cuéntanos tus ideas'></Steps>
+
+          <StepsIcons classy={fuente2} bg='#312b31' pct='1' p='Cuéntanos tus ideas' p2='Recibe las nuestras'></StepsIcons>
           <Interactive></Interactive>
           <Testimonials></Testimonials>
-          <Steps bg='#312b31' pct='60' p='Empieza a recibir dinero'></Steps>
+          {/*        <Steps bg='#312b31' pct='60' p='Empieza a recibir dinero'></Steps> */}
           <Hablemos />
           <div id='preguntas' className={fuente2 + ' '}>
             <FAQ />

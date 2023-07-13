@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
 import { useState } from 'react';
 import Img from '../atoms/Img';
 import { questions } from '../API/questions';
@@ -19,14 +19,27 @@ function Respuestas({ respuestas }) {
   );
 }
 export default function Interactive() {
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+  const y2 = useTransform(scrollYProgress, [0, 1], ['0%', '90%']);
   const [paso, setPaso] = useState({ current: 0, respuestas: [] });
   const handleReset = () => {
     setPaso({ current: 0, respuestas: [] });
+    console.log(y);
   };
   return (
-    <div className='h-[100vh] flex-col flex justify-center items-center text-black bg-cartoon shadow-inner shadow-black' id='tarifas'>
+    <div className='h-[100vh] overflow-hidden relative flex-col flex justify-center items-center text-black bg-cartooon bg-blue-200 shadow-inner shadow-black' id='tarifas'>
+      <motion.div style={{ y: y }} className='absolute hidden sm:hidden left-0 w-full h-full'>
+        <Img className='sm:w-48 z-0 w-16 ml-8' src='flower2.png'></Img>
+      </motion.div>
+      <motion.div style={{ y: y2 }} className='absolute hidden right-0 h-full'>
+        <Img className='sm:w-48 z-0 w-16' src='flower.png'></Img>
+      </motion.div>
+      <motion.div style={{ y: y2 }} className='absolute flex items-center justify-center w-full h-full'>
+        <Img className='sm:w-102 z-0 w-26' src='happy2.png'></Img>
+      </motion.div>
       <div className='px-4 flex w-full items-center justify-center'>
-        <div className='flex-grow p-8 px-4 sm:px-6 pt-4 py-10 w-full mx-auto sm:w-2/3 max-w-2xl flex flex-col justify-center align-center bg-red-50 shadow-xl rounded-xl  border-gray-300 border-y'>
+        <div className='z-10 flex-grow p-8 px-4 sm:px-6 pt-4 py-10 w-full mx-auto sm:w-2/3 max-w-2xl flex flex-col justify-center align-center bg-red-50/95 shadow-xl rounded-xl  border-gray-300 border-y'>
           <div className='w-full flex py-2 mb-2 text-3xl items-center'>
             {/*   <Img h={100} w={100} className='pb-1' src='quiz.png'></Img> */}
             <h1>Tarifas</h1>
@@ -47,7 +60,7 @@ export default function Interactive() {
                                 animate={{ scale: 1 }}
                                 transition={{ repeat: Infinity, duration: 0.6, repeatType: 'reverse' }}
                                 key={key}
-                                className='rounded-md p-4 mb-4 box-content  border-red-600 flex-grow bg-white hover:border-2 hover:border-black'
+                                className='rounded-md p-4 mb-4 box-content   flex-grow bg-white border border-white hover:border-blue-600'
                                 onClick={() => {
                                   setPaso((prev) => {
                                     prev.respuestas.push(question);

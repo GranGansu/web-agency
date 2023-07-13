@@ -4,6 +4,7 @@ interface Step {
   p2: string;
   bg: string;
   img: string;
+  classy: string;
   pct: number;
   ul: Array<string>;
 }
@@ -11,15 +12,21 @@ export default function Steps(step: Step) {
   return (
     <div
       style={{ background: step.bg ? step.bg : 'radial-gradient(#000000c9, #1a1919);' }}
-      className={`min-h-[50vh] px-4 py-6 flex flex-col  justify-center items-center gap-4 text-white`}>
+      className={`min-h-[50vh] px-4 py-6 flex flex-col  justify-center items-center gap-4 text-white ${step.classy}`}>
       <div className='text-center relative'>
         {/*         {step.img && <Img className='max-w-xl px-4 -translate-x-4 -translate-y-3/4 absolute -rotate-6 w-36 sm:w-48 z-0' h={300} w={300} src={step.img}></Img>} */}
         {step.pct && (
           <h1 className='text-4xl sm:text-7xl p-2 px-4  from-black/50 to-transparent bg-gradient-to-r rounded-full z-20 relative'>
-            {step.pct !== '100' ? step.pct + '%' : 'Diseñamos'}
+            {step.pct !== 100 ? step.pct + '' : 'Diseñamos'}
           </h1>
         )}
-        {step.p && <p className='text-4xl font-bold text-yellow-300 font-tilt px-2 mt-6 uppercase'>{step.p}</p>}
+        {step.p && <p className='text-4xl font-bold text-yellow-300 px-2 mt-6 uppercase'>{step.p}</p>}
+        {step.p2 && (
+          <>
+            <h1 className='text-4xl sm:text-7xl mt-8 p-2 px-4  from-black/50 to-transparent bg-gradient-to-r rounded-full z-20 relative'>2</h1>
+            <p className='text-4xl font-bold text-yellow-300 px-2 mt-6 uppercase'>{step.p2}</p>
+          </>
+        )}
         {step.ul && (
           <ul className='text-center py-10'>
             {step.ul.map((e, key) => {

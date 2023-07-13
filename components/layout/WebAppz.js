@@ -10,7 +10,7 @@ export default function WebAppz() {
         <div className='mt-6'>
           <div className='p-4 font-bold text-gray-700'>
             <h1 className='text-3xl'>Hiking boots</h1>
-            <p className='text-yellow-400'>Salomon, North Face</p>
+            <p className='text-gray-400'>Salomon, North Face</p>
             {mostrar && (
               <div className='mt-6 grid grid-cols-2 gap-x-2'>
                 <div className='flex flex-col items-center p-4 py-6 bg-white rounded shadow'>
@@ -49,7 +49,7 @@ export default function WebAppz() {
           </div>
           <div className='p-4 font-bold text-gray-700'>
             <h1 className='text-3xl'>Hiking boots</h1>
-            <p className='text-yellow-400'>Salomon, North Face</p>
+            <p className='text-gray-400'>Salomon, North Face</p>
             {mostrar && (
               <div className='mt-6 grid grid-cols-2 gap-x-2'>
                 <div className='flex flex-col items-center p-4 py-6 bg-white rounded shadow'>
@@ -100,10 +100,18 @@ export default function WebAppz() {
               {/*               {app(true)}
               {app()} */}
               <ul className='text-2xl mx-4 gap-y-4 flex flex-col pt-4'>
-                <li>Android & IOS</li>
-                <li>Recibe pagos con Tarjeta</li>
-                <li>Usuarios ilimitados</li>
-                <li>Adaptada a móviles y PC</li>
+                <motion.li transition={{ duration: 1 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                  Android & IOS
+                </motion.li>
+                <motion.li transition={{ duration: 1 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                  Recibe pagos con Tarjeta
+                </motion.li>
+                <motion.li transition={{ duration: 1 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                  Usuarios ilimitados
+                </motion.li>
+                <motion.li transition={{ duration: 1 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                  Adaptada a móviles y PC
+                </motion.li>
               </ul>
             </motion.div>
           )}
@@ -111,10 +119,18 @@ export default function WebAppz() {
             <motion.div className='z-30' key='2vv' exit={{ x: 1000, opacity: 0.5 }} initial={{ rotate: 20, x: 1000 }} animate={{ x: 0, rotate: 0 }}>
               {web()}
               <ul className='text-2xl mx-4 gap-y-4 flex flex-col pt-4 '>
-                <li>Formularios</li>
-                <li>Recibe pagos con Tarjeta</li>
-                <li>Usuarios ilimitados</li>
-                <li>Adaptada a móviles y PC</li>
+                <motion.li transition={{ duration: 1 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                  Formularios
+                </motion.li>
+                <motion.li transition={{ duration: 1 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                  Recibe pagos con Tarjeta
+                </motion.li>
+                <motion.li transition={{ duration: 1 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                  Usuarios ilimitados
+                </motion.li>
+                <motion.li transition={{ duration: 1 }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                  Adaptada a móviles y PC
+                </motion.li>
               </ul>
             </motion.div>
           )}
