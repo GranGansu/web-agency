@@ -1,7 +1,9 @@
 import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import { useState } from 'react';
 import Img from '../atoms/Img';
 import { questions } from '../API/questions';
+import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 function Respuestas({ respuestas }) {
   return (
     <div className='text-black'>
@@ -28,39 +30,39 @@ export default function Interactive() {
     console.log(y);
   };
   return (
-    <div className='h-[100vh] overflow-hidden relative flex-col flex justify-center items-center text-black bg-cartooon bg-blue-200 shadow-inner shadow-black' id='tarifas'>
-      <motion.div style={{ y: y }} className='absolute hidden sm:hidden left-0 w-full h-full'>
-        <Img className='sm:w-48 z-0 w-16 ml-8' src='flower2.png'></Img>
-      </motion.div>
-      <motion.div style={{ y: y2 }} className='absolute hidden right-0 h-full'>
-        <Img className='sm:w-48 z-0 w-16' src='flower.png'></Img>
-      </motion.div>
+    <div className='h-[100vh] overflow-hidden relative flex-col flex pt-20 sm:pt-0 sm:justify-center items-center text-black bg-cartooon bg-gray-900  shadow-black' id='tarifas'>
       <motion.div style={{ y: y2 }} className='absolute flex items-center justify-center w-full h-full'>
-        <Img className='sm:w-102 z-0 w-26' src='happy2.png'></Img>
+        <ReceiptLongIcon className='text-white sm:w-102 z-0 w-26' fontSize='large'></ReceiptLongIcon>
       </motion.div>
-      <div className='px-4 flex w-full items-center justify-center'>
-        <div className='z-10 flex-grow p-8 px-4 sm:px-6 pt-4 py-10 w-full mx-auto sm:w-2/3 max-w-2xl flex flex-col justify-center align-center bg-red-50/95 shadow-xl rounded-xl  border-gray-300 border-y'>
-          <div className='w-full flex py-2 mb-2 text-3xl items-center'>
+      <div className='px-4 flex w-full '>
+        <div className='z-10 flex-grow p-8 px-4 sm:px-6 pt-4 py-10 w-full mx-auto sm:w-2/3 max-w-2xl flex flex-col justify-center align-center bg-transparent  border-white/50 rounded-xl text-white'>
+          <div className='w-full flex py-2 mb-2 text-xl items-center text-red-400'>
             {/*   <Img h={100} w={100} className='pb-1' src='quiz.png'></Img> */}
-            <h1>Tarifas</h1>
+            <h1>Presupuesto</h1>
           </div>
           <div className='relative w-full min-h-[200px] flex  items-center'>
             <AnimatePresence>
               {questions.map((q, key) => {
                 return (
                   paso.current === key && (
-                    <motion.div className='absolute' transition={{ duration: 0.3 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ scale: 0, opacity: 0 }} key={key}>
-                      <h2 className='text-xl  mb-6'>¿{q.pregunta}?</h2>
+                    <motion.div
+                      className='absolute w-full'
+                      transition={{ duration: 0.3 }}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ scale: 0, opacity: 0 }}
+                      key={key}>
+                      <h2 className='text-2xl  mb-6'>¿{q.pregunta}?</h2>
                       <div>
-                        <ul className='flex gap-x-2'>
+                        <ul className='flex justify-between gap-x-2'>
                           {q.respuestas.map((question, key) => {
                             return (
                               <motion.button
                                 initial={{ scale: 0.99 }}
                                 animate={{ scale: 1 }}
-                                transition={{ repeat: Infinity, duration: 0.6, repeatType: 'reverse' }}
+                                transition={{ repeat: 1, duration: 0.6, repeatType: 'reverse' }}
                                 key={key}
-                                className='rounded-md p-4 mb-4 box-content   flex-grow bg-white border border-white hover:border-blue-600'
+                                className='rounded-md p-4 mb-4 box-content grow bg-transparent border  hover:border-blue-600'
                                 onClick={() => {
                                   setPaso((prev) => {
                                     prev.respuestas.push(question);
@@ -91,8 +93,8 @@ export default function Interactive() {
               </div>
             )}
           </div>
-          <button className='rounded p-4 shadow bg-red-400 text-white flex items-center justify-center gap-x-2' onClick={handleReset}>
-            <Img h={25} w={25} className='pb-1' src='restart.png'></Img>
+          <button className='rounded p-4 shadow bg-transparent text-red-400 flex items-center justify-center gap-x-1' onClick={handleReset}>
+            <RestartAltIcon></RestartAltIcon>
             Reiniciar cuestionario
           </button>
         </div>

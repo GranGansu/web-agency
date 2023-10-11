@@ -13,10 +13,10 @@ export default function Steps(step: Step) {
     <div
       style={{ background: step.bg ? step.bg : 'radial-gradient(#000000c9, #1a1919);' }}
       className={`min-h-[50vh] px-4 py-6 flex flex-col  justify-center items-center gap-4 text-white ${step.classy}`}>
-      <div className='text-center relative'>
+      <div className='text-center relative  w-full rounded-lg py-0'>
         {/*         {step.img && <Img className='max-w-xl px-4 -translate-x-4 -translate-y-3/4 absolute -rotate-6 w-36 sm:w-48 z-0' h={300} w={300} src={step.img}></Img>} */}
         {step.pct && (
-          <h1 className='text-4xl sm:text-7xl p-2 px-4  from-black/50 to-transparent bg-gradient-to-r rounded-full z-20 relative'>
+          <h1 className='text-4xl sm:text-5xl p-2 px-4  from-black/50 to-transparent bg-gradient-to-r rounded-full z-20 relative'>
             {step.pct !== 100 ? step.pct + '' : 'Diseñamos'}
           </h1>
         )}
@@ -28,10 +28,10 @@ export default function Steps(step: Step) {
           </>
         )}
         {step.ul && (
-          <ul className='text-center py-10'>
+          <ul className='text-center py-10 pb-4 pt-4 grid col-span-2 gap-8 items-center justify-center'>
             {step.ul.map((e, key) => {
               return (
-                <li key={key} className='text-4xl sm:text-6xl py-4 last:border-b-0 font-tilt border-b border-white/20'>
+                <li key={key} className='text-4xl text-black border-gray-200 bg-white shadow-xl sm:text-3xl rounded-full p-8 font-tilt border'>
                   {e}
                 </li>
               );

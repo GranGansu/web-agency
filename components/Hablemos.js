@@ -7,10 +7,11 @@ export default function Hablemos() {
         <a id='hablemos'>
           <h3 className='text-5xl font-bold'>Hablemos, es gratis</h3>
         </a>
-        <div className='my-6 flex space-x-2 text-black text-2xl'>
+        <div className='my-6 flex flex-col gap-y-2 space-x-2 text-black text-2xl'>
           <a href='https://wa.me/34656828317'>
             <p className='p-8 w-fit border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold'>Whatsapp</p>
           </a>
+          <a className='text-white text-sm underline underline-offset-2'>o e-mail</a>
           {/*           <a href='https://www.instagram.com/grangansu/'>
             <p className='p-4 w-fit bg-red-800 border-3 shadow-xl text-white rounded'>Instagram</p>
           </a> */}

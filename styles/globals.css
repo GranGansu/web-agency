@@ -32,6 +32,48 @@ a {
   }
 }
 
+.custom-shape-divider-top-1696944470 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1696944470 svg {
+  position: relative;
+  display: block;
+  width: calc(276% + 1.3px);
+  height: 106px;
+}
+
+.custom-shape-divider-top-1696944470 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.custom-shape-divider-bottom-1696944517 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1696944517 svg {
+  position: relative;
+  display: block;
+  width: calc(276% + 1.3px);
+  height: 106px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1696944517 .shape-fill {
+  fill: #FFFFFF;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
