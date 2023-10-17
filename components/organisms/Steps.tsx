@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import Img from '../atoms/Img';
+
 interface Step {
   p: string;
   p2: string;
@@ -8,12 +10,13 @@ interface Step {
   pct: number;
   ul: Array<string>;
 }
+
 export default function Steps(step: Step) {
   return (
     <div
-      style={{ background: step.bg ? step.bg : 'radial-gradient(#000000c9, #1a1919);' }}
-      className={`min-h-[50vh] px-4 py-6 flex flex-col  justify-center items-center gap-4 text-white ${step.classy}`}>
-      <div className='text-center relative  w-full rounded-lg py-0'>
+      /* style={{ background: step.bg ? step.bg : 'white' }} */
+      className={`rounded-2xl m-2 mb-6 min-h-[50vh] px-4 py-6 flex flex-col  justify-center items-center gap-4 text-white from-white to-gray-200 bg-gradient-to-b via-white ${step.classy}`}>
+      <div className='text-center relative flex items-center justify-center w-full rounded-lg py-0'>
         {/*         {step.img && <Img className='max-w-xl px-4 -translate-x-4 -translate-y-3/4 absolute -rotate-6 w-36 sm:w-48 z-0' h={300} w={300} src={step.img}></Img>} */}
         {step.pct && (
           <h1 className='text-4xl sm:text-5xl p-2 px-4  from-black/50 to-transparent bg-gradient-to-r rounded-full z-20 relative'>
@@ -27,7 +30,7 @@ export default function Steps(step: Step) {
             <p className='text-4xl font-bold text-yellow-300 px-2 mt-6 uppercase'>{step.p2}</p>
           </>
         )}
-        {step.ul && (
+        {!step.ul && (
           <ul className='text-center py-10 pb-4 pt-4 grid col-span-2 gap-8 items-center justify-center'>
             {step.ul.map((e, key) => {
               return (
@@ -37,6 +40,26 @@ export default function Steps(step: Step) {
               );
             })}
           </ul>
+        )}
+        {/* Este es el bueno */}
+        {step.ul && (
+          <motion.div className='text-center py-10 pb-4 px-6 pt-4 grid sm:grid-cols-3 gap-12 items-center justify-center max-w-2xl gap-y-12'>
+            {step.ul.map((e, key) => {
+              return (
+                <motion.div
+                  initial={{ y: 15, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 1 }}
+                  viewport={{ margin: '-50px', once: true }}
+                  key={key}
+                  className=' text-4xl text-black  bg-transparent sm:text-3xl p-4 font-tilt flex items-center flex-col'>
+                  <Img className='max-w-xl px-4  w-36 sm:w-48 z-0' h={300} w={300} src={key === 0 ? 'payment.png' : 'secure.png'}></Img>
+                  <h1 className='text-red-600'>{e}</h1>
+                  <p className='text-sm font-thin'>Texto secundario</p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         )}
         {step.pct === 100 && (
           <div className='uppercase flex flex-col font-bold sm:text-3xl items-center text-2xl'>

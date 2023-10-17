@@ -6,36 +6,51 @@ import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite
 import LocalOfferIcon from '@mui/icons-material/LocalOffer';
 import Battery3BarIcon from '@mui/icons-material/Battery3Bar';
 import SignalCellular3BarIcon from '@mui/icons-material/SignalCellular3Bar';
+import Img from '../atoms/Img';
 export default function WebAppz() {
+  const day = new Date();
+  const hora = day.getHours();
+  const minutos = day.getMinutes();
   const app = (mostrar) => (
-    <motion.div className='border-4 border-gray-800 border-y-[14px] relative bg-gray-800 rounded-xl shadow-2xl h-[600px] w-[300px] flex flex-col'>
+    <motion.div
+      style={{ transform: 'perspective(100px) rotateY(1deg)', boxShadow: '-8px 1px 1px 8px #1f2937' }}
+      className='border-4 border-gray-800 border-y-[14px] relative bg-gray-800 rounded-xl shadow-2xl h-[600px] w-[300px] flex flex-col'>
+      <Img src='iphone.png' className='absolute z-10 hidden'></Img>
+
       <Image className='z-0 absolute w-full h-full left-0 top-0 rounded-2xl rounded-t-sm object-cover' src={`/img/webapp.jpg`} width='500' height='600' alt=''></Image>
       <div className='z-50 flex flex-col place-content-between h-full rounded-xl overflow-hidden'>
         <div className='py-1 text-xs flex justify-end bg-gray-100 text-black'>
+          <span className='pt-1 pr-1'>
+            {hora}
+            <motion.span className='font-bold' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ repeat: Infinity, duration: 1 }}>
+              :
+            </motion.span>
+            {minutos.toString().length === 1 ? '0' + minutos : minutos}
+          </span>
           <SignalCellular3BarIcon fontSize='small'></SignalCellular3BarIcon>
           <Battery3BarIcon fontSize='small'></Battery3BarIcon>
         </div>
         <div className='mt-2'>
           <div className='p-4 font-bold text-gray-700'>
-            <h1 className='text-4xl'>Hiking boots</h1>
-            <ul className='flex gap-x-1 text-sm mt-2'>
-              <li className='rounded-xl px-2 py-1 bg-gray-200 border border-gray-300'>Salomon</li>
-              <li className='rounded-xl px-2 py-1 bg-gray-200 border border-gray-300'>North Face</li>
+            <h1 className='text-2xl'>Hiking boots</h1>
+            <ul className='flex gap-x-2 text-sm mt-2 font-thin'>
+              <li className='rounded-xl px-2 py-1 select-none hover:cursor-pointer bg-gray-200/70 border border-gray-300 shadow-inner'>Salomon</li>
+              <li className='rounded-xl px-2 py-1 select-none hover:cursor-pointer bg-gray-200/70 border border-gray-300 shadow-inner'>North Face</li>
             </ul>
             {mostrar && (
               <div className='mt-6 grid grid-cols-2 gap-3'>
-                <button className='hover:scale-105 flex flex-col items-center p-4 py-6 bg-white rounded shadow'>
+                <div className='hover:scale-105 select-none flex flex-col items-center p-4 py-6 bg-white rounded shadow'>
                   <Image src={`/img/sal1.jpg`} width='80' height='80' alt=''></Image>
-                  Boot 1
-                </button>
-                <button className='hover:scale-105 flex flex-col items-center p-4 py-6 bg-white rounded shadow'>
+                  <button className='border rounded-full px-2 py-1 text-sm bg-violet-400 text-white'>Comprar</button>
+                </div>
+                <div className='hover:scale-105 select-none flex flex-col items-center p-4 py-6 bg-white rounded shadow'>
                   <Image src={`/img/sal5.jpg`} width='80' height='80' alt=''></Image>
-                  Boot 2
-                </button>
-                <button className='hover:scale-105 flex flex-col items-center p-4 py-6 bg-white rounded shadow'>
+                  <button className='border rounded-full px-2 py-1 text-sm bg-violet-400 text-white'>Comprar</button>
+                </div>
+                <div className='hover:scale-105 select-none col-span-2 flex flex-col items-center p-4 py-6 bg-white rounded shadow'>
                   <Image src={`/img/sal3.jpg`} width='80' height='80' alt=''></Image>
-                  Boot 3
-                </button>
+                  <button className='border rounded-full px-2 py-1 text-sm bg-violet-400 text-white'>Comprar</button>
+                </div>
               </div>
             )}
           </div>
