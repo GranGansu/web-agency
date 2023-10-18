@@ -3,21 +3,22 @@ import Img from '../atoms/Img';
 import StarIcon from '@mui/icons-material/Star';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { motion } from 'framer-motion';
 
 export default function Testimonials({ className }) {
   const ref = useRef();
   let total = 0;
   const [estado, setEstado] = useState(null);
   const opinions = [
-    { name: 'James', star: 5.0, img: 'profile1', message: 'Buena web' },
-    { name: 'Amy', star: 5.0, img: 'profile2', message: 'Grandioso trabajo' },
+    { name: 'James', star: 5.0, img: 'profile9', message: 'Buena web' },
+    { name: 'Amy', star: 5.0, img: 'profile8', message: 'Grandioso trabajo' },
     { name: 'Amelie', star: 5.0, img: 'profile3', message: 'Grandioso trabajo y debería agradecer a todos' },
-    { name: 'Jeremy', star: 4.5, img: 'profile4', message: 'Nunca podría haberlo hecho mejor con otros, muy buena comunicación' },
-    { name: 'Susana', star: 4.8, img: 'profile5', message: 'Grandioso trabajo' },
-    { name: 'Susana', star: 4.8, img: 'profile5', message: 'Grandioso trabajo' },
+    { name: 'Jeremy', star: 4.5, img: 'profile10', message: 'Nunca podría haberlo hecho mejor con otros, muy buena comunicación' },
+    { name: 'Susana', star: 4.8, img: 'profile7', message: 'Grandioso trabajo' },
+    { name: 'Matías', star: 4.8, img: 'profile6', message: 'Grandioso trabajo' },
   ];
   return (
-    <div className={className + ' w-screen mx-auto py-20 flex flex-col sm:items-center  from-red-500 to-red-300 bg-gradient-to-r'}>
+    <div className={className + ' w-screen mx-auto py-20 flex flex-col sm:items-center  from-red-500 to-red-300 bg-[#f0554b] bg-gradient-to-rm'}>
       <div className=' opacity-0 sm:opacity-30 absolute rotate-6 -left-4'>
         <div className='h-1 bg-red-100 w-[10vw]  z-0 mt-10 rounded-full'></div>
         <div className='h-1 bg-red-100 w-[20vw]   z-0 mt-10 rounded-full'></div>
@@ -27,7 +28,7 @@ export default function Testimonials({ className }) {
         <div className='h-1 bg-red-100 w-[5vw]   z-0 mt-10 rounded-full'></div>
       </div>
       <h2 className='text-3xl max-w-5xl font-bold w-fit text-white ml-4 sm:ml-0'>Qué opinan nuestros clientes</h2>
-      <div className='relative'>
+      <div className='relative max-w-full'>
         <div className='flex items-center gap-x-2'>
           <div
             onClick={() => {
@@ -85,9 +86,16 @@ export default function Testimonials({ className }) {
             <ArrowForwardIosIcon />
           </div>
         </div>
-        <p className='w-fit mx-5 flex items-center text-gray-700 font-bold rounded-full p-2 px-5 pr-3 bg-white/90  border-2'>
-          Valoración media <span className='text-2xl text-green-600 ml-1 p-2 rounded-full'>{(total / opinions.length).toPrecision(3)}</span>
-        </p>
+
+        <motion.div
+          style={{ background: 'linear-gradient(70deg, #d99090, transparent)' }}
+          whileHover={{ background: 'linear-gradient(200deg, #d99090, transparent)' }}
+          transition={{ duration: 0.2 }}
+          className='hover:cursor-pointer p-3  w-fit rounded-full mx-auto'>
+          <p className='w-fit flex items-center text-gray-700 font-bold rounded-full p-2 px-5 pr-3 bg-white  border-2'>
+            Valoración <span className='text-2xl text-green-600 ml-1 p-2 rounded-full'>{(total / opinions.length).toPrecision(3)}</span>
+          </p>
+        </motion.div>
       </div>
     </div>
   );

@@ -7,29 +7,36 @@ export default function FAQ() {
     {
       p: '¿Qué incluye una web?',
       r: (
-        <table className='text-left'>
-          <thead>
-            <tr>
-              <th className='pr-8'>Servicio</th>
-              <th className='pr-8'>Incluido</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Indexado en Google</td>
-              <td>
-                <CheckIcon className='text-green-700 font-bold'></CheckIcon>
-              </td>
-            </tr>
-            <tr>
-              <td>Dominio</td>
-              <td>
-                <CheckIcon className='text-green-700 font-bold'></CheckIcon>
-              </td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
+        <div className='bg-white p-2 rounded border shadow'>
+          <table className='text-left bg-white leading-loose'>
+            <thead>
+              <tr className='border-b '>
+                <th className='pr-8 pl-2'>Servicio</th>
+                {/*   <th className='pr-8 text-center'>Incluido</th> */}
+              </tr>
+            </thead>
+            <tbody>
+              <tr className='hover:bg-blue-100'>
+                <td className='px-2'>Indexado en Google</td>
+                <td className='flex justify-center items-center p-4'>
+                  <CheckIcon className='text-green-700 font-bold'></CheckIcon>
+                </td>
+              </tr>
+              <tr className='bg-gray-50 hover:bg-blue-100'>
+                <td className='px-2'>Dominio</td>
+                <td className='flex justify-center items-center p-4'>
+                  <CheckIcon className='text-green-700 font-bold'></CheckIcon>
+                </td>
+              </tr>
+              <tr className='hover:bg-blue-100'>
+                <td className='px-2'>Indexado en Google</td>
+                <td className='flex justify-center items-center p-4'>
+                  <CheckIcon className='text-green-700 font-bold'></CheckIcon>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       ),
     },
     {
@@ -74,7 +81,7 @@ export default function FAQ() {
             }}
             expanded={expand === key}
             title={p.p}>
-            <div className='text-center border-t pt-6 border-yellow-400'>{p.r}</div>
+            <div className='text-center flex items-center justify-center border-t pt-6 border-yellow-400'>{p.r}</div>
           </Accordeon>
         );
       })}

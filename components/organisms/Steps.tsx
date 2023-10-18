@@ -8,9 +8,13 @@ interface Step {
   img: string;
   classy: string;
   pct: number;
-  ul: Array<string>;
+  ul: Array<Opcion>;
 }
-
+interface Opcion {
+  titulo: string;
+  description: string;
+  img: string;
+}
 export default function Steps(step: Step) {
   return (
     <div
@@ -35,7 +39,7 @@ export default function Steps(step: Step) {
             {step.ul.map((e, key) => {
               return (
                 <li key={key} className='text-4xl text-black border-gray-200 bg-white shadow-xl sm:text-3xl rounded-full p-8 font-tilt border'>
-                  {e}
+                  {e.titulo}
                 </li>
               );
             })}
@@ -43,7 +47,7 @@ export default function Steps(step: Step) {
         )}
         {/* Este es el bueno */}
         {step.ul && (
-          <motion.div className='text-center py-10 pb-4 px-6 pt-4 grid sm:grid-cols-3 gap-12 items-center justify-center max-w-2xl gap-y-12'>
+          <motion.div className=' pt-4 grid sm:grid-cols-4 gap-10 items-start max-w-3xl'>
             {step.ul.map((e, key) => {
               return (
                 <motion.div
@@ -52,10 +56,11 @@ export default function Steps(step: Step) {
                   transition={{ duration: 1 }}
                   viewport={{ margin: '-50px', once: true }}
                   key={key}
-                  className=' text-4xl text-black  bg-transparent sm:text-3xl p-4 font-tilt flex items-center flex-col'>
-                  <Img className='max-w-xl px-4  w-36 sm:w-48 z-0' h={300} w={300} src={key === 0 ? 'payment.png' : 'secure.png'}></Img>
-                  <h1 className='text-red-600'>{e}</h1>
-                  <p className='text-sm font-thin'>Texto secundario</p>
+                  className=' text-xl w-full bg-transparent text-black sm:text-3xl p-4 px-10 font-tilt flex items-center flex-col'>
+                  {/* <Img className='max-w-xl px-4  w-36 sm:w-48 z-0' h={300} w={300} src={e.img}></Img> */}
+
+                  <h1 className='text-black font-bold'>{e.titulo}</h1>
+                  <p className='text-sm font-thin mt-2 text-gray-800'>{e.description}</p>
                 </motion.div>
               );
             })}

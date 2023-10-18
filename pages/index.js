@@ -29,7 +29,7 @@ export default function Home({ fuente, fuente2, fuente3 }) {
             </motion.div>
           )}
         </AnimatePresence>
-        <div id='home' className='bg-[#312b31] from-red-400 to-[#312b31] bg-gradient-to-br -mx-1 flex flex-col items-center'>
+        <div id='home' className='bg-[#312b31] from-red-400 to-[#de1b55] bg-gradient-to-b -mx-1 flex flex-col items-center'>
           <div className={fuente3}>
             <Header />
           </div>
@@ -41,10 +41,19 @@ export default function Home({ fuente, fuente2, fuente3 }) {
           <WebAppz />
         </div>
       </main>
-      <Transform fuente={fuente3} />
+      <div className='relative'>
+        <Transform fuente={fuente3} />
+      </div>
       <div className={fuente3 + ' relative flex flex-col z-20 w-full'}>
         <div className={fuente3 + ' bg-[#de1b55]'}>
-          <Steps ul={['Soporte 24hs', 'Seguridad a tope!', '100% online', 'Acepta pagos', 'Comunicación']} />
+          <Steps
+            ul={[
+              { img: 'card.svg', titulo: 'Soporte 24hs', description: 'Probando descripcion' },
+              { img: 'secure.png', titulo: 'Acepta pagos', description: 'Tarjeta, PayPal' },
+              { img: 'secure.png', titulo: 'Comunicación directa', description: 'Probando descripcion' },
+              { img: 'secure.png', titulo: 'Seguridad', description: 'Certificadas' },
+            ]}
+          />
         </div>
         <Interactive />
         <Testimonials className={fuente3} />

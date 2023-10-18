@@ -13,10 +13,8 @@ export default function WebAppz() {
   const minutos = day.getMinutes();
   const app = (mostrar) => (
     <motion.div
-      style={{ transform: 'perspective(100px) rotateY(1deg)', boxShadow: '-8px 1px 1px 8px #1f2937' }}
-      className='border-4 border-gray-800 border-y-[14px] relative bg-gray-800 rounded-xl shadow-2xl h-[600px] w-[300px] flex flex-col'>
-      <Img src='iphone.png' className='absolute z-10 hidden'></Img>
-
+      style={{ transform: 'perspective(100px) rotateY(1deg)', boxShadow: '-8px 1px 1px 6px #1f2937' }}
+      className='border-4 border-gray-800 border-y-[8px] relative bg-gray-800 rounded-xl h-[600px] w-[300px] flex flex-col'>
       <Image className='z-0 absolute w-full h-full left-0 top-0 rounded-2xl rounded-t-sm object-cover' src={`/img/webapp.jpg`} width='500' height='600' alt=''></Image>
       <div className='z-50 flex flex-col place-content-between h-full rounded-xl overflow-hidden'>
         <div className='py-1 text-xs flex justify-end bg-gray-100 text-black'>

@@ -41,7 +41,7 @@ export default function Hablemos() {
         </ul>
       </div>
       <div className='bg-red-500 w-full h-full absolute z-10 opacity-90'></div>
-      <Image alt='' className='absolute h-full w-full object-cover z-0' width='1000' height='1000' src={'/img/dialog.svg'}></Image>
+      <Image alt='' className='absolute h-full w-full object-fit z-0 border opacity-90' width='1000' height='1000' src={'/img/dialog.svg'}></Image>
     </div>
   );
 }
