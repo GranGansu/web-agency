@@ -7,12 +7,12 @@ export default function FAQ() {
     {
       p: '¿Qué incluye una web?',
       r: (
-        <div className='bg-white p-2 rounded border shadow'>
-          <table className='text-left bg-white leading-loose'>
+        <div className='bg-white p-2 rounded border shadow w-full'>
+          <table className='text-left bg-white leading-loose w-full'>
             <thead>
               <tr className='border-b '>
                 <th className='pr-8 pl-2'>Servicio</th>
-                {/*   <th className='pr-8 text-center'>Incluido</th> */}
+                  <th className='pr-8 text-center'>Incluido</th>
               </tr>
             </thead>
             <tbody>

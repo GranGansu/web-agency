@@ -3,12 +3,13 @@ import Hablemos from '../components/Hablemos';
 import Header from '../components/Header';
 import { FAQ, Testimonials } from '../components/layout';
 import WebAppz from '../components/layout/WebAppz';
-import Steps from '../components/organisms/Steps';
 import Interactive from '../components/organisms/Interactive';
 import { useInView, motion, AnimatePresence } from 'framer-motion';
 import { useRef } from 'react';
 import Footer from '../components/layout/Footer';
-import { Transform } from '../components/organisms';
+import { Transformm } from '../components/organisms';
+import Transform3 from '../components/organisms/Transform3';
+
 export default function Home({ fuente, fuente2, fuente3 }) {
   const ref = useRef();
   const isInView = useInView(ref);
@@ -19,7 +20,7 @@ export default function Home({ fuente, fuente2, fuente3 }) {
         <meta name='description' content='Creación páginas web' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main className={fuente3 + ' relative z-30 overflow-x-hidden overflow-y-scroll snap-proximity snap-y '}>
+      <main className={fuente3 + ' relative z-30 overflow-x-hidden overflow-y-scroll snap-proximity snap-y'}>
         <AnimatePresence>
           {!isInView && (
             <motion.div exit={{ x: -1000 }} initial={{ scale: 0.6 }} animate={{ scale: 1 }} className='fixed w-full bottom-2 z-50 mx-auto flex gap-x-2 items-center justify-center'>
@@ -29,32 +30,22 @@ export default function Home({ fuente, fuente2, fuente3 }) {
             </motion.div>
           )}
         </AnimatePresence>
-        <div id='home' className='bg-[#312b31] from-red-400 to-[#de1b55] bg-gradient-to-b -mx-1 flex flex-col items-center'>
+        <div id='home' className='bg-[#312b31] from-red-400 to-[#de1b55] bg-gradient-to-b -mx-1 flex flex-col items-center min-h-[100vh]'>
           <div className={fuente3}>
             <Header />
           </div>
           <div ref={ref}></div>
           <div className='flex flex-col gap-y-2 items-center mb-4'>
-            <h1 className='text-4xl text-orange-200'>Soluciones digitales</h1>
+            <h1 className='text-4xl text-[cornsilk]'>Soluciones digitales</h1>
             <h2 className='text-4xl text-white'>& Profesionales </h2>
           </div>
           <WebAppz />
         </div>
       </main>
-      <div className='relative'>
-        <Transform fuente={fuente3} />
+      <div className={fuente3+" relative"}>
+        <Transformm  />
       </div>
       <div className={fuente3 + ' relative flex flex-col z-20 w-full'}>
-        <div className={fuente3 + ' bg-[#de1b55]'}>
-          <Steps
-            ul={[
-              { img: 'card.svg', titulo: 'Soporte 24hs', description: 'Probando descripcion' },
-              { img: 'secure.png', titulo: 'Acepta pagos', description: 'Tarjeta, PayPal' },
-              { img: 'secure.png', titulo: 'Comunicación directa', description: 'Probando descripcion' },
-              { img: 'secure.png', titulo: 'Seguridad', description: 'Certificadas' },
-            ]}
-          />
-        </div>
         <Interactive />
         <Testimonials className={fuente3} />
         <Hablemos />
@@ -62,7 +53,7 @@ export default function Home({ fuente, fuente2, fuente3 }) {
           <FAQ />
         </div>
       </div>
-      <Footer></Footer>
+      <Footer/>
     </div>
   );
 }

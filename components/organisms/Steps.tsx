@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Img from '../atoms/Img';
 
 interface Step {
@@ -47,7 +48,7 @@ export default function Steps(step: Step) {
         )}
         {/* Este es el bueno */}
         {step.ul && (
-          <motion.div className=' pt-4 grid sm:grid-cols-4 gap-10 items-start max-w-3xl'>
+          <motion.div className=' pt-4 grid sm:grid-cols-4 gap-10 gap-x-20 items-start max-w-3xl'>
             {step.ul.map((e, key) => {
               return (
                 <motion.div
@@ -57,8 +58,7 @@ export default function Steps(step: Step) {
                   viewport={{ margin: '-50px', once: true }}
                   key={key}
                   className=' text-xl w-full bg-transparent text-black sm:text-3xl p-4 px-10 font-tilt flex items-center flex-col'>
-                  {/* <Img className='max-w-xl px-4  w-36 sm:w-48 z-0' h={300} w={300} src={e.img}></Img> */}
-
+                  {e.img}
                   <h1 className='text-black font-bold'>{e.titulo}</h1>
                   <p className='text-sm font-thin mt-2 text-gray-800'>{e.description}</p>
                 </motion.div>

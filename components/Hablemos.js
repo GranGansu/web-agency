@@ -12,17 +12,17 @@ export default function Hablemos() {
         <div className='my-6 flex  gap-4 text-black text-2xl flex-wrap'>
           <a href='https://wa.me/34656828317'>
             <p className='p-8 w-fit border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'>
-              <WhatsAppIcon className='text-white text-6xl' fontSize='inherit'></WhatsAppIcon>
+              <WhatsAppIcon style={{fontSize:'xxx-large'}} className='text-white text-6xl' fontSize='inherit'></WhatsAppIcon>
             </p>
           </a>
           <a href='https://wa.me/34656828317'>
             <p className='p-6 w-fit border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'>
-              <TwitterIcon className='text-white text-6xl' fontSize='inherit'></TwitterIcon>
+              <TwitterIcon style={{fontSize:'xxx-large'}} className='text-white text-6xl' fontSize='inherit'></TwitterIcon>
             </p>
           </a>
           <a href='https://wa.me/34656828317'>
             <p className='p-4  border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'>
-              <MailOutlineIcon className='text-white text-6xl' fontSize='inherit'></MailOutlineIcon>
+              <MailOutlineIcon style={{fontSize:'xxx-large'}} className='text-white text-6xl' fontSize='inherit'></MailOutlineIcon>
             </p>
           </a>
           {/*           <a className='text-white text-sm hover:scale-105 hover:cursor-pointer mt-2'>

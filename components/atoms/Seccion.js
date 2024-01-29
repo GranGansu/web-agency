@@ -12,9 +12,6 @@ export default function Seccion({ img, titulo, out = false, target, container })
     <section className='w-full h-full flex justify-center items-center absolute left-0 overflow-hidden'>
       <motion.div style={{ scale: out ? fuera : dentro }} className='w-full h-full flex items-center justify-center text-center flex-col relative'>
         <Img w={1000} src={img} className='w-full max-w-4xl z-0 left-0 object-cover'></Img>
-        {/*         <motion.p style={{ opacity: out ? textFuera : textDentro }} className='text-white text-6xl mt-4 z-10 relative'>
-        {titulo}
-      </motion.p> */}
       </motion.div>
     </section>
   );
