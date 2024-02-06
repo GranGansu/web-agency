@@ -1,4 +1,4 @@
-import { Accordeon } from '../atoms/';
+import { Accordeon } from '../atoms';
 import { useState } from 'react';
 import CheckIcon from '@mui/icons-material/Check';
 export default function FAQ() {

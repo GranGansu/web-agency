@@ -1,4 +1,0 @@
-1.- Añadir box de comentario en Interactive paso final
-2.- Al descender, morph de piedra en diamante
-3.- Degradado en tarifas
-4.- Presupuesto BOX con imagen ilutrativa al side

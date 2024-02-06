@@ -65,9 +65,9 @@ export default function Testimonials({ className }) {
                       </div>
                       <p className='font-bold z-10 text-xl'>{op.name}</p>
                       <p className='z-10 text-gray-500 text-center'>&ldquo;{op.message}&rdquo;</p>
-                      <button className='z-10 border-blue-200 border-b p-2 px-4 font-bold mt-4 text-sm text-center bg-white hover:cursor-pointer hover:border-blue-300 hover:border'>
+{/*                       <button className='z-10 border-blue-200 border-b p-2 px-4 font-bold mt-4 text-sm text-center bg-white hover:cursor-pointer hover:border-blue-300 '>
                         Ver trabajo
-                      </button>
+                      </button> */}
                     </>
                   ) : (
                     <div className='absolute w-full h-full'>
