@@ -18,7 +18,7 @@ export default function WebOption({ show }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className='relative z-50 text-black w-full bg-gray-100 rounded-xl border-4 border-red-200 p-4'>
-        <Image src='/img/item1.png' width={150} height={150} className='w-full'></Image>
+        <Image alt="nike shoes" src='/img/item1.png' width={150} height={150} className='w-full'></Image>
         <div className='shadow-sm rotate-2 border px-8 text-xl rounded-full p-4 absolute bottom-8 z-50'>150€</div>
       </motion.div>
       <motion.div

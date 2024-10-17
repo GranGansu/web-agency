@@ -24,10 +24,10 @@ export default function Transform3() {
       <motion.li className='absolute  -translate-y-1/2 rounded flex flex-col items-center w-full' style={{ opacity: reemplazo }}>
         <div className='flex'>
           <motion.div style={{ translateX: entrada }} className='mb-4 -mt-6'>
-            <Image width={300} height={300} src={img} />
+            <Image alt="transitional" width={300} height={300} src={img} />
           </motion.div>
           <motion.div style={{ translateX: salida }} className='mb-4  -mt-6'>
-            <Image width={300} height={300} src={img} />
+            <Image alt="transitional" width={300} height={300} src={img} />
           </motion.div>
         </div>
         <p className='mb-4'>{title}</p>
@@ -40,7 +40,7 @@ export default function Transform3() {
       <div className=' px-4 h-screen sticky  top-0 z-90 flex flex-col justify-center items-center w-full text-4xl overflow-hidden'>
         <ul className='flex flex-col w-full relative text-center bg-blue-300'>
           {items.map((item, i) => {
-            return <ListItem sub={item.description} title={item.title} img={item.img} tiempo={[cantidad[i - 1] ?? 0, cantidad[i], cantidad[i + 1] ?? 1]} />;
+            return <ListItem key={i} sub={item.description} title={item.title} img={item.img} tiempo={[cantidad[i - 1] ?? 0, cantidad[i], cantidad[i + 1] ?? 1]} />;
           })}
         </ul>
       </div>

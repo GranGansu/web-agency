@@ -18,7 +18,7 @@ export default function Transformm() {
     return (
       <motion.li ref={ref} className=' rounded py-6 left-0 w-full flex flex-col items-center' style={{ opacity: interval, y:interval }}>
       <motion.div>
-        <Image width={100} height={100} src={img} /></motion.div>
+        <Image alt="unused" width={100} height={100} src={img} /></motion.div>
         {title}
       </motion.li>
     );

@@ -1,9 +1,9 @@
 export default function Sticky() {
 
-  let funcion = () => {
+/*   let funcion = () => {
     console.log('hola');
   };
-  let observer = new IntersectionObserver(funcion);
+  let observer = new IntersectionObserver(funcion); */
 /*   const target= document.getElementById("stick") */
 /*   observer.observe(target) */
   return (
