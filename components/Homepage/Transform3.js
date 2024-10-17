@@ -4,29 +4,44 @@ import Image from 'next/image';
 
 export default function Transform3() {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start', 'end end'] });
-  const tarjetas = useTransform(scrollYProgress, [0, 0.2], ['110%', '-100%']);
-  const segundo = useTransform(scrollYProgress, [0, 0.3, 0.6], [0, 1, 0]);
-  const tercer = useTransform(scrollYProgress, [0.4, 1], [0, 1]);
-  const stretch1 = useTransform(scrollYProgress, [0.4, 1], [0, 1]);
-  const ListItem = ({ title, interval, img }) => {
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end end'] });
+  const items = [
+    { title: 'Acepta todos los medios de pago', img: '/img/mastercard.png', description: 'Buena descripción' },
+    { title: '24hs en línea', img: '/img/better.png', description: 'Buena descripción' },
+    { title: 'Amigos y desamigos', img: '/img/app.png', description: 'Buena descripción' },
+    { title: 'Chat y atención al cliente', img: '/img/app.png', description: 'Buena descripción' },
+  ];
+  const cantidad = items.map((item, i) => {
+    const absoluto = 1 / items.length; //ej 0.33
+    return (i + 1) * absoluto;
+  }); //0.33/0.66/0.99
+  console.log(cantidad);
+  const ListItem = ({ title, img, sub, tiempo }) => {
+    const reemplazo = useTransform(scrollYProgress, tiempo, [0, 1, -0.6]);
+    const entrada = useTransform(reemplazo, [0, 1], [1000, 0]);
+    const salida = useTransform(reemplazo, [0, 1], [-1000, 0]);
     return (
-      <motion.li className='  mx-auto py-6 w-56 rounded flex flex-col items-center' transition={{ duration: 1 }}>
-        <motion.div>
-          <Image width={100} height={100} src={img} />
-        </motion.div>
-        {title}
+      <motion.li className='absolute  -translate-y-1/2 rounded flex flex-col items-center w-full' style={{ opacity: reemplazo }}>
+        <div className='flex'>
+          <motion.div style={{ translateX: entrada }} className='mb-4 -mt-6'>
+            <Image width={300} height={300} src={img} />
+          </motion.div>
+          <motion.div style={{ translateX: salida }} className='mb-4  -mt-6'>
+            <Image width={300} height={300} src={img} />
+          </motion.div>
+        </div>
+        <p className='mb-4'>{title}</p>
+        <p className='text-gray-400 text-md'>{sub}</p>
       </motion.li>
     );
   };
   return (
     <div className={' h-[200vh] w-full relative flex space-evenly'} ref={ref}>
       <div className=' px-4 h-screen sticky  top-0 z-90 flex flex-col justify-center items-center w-full text-4xl overflow-hidden'>
-        <motion.div className='border rounded w-full py-2 text-center text-2xl' style={{ x: tarjetas }}>VISA MASTERCARD AMERICAN EXPRESS</motion.div>
-        <ul className='flex gap-y-24 flex-col relative w-full text-center'>
-          {/*           <ListItem title='Soporte 24hs' img='/img/soporte.png' ></ListItem> */}
-          <ListItem title='Todos los medios de pago' img='/img/cardd.png'/>
-          {/*          <ListItem title='Siempre online' img='/img/pulse.png' ></ListItem> */}
+        <ul className='flex flex-col w-full relative text-center bg-blue-300'>
+          {items.map((item, i) => {
+            return <ListItem sub={item.description} title={item.title} img={item.img} tiempo={[cantidad[i - 1] ?? 0, cantidad[i], cantidad[i + 1] ?? 1]} />;
+          })}
         </ul>
       </div>
     </div>

@@ -1,19 +1,25 @@
-import Img from "../atoms/Img";
+import Img from '../atoms/Img';
 
 export default function Portfolio() {
-  const Pagina = ({ title, bg }) => {
-    return <div className='cursor-pointer w-full relative aspect-square flex flex-col items-center justify-center'>
-    <Img src={bg} className="hover:contrast-100 contrast-75 aspect-square object-cover absolute w-full h-full z-0"></Img>
-    <p className="z-10 bg-white p-4 text-2xl">{title}</p></div>;
+  const Pagina = ({ title, bg, subtext }) => {
+    return (
+      <div className='border w-full cursor-pointer flex flex-col rounded-xl shadow  items-center justify-end bg-white relative h-96 overflow-hidden hover:translate-y-1'>
+        <div className='absolute h-full w-full from-transparent to-white bg-gradient-to-b via-transparent z-50'></div>
+        <Img src={bg} className='absolute w-full h-full object-cover z-0' />
+        <div className='z-50 pb-6'>
+          <p className='p-2 px-4 w-fit mx-auto rounded-full bg-white shadow mb-2'>{title}</p>
+          <p className='text-black'>{subtext}</p>
+        </div>
+      </div>
+    );
   };
   return (
     <div>
-      <div className='grid sm:grid-cols-2 grid-cols-1 w-full gap-0'>
-        <Pagina bg="pagina1.png" title='Tienda online' />
-        <Pagina bg="pagina2.png" title='E-commerce' />
-        <Pagina bg="pagina3.png" title='Proyecto empresarial' />
-        <Pagina bg="pagina4.png" title='Proyecto personal' /> 
-
+      <div className='w-full p-4 sm:py-48 pb-12 from-transparent bg-gradient-to-b to-red-50 gap-6 grid  grid-cols-1 sm:grid-cols-4'>
+        <Pagina bg='creative.jpg' subtext='Tienda online' title='Android' />
+        <Pagina bg='mockup-templates-to-download-now.png' subtext='Todas tus páginas bien administradas' title='Blog personal' />
+        <Pagina bg='mockup3.jpg' subtext='Interactividad' title='Web App' />
+        <Pagina bg='webapp.jpg' subtext='Gestión absoluta' title='Webmaster' />
       </div>
     </div>
   );

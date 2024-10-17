@@ -14,12 +14,12 @@ export default function Home({ fuente, fuente2, fuente3 }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main className={' relative z-[60] overflow-x-hidden overflow-y-scroll snap-proximity snap-y'}>
-        <div id='home' className='bg-[#312b31] from-red-400 to-[#de1b55] bg-gradient-to-b -mx-1 flex flex-col items-center min-h-[100vh]'>
+        <div id='home' className='bg-[#312b31] from-red-400 to-[#de1b55] -mx-1 flex flex-col items-center min-h-[100vh]'>
           <Nav />
           <div className='flex flex-col gap-y-2 items-center mb-10'>
-            <h1 className='text-4xl sm:text-6xl font-bold text-[cornsilk]'>Soluciones</h1>
-            <h2 className='text-4xl sm:text-6xl font-bold text-white'>Digitales </h2>
-            <h3>& Profesionales</h3>
+            <h1 className='text-5xl sm:text-6xl font-bold text-[#fffd75]'>Soluciones</h1>
+            <h2 className='text-5xl sm:text-6xl font-bold text-white'>Digitales </h2>
+            <h3 className='text-white underline underline-offset-4 font-bold'>PRO</h3>
           </div>
           <WebAppz />
         </div>
@@ -29,7 +29,7 @@ export default function Home({ fuente, fuente2, fuente3 }) {
         <Transform3 />
       </div>
       <div className={' relative flex flex-col z-20 w-full'}>
-        <Why />
+    {/*     <Why /> */}
         <Portfolio />
         <Interactive />
         <Testimonials />
