@@ -9,7 +9,7 @@ export default function Que() {
     setType(value);
   };
   return (
-    <div className='px-4 mt-6'>
+    <div className='px-4 mt-6 mb-10'>
       <h1 className='text-xl'>Simulador</h1>
       <div className='flex flex-col gap-y-2 py-4'>
         <div className='flex gap-x-2'>
