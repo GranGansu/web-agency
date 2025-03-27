@@ -14,7 +14,7 @@ export default function Nav() {
 {/*           <li >
             <Img src='suslabs.png' w='150' h='150' className='w-full'></Img>
           </li> */}
-          <li className='border-4 border-red-300 px-4 p-1 rounded-full whitespace-nowrap'>La duquesa Kong</li>
+          <li className='border-4 border-red-300 px-4 p-1 rounded-full whitespace-nowrap'>Bombita</li>
           {items.map((i, key) => {
             return (
               <motion.li className={`hover:border-yellow-100 ${key===9&&'px-4 p-1 rounded-full border-4 border-red-300'} `} key={key} whileTap={{ scale: 1.1 }}>

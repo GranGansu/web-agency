@@ -7,6 +7,7 @@ module.exports = {
         green: 'url(/img/green.jpg)',
         code: 'url(/img/happy.jpg)',
         cartoon: 'url(/img/cartoon.jpg)',
+        rainbow: 'url(/img/rainbow.png)',
       },
     },
   },

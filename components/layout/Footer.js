@@ -9,15 +9,15 @@ export default function Footer() {
         <Img src={'suslabs.png'} className='sm:pr-10 object-scale-down mb-10'></Img>
 
         <ul className='text-black text-xl leading-relaxed'>
-          <li className='pb-1 mb-1 text-2xl'>Suspenselabs</li>
-          <li className='bg-transparent border-2 shadow border-black rounded-full w-full h-2 mb-2'></li>
+        <li className='mb-1 text-red-100 text-2xl border-2 border-red-100 rounded-full px-4 py-1'>Nosotros</li>
+         {/*  <li className='bg-transparent border-2 shadow border-black rounded-full w-full h-2 mb-2'></li> */}
           <li>Webmaster</li>
           <li>Tarifas</li>
           <li>Contacto</li>
         </ul>
         <ul className='text-black text-xl leading-relaxed'>
-          <li className='pb-1 mb-1 text-2xl'>Servicios</li>
-          <li className='bg-transparent border-2 shadow border-black rounded-full w-full h-2 mb-2'></li>
+          <li className='mb-1 text-red-100 text-2xl border-2 border-red-100 rounded-full px-4 py-1'>Servicios</li>
+          {/* <li className='bg-transparent border-2 shadow border-black rounded-full w-full h-2 mb-2'></li> */}
           <li>App</li>
           <li>Web</li>
           <li>Mantenimiento</li>

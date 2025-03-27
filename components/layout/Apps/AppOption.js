@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 export default function AppOption({ show }) {
   return show && (
     <motion.div className='border-red-300 flex flex-col border-8 justify-between bg-white shadow-xl mx-2 relative rounded-[40px] w-full overflow-hidden p-4 gap-y-4'>
+    aaa
       <motion.div
         transition={{ duration: 0.2 }}
         initial={{ opacity: 0 }}
