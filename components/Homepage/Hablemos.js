@@ -12,7 +12,7 @@ export default function Hablemos() {
         <div className='my-6 flex  gap-4 text-black text-2xl flex-wrap'>
           {social.map((s) => {
             return (
-              <Link href={s.url}>
+              <Link href={s.url} key={s.title}>
                 <div className='p-8 w-fit border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'><s.Icon style={{ fontSize: 'xxx-large' }} className='text-white text-6xl' fontSize='inherit'/></div>
               </Link>
             );

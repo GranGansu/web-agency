@@ -13,7 +13,7 @@ export default function Footer() {
             <li className='mb-2 font-bold text-bg text-xl  border-bg pr-4 py-1'>Nosotros</li>
             {nosotros.map((n) => {
               return (
-                <li className='pl-2'>
+                <li className='pl-2' key={n.title}>
                   <Link href={n.url}>{n.title}</Link>
                 </li>
               );
@@ -29,7 +29,7 @@ export default function Footer() {
         <ul className='text-black shadow-sm border-primary flex-wrap flex justify-center mt-8 gap-6 w-full text-xl leading-relaxed border rounded py-4'>
           {social.map((e) => {
             return (
-              <li className='hover:scale-105 cursor-pointer'>
+              <li key={e.title} className='hover:scale-105 cursor-pointer'>
                 <e.Icon /> <Link href={e.url}>{e.title}</Link>
               </li>
             );
