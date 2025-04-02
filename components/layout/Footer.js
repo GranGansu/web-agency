@@ -1,37 +1,39 @@
+import Link from 'next/link';
 import Img from '../atoms/Img';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-export default function Footer() {
-  return (
-    <footer className='w-full bg-[#f0554b] pb-16 pt-8 px-4 h-[100vh] sm:h-fit'>
-      <div className='flex flex-wrap justify-between py-8 gap-x-6 mx-auto w-fit px-10 rounded-lg bg-cover'>
-        <Img src={'suslabs.png'} className='sm:pr-10 object-scale-down mb-10'></Img>
 
-        <ul className='text-black text-xl leading-relaxed'>
-        <li className='mb-1 text-red-100 text-2xl border-2 border-red-100 rounded-full px-4 py-1'>Nosotros</li>
-         {/*  <li className='bg-transparent border-2 shadow border-black rounded-full w-full h-2 mb-2'></li> */}
-          <li>Webmaster</li>
-          <li>Tarifas</li>
-          <li>Contacto</li>
-        </ul>
-        <ul className='text-black text-xl leading-relaxed'>
-          <li className='mb-1 text-red-100 text-2xl border-2 border-red-100 rounded-full px-4 py-1'>Servicios</li>
-          {/* <li className='bg-transparent border-2 shadow border-black rounded-full w-full h-2 mb-2'></li> */}
-          <li>App</li>
-          <li>Web</li>
-          <li>Mantenimiento</li>
-        </ul>
-        <ul className='text-black flex justify-center mt-8 gap-x-6 w-full text-xl leading-relaxed flex-grow'>
-          <li>
-            <WhatsAppIcon className='hover:scale-105' style={{ fontSize: 50 }} />
-          </li>
-          <li>
-            <MailOutlineIcon className='hover:scale-105' style={{ fontSize: 50 }} />
-          </li>
-          <li>
-            <InstagramIcon className='hover:scale-105' style={{ fontSize: 50 }} />
-          </li>
+import { social, nosotros } from '../config/social';
+export default function Footer() {
+  //bg-[#f0554b]
+  return (
+    <footer className='w-full bg-[#f0554b] pb-24 pt-8 px-4 h-[100vh] sm:h-fit'>
+      <div className='flex flex-wrap justify-between py-8 gap-x-6 mx-auto w-fit sm:px-10 rounded-lg bg-cover'>
+        <Img src={'suslabs.png'} className='sm:pr-10 object-scale-down mb-10'></Img>
+        <div className='flex sm:flex-row flex-col gap-6 bg-white/0 border shadow-sm border-primary rounded p-4 w-full'>
+          <ul className='text-white text-md leading-8'>
+            <li className='mb-2 font-bold text-bg text-xl  border-bg pr-4 py-1'>Nosotros</li>
+            {nosotros.map((n) => {
+              return (
+                <li className='pl-2'>
+                  <Link href={n.url}>{n.title}</Link>
+                </li>
+              );
+            })}
+          </ul>
+          <ul className='text-white text-md leading-8'>
+            <li className='mb-2 font-bold text-bg text-xl border-bg pr-4 py-1'>Servicios</li>
+            <li className='font-thin pl-2'>App</li>
+            <li className='font-thin pl-2'>Web</li>
+            <li className='font-thin pl-2'>Mantenimiento</li>
+          </ul>
+        </div>
+        <ul className='text-black shadow-sm border-primary flex-wrap flex justify-center mt-8 gap-6 w-full text-xl leading-relaxed border rounded py-4'>
+          {social.map((e) => {
+            return (
+              <li className='hover:scale-105 cursor-pointer'>
+                <e.Icon /> <Link href={e.url}>{e.title}</Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </footer>

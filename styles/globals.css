@@ -4,6 +4,23 @@ body {
   margin: 0;
 }
 
+.spin {
+  animation: spin;
+  animation-duration: 2s;
+  transition: all;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+
+  100% {
+    rotate: 360deg
+  }
+}
+
 .landing-parent {
   background: linear-gradient(179deg, black, #ff0000);
 }

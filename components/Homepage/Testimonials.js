@@ -9,6 +9,7 @@ export default function Testimonials({ className }) {
   const ref = useRef();
   let total = 0;
   const [estado, setEstado] = useState(null);
+  const [hover, setHover] = useState(null);
   const opinions = [
     { name: 'James', star: 5.0, img: 'profile9', message: 'Buena web' },
     { name: 'Amy', star: 5.0, img: 'profile8', message: 'Grandioso trabajo' },
@@ -39,16 +40,23 @@ export default function Testimonials({ className }) {
           </div>
           <div ref={ref} className=' px-6 max-w-5xl flex gap-6 overflow-x-scroll py-10 snap-mandatory snap-x'>
             {opinions.map((op, key) => {
+              const active = key===hover
               total += op.star;
               return (
                 <div
+                  onMouseOver={() => {
+                    setHover(key);
+                  }}
+                  onMouseLeave={() => {
+                    setHover(null);
+                  }}
                   key={key}
                   onClick={() => {
                     setEstado((prev) => {
                       return prev === key ? null : key;
                     });
                   }}
-                  className={`bg-white text-black relative   snap-center snap-normal p-4 px-8 rounded-xl  flex-col flex justify-evenly flex-shrink-0 items-center overflow-hidden col-span-2 w-72 sm:col-span-1 hover:cursor-pointer shadow-md min-h-[400px] hover:-translate-y-1 ${
+                  className={`bg-white text-black relative   snap-center snap-normal p-4 px-8 rounded-xl  flex-col flex justify-evenly flex-shrink-0 items-center overflow-hidden col-span-2 w-72 sm:col-span-1 cursor-pointer shadow-md min-h-[400px] ${
                     key === 9 && ' sm:col-span-2 sm:border-1 sm:border-yellow-300 items-center'
                   }${key === 9 && ' sm:col-span-1 col-span-2 border-2 border-yellow-300 sm:border text-center items-center'}`}>
                   {estado !== key ? (
@@ -56,18 +64,15 @@ export default function Testimonials({ className }) {
                       <div className='absolute w-full opacity-90 h-1/3  right-0 bottom-0 rounded-xl bg-code bg-cover hidden'>
                         <div className='absolute w-full h-full from-white via-white rounded-xl z-0 to-transparent bg-gradient-to-br'></div>
                       </div>
-                      <div className='flex text-xl self-start align-center items-center gap-x-1 z-10 text-yellow-400 font-bold border-blue-200 p-1  px-2  '>
+                      <div className='flex text-xl self-start align-center items-center gap-x-1 z-10 text-accent font-bold border-blue-200 p-1  px-2  '>
                         {op.star.toString().length > 1 ? op.star : op.star + '.0'}
-                        <StarIcon className='text-yellow-400'></StarIcon>
+                        <StarIcon className='text-accent'></StarIcon>
                       </div>
-                      <div className='border-4 p-1 shadow bg-white rounded-full w-fit mb-2'>
-                        <Img className='w-36 z-10 rounded-full' src={`${op.img}.jpg`}></Img>
+                      <div className={`border-4 p-1 shadow bg-white rounded-full w-fit mb-2 transition-all ${active&&'border-primary'}`}>
+                        <Img className={`w-36 z-10 transition-all rounded-full ${active && 'scale-105'}`} src={`${op.img}.jpg`}></Img>
                       </div>
                       <p className='font-bold z-10 text-xl'>{op.name}</p>
                       <p className='z-10 text-gray-500 text-center'>&ldquo;{op.message}&rdquo;</p>
-{/*                       <button className='z-10 border-blue-200 border-b p-2 px-4 font-bold mt-4 text-sm text-center bg-white hover:cursor-pointer hover:border-blue-300 '>
-                        Ver trabajo
-                      </button> */}
                     </>
                   ) : (
                     <div className='absolute w-full h-full'>

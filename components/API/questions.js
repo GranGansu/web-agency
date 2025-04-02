@@ -1,6 +1,6 @@
 export const questions = [
   {
-    pregunta: 'Tu web será un blog, una tienda, o una página de empresa',
+    pregunta: 'Qué buscas',
     respuestas: [
       ['Web', 1],
       ['Blog', 2],

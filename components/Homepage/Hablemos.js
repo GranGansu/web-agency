@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { social } from '../config/social';
+import Link from 'next/link';
+
 export default function Hablemos() {
   return (
     <div className='bg-yellow-200 min-h-[40vh] py-10 flex items-center justify-center h-screen relative shadow-md overflow-x-hidden'>
@@ -10,23 +10,17 @@ export default function Hablemos() {
           <h3 className='text-5xl font-bold'>Hablemos, es gratis</h3>
         </a>
         <div className='my-6 flex  gap-4 text-black text-2xl flex-wrap'>
-          <a href='https://wa.me/34656828317'>
+          {social.map((s) => {
+            return (
+              <Link href={s.url}>
+                <div className='p-8 w-fit border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'><s.Icon style={{ fontSize: 'xxx-large' }} className='text-white text-6xl' fontSize='inherit'/></div>
+              </Link>
+            );
+          })}
+          {/*           <a href='https://wa.me/34656828317'>
             <p className='p-8 w-fit border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'>
-              <WhatsAppIcon style={{fontSize:'xxx-large'}} className='text-white text-6xl' fontSize='inherit'></WhatsAppIcon>
+              <WhatsAppIcon style={{ fontSize: 'xxx-large' }} className='text-white text-6xl' fontSize='inherit'></WhatsAppIcon>
             </p>
-          </a>
-          <a href='https://wa.me/34656828317'>
-            <p className='p-6 w-fit border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'>
-              <TwitterIcon style={{fontSize:'xxx-large'}} className='text-white text-6xl' fontSize='inherit'></TwitterIcon>
-            </p>
-          </a>
-          <a href='https://wa.me/34656828317'>
-            <p className='p-4  border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'>
-              <MailOutlineIcon style={{fontSize:'xxx-large'}} className='text-white text-6xl' fontSize='inherit'></MailOutlineIcon>
-            </p>
-          </a>
-          {/*           <a className='text-white text-sm hover:scale-105 hover:cursor-pointer mt-2'>
-            <MailOutlineIcon></MailOutlineIcon> e-mail
           </a> */}
         </div>
         <ul className=' leading-relaxed text-gray-200 text-center text-lg hidden'>
