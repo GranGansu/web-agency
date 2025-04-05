@@ -28,19 +28,19 @@ export default function Testimonials({ className }) {
         <div className='h-1 bg-red-100 w-[20vw]   z-0 mt-10 rounded-full'></div>
         <div className='h-1 bg-red-100 w-[5vw]   z-0 mt-10 rounded-full'></div>
       </div>
-      <h2 className='text-3xl max-w-5xl font-bold w-fit text-white ml-4 sm:ml-0'>Qué opinan nuestros clientes</h2>
+      <h2 className='text-3xl max-w-5xl font-bold w-fit pl-2 text-white ml-4 sm:ml-0'>Qué opinan nuestros clientes</h2>
       <div className='relative max-w-full'>
         <div className='flex items-center gap-x-2'>
           <div
             onClick={() => {
               ref.current.scrollBy(-5, 0);
             }}
-            className='hover:bg-white p-2 hover:cursor-pointer rounded-full items-center justify-center hover:scale-105 hidden sm:flex'>
-            <ArrowBackIosIcon></ArrowBackIosIcon>
+            className='hover:border-accent hover:text-accent border-4 border-transparent p-2 hover:cursor-pointer rounded-full items-center justify-center hover:scale-105 hidden sm:flex'>
+            <ArrowBackIosIcon className='relative left-1' />
           </div>
           <div ref={ref} className=' px-6 max-w-5xl flex gap-6 overflow-x-scroll py-10 snap-mandatory snap-x'>
             {opinions.map((op, key) => {
-              const active = key===hover
+              const active = key === hover;
               total += op.star;
               return (
                 <div
@@ -64,11 +64,11 @@ export default function Testimonials({ className }) {
                       <div className='absolute w-full opacity-90 h-1/3  right-0 bottom-0 rounded-xl bg-code bg-cover hidden'>
                         <div className='absolute w-full h-full from-white via-white rounded-xl z-0 to-transparent bg-gradient-to-br'></div>
                       </div>
-                      <div className='flex text-xl self-start align-center items-center gap-x-1 z-10 text-accent font-bold border-blue-200 p-1  px-2  '>
+                      <div className='flex text-xl self-start align-center items-center gap-x-1 z-10 text-primary font-bold border-blue-200 p-1  px-2  '>
                         {op.star.toString().length > 1 ? op.star : op.star + '.0'}
-                        <StarIcon className='text-accent'></StarIcon>
+                        <StarIcon className='text-primary'></StarIcon>
                       </div>
-                      <div className={`border-4 p-1 shadow bg-white rounded-full w-fit mb-2 transition-all ${active&&'border-primary'}`}>
+                      <div className={`border-4 p-1 shadow bg-white rounded-full w-fit mb-2 transition-all ${active && 'border-primary'}`}>
                         <Img className={`w-36 z-10 transition-all rounded-full ${active && 'scale-105'}`} src={`${op.img}.jpg`}></Img>
                       </div>
                       <p className='font-bold z-10 text-xl'>{op.name}</p>
@@ -87,7 +87,7 @@ export default function Testimonials({ className }) {
             onClick={() => {
               ref.current.scrollBy(5, 0);
             }}
-            className='hover:bg-white p-2 rounded-full hover:cursor-pointer hidden sm:flex items-center justify-center hover:scale-105'>
+            className='hover:border-accent hover:text-accent border-4 border-transparent p-2 hover:cursor-pointer rounded-full items-center justify-center hover:scale-105 hidden sm:flex'>
             <ArrowForwardIosIcon />
           </div>
         </div>

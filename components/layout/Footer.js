@@ -8,25 +8,25 @@ export default function Footer() {
     <footer className='w-full bg-[#f0554b] pb-24 pt-8 px-4 h-[100vh] sm:h-fit'>
       <div className='flex flex-wrap justify-between py-8 gap-x-6 mx-auto w-fit sm:px-10 rounded-lg bg-cover'>
         <Img src={'suslabs.png'} className='sm:pr-10 object-scale-down mb-10'></Img>
-        <div className='flex sm:flex-row flex-col gap-6 bg-white/0 border shadow-sm border-primary rounded p-4 w-full'>
+        <div className='flex sm:flex-row flex-col gap-12 bg-white/0 border-primary rounded p-4'>
           <ul className='text-white text-md leading-8'>
-            <li className='mb-2 font-bold text-bg text-xl  border-bg pr-4 py-1'>Nosotros</li>
+            <li className='mb-2 text-white text-xl  border-bg pr-4 py-1'>Nosotros</li>
             {nosotros.map((n) => {
               return (
-                <li className='pl-2' key={n.title}>
+                <li key={n.title}>
                   <Link href={n.url}>{n.title}</Link>
                 </li>
               );
             })}
           </ul>
           <ul className='text-white text-md leading-8'>
-            <li className='mb-2 font-bold text-bg text-xl border-bg pr-4 py-1'>Servicios</li>
-            <li className='font-thin pl-2'>App</li>
-            <li className='font-thin pl-2'>Web</li>
-            <li className='font-thin pl-2'>Mantenimiento</li>
+            <li className='mb-2  text-white text-xl  pr-4 py-1'>Servicios</li>
+            <li className='font-thin'>App</li>
+            <li className='font-thin'>Web</li>
+            <li className='font-thin'>Mantenimiento</li>
           </ul>
         </div>
-        <ul className='text-black shadow-sm border-primary flex-wrap flex justify-center mt-8 gap-6 w-full text-xl leading-relaxed border rounded py-4'>
+        <ul className='text-black border-primary flex-wrap flex justify-center mt-8 gap-6 w-full text-xl leading-relaxed  rounded py-4'>
           {social.map((e) => {
             return (
               <li key={e.title} className='hover:scale-105 cursor-pointer'>

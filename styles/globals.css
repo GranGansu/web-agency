@@ -21,17 +21,17 @@ body {
   }
 }
 
-.landing-parent {
-  background: linear-gradient(179deg, black, #ff0000);
-}
+/* .landing-parent {
+  background: linear-gradient(179deg, black, #503d3d);
+} */
 
 .landing-page {
   height: 100vh;
-  background-color: linear-gradient(rgba(207, 22, 22, 0.1) 1px, red 1px);
-  background-image: linear-gradient(rgba(255, 0, 0, 0.1) 1px, transparent 1px),
+/*   background-color: linear-gradient(rgba(207, 22, 22, 0.1) 1px, red 1px); */
+  background-image: linear-gradient(rgba(255, 0, 0, 0.1) -1px, transparent -1px),
     /* línea */
-    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(90deg, red -8px, transparent 1px);
+  background-size: 80px 80px;
   /* Grid cell size */
 }
 

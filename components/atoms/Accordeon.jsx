@@ -4,6 +4,7 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import { styled } from '@mui/material/styles';
 import React from 'react';
 import { motion } from 'framer-motion';
+import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 export default function Accordeon(props) {
   const Acc = styled(Accordion)(() => ({
     margin: '0px !important',
@@ -23,8 +24,8 @@ export default function Accordeon(props) {
   return (
     <Acc {...props}>
       <AccordionSummary className=''>
-        <div className='max-w-2xl text-center m-auto '>
-          <b className='text-2xl'>{props.title}</b>
+        <div className='max-w-2xl text-left '>
+          <b className='sm:text-2xl text-xl font-thin text-left'>{props.title} <ArrowDropDownIcon/></b>
         </div>
       </AccordionSummary>
       <Accc className='text-xl max-w-2xl m-auto border-0'>{props.children}</Accc>

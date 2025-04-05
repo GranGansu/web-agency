@@ -3,7 +3,7 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import { useState } from 'react';
 import { questions } from '../API/questions';
 import CheckIcon from '@mui/icons-material/Check';
-
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 function Respuestas({ respuestas }) {
   return (
     <div className='text-black'>
@@ -20,7 +20,7 @@ function Respuestas({ respuestas }) {
     </div>
   );
 }
-export default function Interactive({full}) {
+export default function Interactive({ full }) {
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   const y2 = useTransform(scrollYProgress, [0, 1], ['0%', '90%']);
@@ -30,26 +30,31 @@ export default function Interactive({full}) {
     console.log(y);
   };
   return (
-    <div className={`from-white to-transparent bg-gradient-to-br ${full?'h-[100vh]':'rounded-xl'} overflow-hidden  relative flex-col flex justify-center items-center text-black`} id='tarifas'>
+    <div
+      className={`from-white to-transparent bg-gdradient-to-br ${full ? 'h-[100vh] ' : 'rounfded-xl mt-8'} overflow-hidden  relative flex-col flex justify-center items-center text-black`}
+      id='tarifas'>
       <div className='flex w-full h-full rounded-lg flex-col sm:flex-row'>
         <div className='z-10 py-10  px-6 sm:px-10 w-full  flex flex-col justify-center from-gray-200 items-center to-white  via-white  border-white/50 '>
           <div className='sm:max-w-xl'>
             <div className='w-full flex py-2 mb-2 text-xl items-center text-black'>
-              <h1 className='text-3xl sm:text-4xl'>Presupuesto en <span className='text-primary'>30</span> segundos</h1>
+              <h1 className='text-3xl sm:text-4xl opacity-60'>
+                Presupuesto en <span className='text-primary'>30</span> segundos
+              </h1>
             </div>
+            <hr className='my-4 border-gray-50'></hr>
             <div className='relative w-full flex  items-center'>
               {questions.map((q, key) => {
                 return (
                   paso.current === key && (
                     <div className=' w-full' key={key}>
-                      <h2 className='text-2xl  mb-6'>¿{q.pregunta}?</h2>
+                      <h2 className='text-2xl  mb-6'><AutoAwesomeIcon className='text-primary'/> ¿{q.pregunta}?</h2>
                       <div>
                         <ul className='flex flex-col justify-between gap-x-2'>
                           {q.respuestas.map((question, key) => {
                             return (
                               <motion.button
                                 key={key}
-                                className='rounded-md p-4 mb-4 box-content grow bg-white shadow-sm border-gray-200 border hover:border-accent'
+                                className='rounded-full p-4 mb-4 grow bg-white border-4  hover:border-accent'
                                 onClick={() => {
                                   setPaso((prev) => {
                                     prev.respuestas.push(question);
@@ -60,6 +65,9 @@ export default function Interactive({full}) {
                               </motion.button>
                             );
                           })}
+                          {q.respuestas.length < 3 && (
+                            <button className='p-4 mb-4  border-gray-200 border-4  invisible'>refill</button>
+                          )}
                         </ul>
                       </div>
                     </div>
@@ -68,7 +76,7 @@ export default function Interactive({full}) {
               })}
 
               {paso.current === -1 && (
-                <div className='flex flex-col gap-y-2 w-full border-b border-gray-400 mb-4'>
+                <div className='flex flex-col gap-y-2 w-full border-gray-400 mb-4'>
                   <Respuestas respuestas={paso.respuestas}></Respuestas>
                   <form className='flex items-stretch flex-col box-border'>
                     <label className='py-2'>Introduce tu e-mail</label>
@@ -80,7 +88,7 @@ export default function Interactive({full}) {
                 </div>
               )}
             </div>
-            <button className='text-sm rounded-full p-4 shadow bg-transparent bg-gray-100 mt-2 flex items-center justify-center gap-x-1' onClick={handleReset}>
+            <button className='text-sm rounded-full px-4 py-2 border mt-2 flex items-center justify-center gap-x-1' onClick={handleReset}>
               <RestartAltIcon className='text-red-300'></RestartAltIcon>
               Reiniciar cuestionario
             </button>

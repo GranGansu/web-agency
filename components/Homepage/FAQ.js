@@ -12,7 +12,7 @@ export default function FAQ() {
             <thead>
               <tr className='border-b '>
                 <th className='pr-8 pl-2'>Servicio</th>
-                  <th className='pr-8 text-center'>Incluido</th>
+                <th className='pr-8 text-center'>Incluido</th>
               </tr>
             </thead>
             <tbody>
@@ -71,7 +71,7 @@ export default function FAQ() {
     { p: '¿Cuánto cuesta mantenerla?', r: 'todo' },
   ];
   return (
-    <div>
+    <div id='preguntas'>
       {preguntas.map((p, key) => {
         return (
           <Accordeon
@@ -81,7 +81,7 @@ export default function FAQ() {
             }}
             expanded={expand === key}
             title={p.p}>
-            <div className='text-center flex items-center justify-center border-t pt-6 border-yellow-400'>{p.r}</div>
+            <div className='flex items-center pt-6 border-yellow-400'>{p.r}</div>
           </Accordeon>
         );
       })}

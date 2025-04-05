@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import FullURL from '../../atoms/FullURL';
 import { Refresh } from '@mui/icons-material';
+import Absolute from '../../atoms/Absolute';
 
 export default function WebOption() {
   const [visible, setVisible] = useState(false);
@@ -11,15 +12,16 @@ export default function WebOption() {
   useEffect(() => {
     visible &&
       setImage((prev) => {
-        return prev < 3 ? prev + 1 : 1;
+        return prev < 4 ? prev + 1 : 1;
       });
   }, [visible]);
   return (
     <motion.div
-      className={`shadow-white/70 border-red-100  bg-gradient-to-br from-slate-400 to-red-400 
-    sm:rounded-[20px] w-full overflow-hidden p-8 sm:px-16 gap-y-4 relative`}>
-      {visible && <FullURL setVisible={setVisible} setURL={setURL} defaultURL={url} />}
-      <div className='p-8 bg-white rounded-[20px] w-full flex flex-col justify-between gap-y-4 shadow-xl'>
+      //style={{ background: 'radial-gradient(circle, #00000054, black,#3367ffb3,transparent,transparent, transparent)' }}
+      className={`shadow-white/70 border-red-100  bg-gradiendt-to-b from-transparent via-red-400/60 to-transparent 
+    sm:rounded-[0px] w-full overflow-hidden p-8 sm:px-16 gap-y-4 relative`}>
+      <Absolute className='p-2'>
+      <div className='z-10 right-0 relative p-8 bg-white rounded-[20px] w-56 flex flex-col justify-between gap-y-4 shadow-xl'>
         <motion.div
           id='clickableURL'
           transition={{ duration: 0.2 }}
@@ -35,7 +37,7 @@ export default function WebOption() {
           transition={{ duration: 0.2, delay: 0.1 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className='relative z-50 text-black w-full bg-gray-100 rounded-xl border-4 border-red-200 p-4'>
+          className='relative z-50 text-black w-full bg-gray-100 rounded-xl border-4 border-primary p-4'>
           {visible && (
             <div className='bg-red-100 w-full h-full top-0 left-0 absolute rounded-xl'>
               <Refresh className='w-full h-full spin opacity-50' />
@@ -44,7 +46,38 @@ export default function WebOption() {
           <Image alt='nike shoes' src={`/img/item${image}.png`} width={150} height={150} className='w-full' />
         </motion.div>
         <motion.div transition={{ duration: 1, delay: 0.2 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='text-black w-full'>
-          <div className='text-gray-600 w-full rounded-full shadow p-4 text-center text-xl hover:shadow-xl cursor-pointer'>BUY</div>
+          <div className='text-gray-600 w-full rounded-full shadow p-4 text-center text-xl hover:shadow-xl cursor-pointer'>Comprar</div>
+        </motion.div>
+      </div>
+{/*         <div className='translate-y-[15%] border-8 border-primary rounded-full z-0 shadow w-full h-[75%] aspect-square  bg-fgradient-to-b from-transparent via-red-400/60 to-transparent'></div> */}
+      </Absolute>
+      {visible && <FullURL setVisible={setVisible} setURL={setURL} defaultURL={url} />}
+      <div className='z-10 relative p-8 bg-white rounded-[20px] w-full flex flex-col justify-between gap-y-4 shadow-xl'>
+        <motion.div
+          id='clickableURL'
+          transition={{ duration: 0.2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className='text-gray-600 w-full rounded-full shadow p-4'
+          onClick={() => {
+            setVisible(true);
+          }}>
+          <span className='text-gray-400'>https://</span>www.{url.toLowerCase()}.com
+        </motion.div>
+        <motion.div
+          transition={{ duration: 0.2, delay: 0.1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className='relative z-50 text-black w-full bg-gray-100 rounded-xl border-4 border-primary p-4'>
+          {visible && (
+            <div className='bg-red-100 w-full h-full top-0 left-0 absolute rounded-xl'>
+              <Refresh className='w-full h-full spin opacity-50' />
+            </div>
+          )}
+          <Image alt='nike shoes' src={`/img/item${image}.png`} width={150} height={150} className='w-full' />
+        </motion.div>
+        <motion.div transition={{ duration: 1, delay: 0.2 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='text-black w-full'>
+          <div className='text-gray-600 w-full rounded-full shadow p-4 text-center text-xl hover:shadow-xl cursor-pointer'>Comprar</div>
         </motion.div>
       </div>
     </motion.div>

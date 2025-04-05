@@ -4,7 +4,7 @@ export const questions = [
     respuestas: [
       ['Web', 1],
       ['Blog', 2],
-      ['Empresa', 3],
+      ['E-commerce', 3],
     ],
   },
   {
