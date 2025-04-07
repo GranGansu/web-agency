@@ -65,7 +65,7 @@ export default function FAQ() {
         </table>
       ),
     },
-    { p: '¿Puedo editarla?', r: 'Puedes editar el contenido. Todos los cambios al funcionamiento de la web, o estéticos, los haremos nosotros.' },
+    { p: '¿Puedo editarla por mi cuenta?', r: 'Tienes acceso al 100% de la web.' },
     { p: '¿Qué gastos mensuales?', r: 'Desde 10€/mes' },
     { p: '¿Qué es esto?', r: 'Todo y más' },
     { p: '¿Cuánto cuesta mantenerla?', r: 'todo' },
@@ -81,7 +81,7 @@ export default function FAQ() {
             }}
             expanded={expand === key}
             title={p.p}>
-            <div className='flex items-center pt-6 border-yellow-400'>{p.r}</div>
+            <div className='flex pt-6 border-yellow-400'>{p.r}</div>
           </Accordeon>
         );
       })}

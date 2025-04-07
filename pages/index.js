@@ -5,6 +5,7 @@ import Why from '../components/Why';
 import VolverButton from '../components/atoms/Volver';
 import Main from '../components/Homepage/Main';
 import Premium from '../components/Homepage/Premium';
+import Comission from '../components/Homepage/Comission';
 
 export default function Home({ fuente, fuente2, fuente3 }) {
   return (
@@ -17,14 +18,15 @@ export default function Home({ fuente, fuente2, fuente3 }) {
       <Main />
       <VolverButton />
       <div className='relative flex flex-col z-[61] w-full'>
-    {/*     <Portfolio /> */}
+        <Comission title='0%' sub='Comisiones por venta' />
+        <Comission title='Meta' sub='Tecnologías avaladas' />
         <Premium />
         <FAQ />
         <Testimonials />
         <Hablemos />
         <Why />
       </div>
-      <Footer />
+      {/*       <Footer /> */}
     </div>
   );
 }
