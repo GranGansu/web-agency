@@ -19,7 +19,7 @@ export default function Testimonials({ className }) {
     { name: 'Matías', star: 4.8, img: 'profile6', message: 'Grandioso trabajo' },
   ];
   return (
-    <div className={className + ' w-screen mx-auto py-20 flex flex-col sm:items-center  from-red-500 to-red-300 bg-[#f0554b] bg-gradient-to-rm'}>
+    <div className={className + ' w-screen mx-auto py-20 flex flex-col sm:items-center  bg-primary'}>
       <div className=' opacity-0 sm:opacity-30 absolute rotate-6 -left-4'>
         <div className='h-1 bg-red-100 w-[10vw]  z-0 mt-10 rounded-full'></div>
         <div className='h-1 bg-red-100 w-[20vw]   z-0 mt-10 rounded-full'></div>

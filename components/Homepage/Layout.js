@@ -6,7 +6,7 @@ export default function Layout({ children, fuente }) {
     <div className={`${fuente}`}>
 {/*       <Nav /> */}
       {children}
-      <Footer />
+      <Footer  />
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { Hablemos, Portfolio, Testimonials, FAQ } from '../components/Homepage';
-import { Footer } from '../components/layout';
 import Why from '../components/Why';
 import VolverButton from '../components/atoms/Volver';
 import Main from '../components/Homepage/Main';
@@ -26,7 +25,6 @@ export default function Home({ fuente, fuente2, fuente3 }) {
         <Hablemos />
         <Why />
       </div>
-      {/*       <Footer /> */}
     </div>
   );
 }

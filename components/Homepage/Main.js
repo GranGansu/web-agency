@@ -10,7 +10,7 @@ export default function Main() {
           <div className='landing-page absolute w-full h-full'></div>
         </div>
         <Nav />
-        <div className='text-black flex flex-col gap-y-2 items-center sm:mb-8 relative z-50'>
+        <div className='text-black flex flex-col gap-y-2 items-center sm:mb-8 relative z-50 mt-8'>
           <h1 className='text-5xl sm:text-6xl font-bold text-primary'>
             Soluciones <Fingerprint className='transition-all hover:text-red-500 duration-500' fontSize='large' />
           </h1>

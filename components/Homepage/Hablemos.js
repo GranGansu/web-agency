@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Hablemos() {
   return (
-    <div className='bg-yellow-200 min-h-[40vh] py-10 flex items-center justify-center h-screen relative shadow-md overflow-x-hidden'>
+    <div className='bg-primary min-h-[40vh] py-10 flex items-center justify-center h-screen relative shadow-md overflow-x-hidden'>
       <div className='m-auto max-w-6xl p-4 z-20 text-white flex flex-col justify-center items-center'>
         <a id='hablemos'>
           <h3 className='text-5xl font-bold'>Hablemos, es gratis</h3>
@@ -13,7 +13,7 @@ export default function Hablemos() {
           {social.map((s) => {
             return (
               <Link href={s.url} key={s.title}>
-                <div className='p-8 w-fit border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'><s.Icon style={{ fontSize: 'xxx-large' }} className='text-white text-6xl' fontSize='inherit'/></div>
+                <div className='p-8 w-fit border-4 bg-primary/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'><s.Icon style={{ fontSize: 'xxx-large' }} className='text-white text-6xl' fontSize='inherit'/></div>
               </Link>
             );
           })}
@@ -34,7 +34,7 @@ export default function Hablemos() {
           <li>¿No sabes por dónde empezar? </li>
         </ul>
       </div>
-      <div className='bg-red-500 w-full h-full absolute z-10 opacity-90'></div>
+      <div className='bg-primary w-full h-full absolute z-10 opacity-90'></div>
       <Image alt='' className='absolute h-full w-full object-fit z-0 border opacity-90' width='1000' height='1000' src={'/img/dialog.svg'}></Image>
     </div>
   );

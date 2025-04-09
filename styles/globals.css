@@ -11,6 +11,28 @@ body {
   animation-iteration-count: infinite;
 }
 
+.rotate-hue {
+  animation: hue;
+  animation-duration: 2s;
+  transition: all;
+  transition-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg);
+    zoom: 10%;
+  }
+
+  100% {
+    filter: hue-rotate(80deg);
+    zoom: 20%;
+
+  }
+}
+
 @keyframes spin {
   0% {
     rotate: 0deg;
@@ -27,7 +49,7 @@ body {
 
 .landing-page {
   height: 100vh;
-/*   background-color: linear-gradient(rgba(207, 22, 22, 0.1) 1px, red 1px); */
+  /*   background-color: linear-gradient(rgba(207, 22, 22, 0.1) 1px, red 1px); */
   background-image: linear-gradient(rgba(255, 0, 0, 0.1) -1px, transparent -1px),
     /* línea */
     linear-gradient(90deg, red -8px, transparent 1px);

@@ -53,7 +53,7 @@ export default function WebOption({ full }) {
           {/*         <div className='translate-y-[15%] border-8 border-primary rounded-full z-0 shadow w-full h-[75%] aspect-square  bg-fgradient-to-b from-transparent via-red-400/60 to-transparent'></div> */}
         </Absolute>
       )}
-      {visible && <FullURL setVisible={setVisible} setURL={setURL} defaultURL={url} />}
+{/*       {visible && <FullURL setVisible={setVisible} setURL={setURL} defaultURL={url} />} */}
       <div className='z-10 relative p-8 bg-white border border-gray-100 rounded-[20px] w-full flex flex-col justify-between gap-y-4 shadow-xl'>
         <motion.div
           id='clickableURL'
@@ -62,7 +62,7 @@ export default function WebOption({ full }) {
           animate={{ opacity: 1 }}
           className='text-gray-600 w-full rounded-full shadow p-4'
           onClick={() => {
-            setVisible(true);
+            //setVisible(true);
           }}>
           <span className='text-gray-400'>https://</span>www.{url.toLowerCase()}.com
         </motion.div>

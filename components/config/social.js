@@ -12,3 +12,8 @@ export const nosotros = [
   { url: '/tarifas', title: 'Tarifas', Icon: WhatsAppIcon },
   { url: '/contacto', title: 'Contacto', Icon: MailOutlineIcon },
 ];
+export const servicios = [
+  { url: '/webmaster', title: 'Ecommerce' },
+  { url: '/tarifas', title: 'Web Empresa' },
+  { url: '/contacto', title: 'Web Personal' },
+];

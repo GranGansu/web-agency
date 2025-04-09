@@ -7,7 +7,7 @@ const poppins = Poppins({ preload: true, subsets: ['latin'], weight: '400' });
 const poiret = Lexend_Deca({ preload: true, subsets: ['latin'], weight: '400' });
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout fuente={rubik.className}>
+    <Layout fuente={poiret.className}>
       <Component {...pageProps} fuente={rubik.className} fuente2={poppins.className} fuente3={poiret.className} />
     </Layout>
   );

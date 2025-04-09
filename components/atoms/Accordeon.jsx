@@ -14,6 +14,9 @@ export default function Accordeon(props) {
     borderTop: 0,
     boxShadow: 'none',
     borderBottom: 0,
+    '@media (max-width:768px)': {
+      padding: '10px 5px',
+    },
     '&:hover': { cursor: 'pointer', background: 'rgb(254 240 138)' },
     background: props.expanded ? 'rgb(254 240 138)' : '',
     '&:nth-of-type(1)': {
@@ -26,7 +29,7 @@ export default function Accordeon(props) {
     <Acc {...props}>
       <AccordionSummary className=' h-16'>
         <div className='max-w-2xl text-left '>
-          <b className={`sm:text-2xl text-xl font-thin text-left ${props.expanded&&'text-black/60'}`}>
+          <b className={`sm:text-2xl text-xl font-thin text-left ${props.expanded && 'text-black/60'}`}>
             {props.title} {!props.expanded && <ArrowDropDownIcon />}
           </b>
         </div>
