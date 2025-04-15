@@ -18,6 +18,7 @@ module.exports = {
         code: 'url(/img/happy.jpg)',
         cartoon: 'url(/img/cartoon.jpg)',
         rainbow: 'url(/img/rainbow.png)',
+        speed: 'url(/img/speed.jpg)',
       },
     },
   },

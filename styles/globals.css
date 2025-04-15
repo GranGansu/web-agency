@@ -4,11 +4,15 @@ body {
   margin: 0;
 }
 
+.sticky {
+  position: sticky;
+}
+
 .spin {
   animation: spin;
-  animation-duration: 2s;
+  animation-duration: 1s;
   transition: all;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
 
 .rotate-hue {
@@ -36,9 +40,11 @@ body {
 @keyframes spin {
   0% {
     rotate: 0deg;
+    filter: blur(2);
   }
 
   100% {
+    filter: blur(0);
     rotate: 360deg
   }
 }

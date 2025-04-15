@@ -24,15 +24,23 @@ export const Pagina = ({ title, bg, subtext }) => {
   );
 };
 
-export const PaginaFull = ({ title, bg, url, subtext }) => {
+export const PaginaFull = ({ title, bg, url, subtext, className }) => {
   return (
-    <div className='w-full gap-y-6 flex flex-col' id={url}>
-      <div className=' w-full cursor-pointer flex flex-col rounded-xl  justify-center items-left bg-white relative box-border overflow-hidden '>
-        <Img src={bg} className='rounded-xl  absolute w-full h-full object-cover z-0 rotate-hue' />
-        <div className='z-50 py-4 rounded from-black/40 to-transparent bg-gradient-to-r'>
-          {/* <p className='p-2 px-8 w-fit text-2xl rounded-r-full bg-white shadow mb-2'>{subtext}</p> */}
-          <p className='text-white text-4xl px-8'>{title}</p>
-          <p className='text-white px-8'>{subtext}</p>
+    <div className={`w-full gap-y-6 flex flex-col ${className}`} id={url}>
+      <div
+        className={`w-full cursor-pointer flex flex-col rounded-xl justify-center items-left relative box-border overflow-hidden border-2 text-black shadow py-12 bg-secondary/10`}>
+        <div className='z-50 py-4 rounded '>
+          {/* <p className='p-2 px-8 w-fit text-white text-2xl rounded-r-full bg-black shadow-xl mb-4'>{title}</p> */}
+          <p className=' mx-4 py-2 mb-4 text-4xl px-8 border-4 border-accent rounded-full w-fit'>{title}</p>
+          <ul className=' text-2xl px-8'>
+            {subtext.map((sub, i) => {
+              return (
+                <li className={`${i == 1 && 'text-slate-500'}`} key={sub}>
+                  {sub}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </div>
