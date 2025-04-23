@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { social, nosotros, servicios } from '../lib/social';
-/* import { Fingerprint } from '@mui/icons-material'; */
 import Image from 'next/image';
 import Absolute from '../atoms/Absolute';
 import Skewed from '../atoms/Skewed';

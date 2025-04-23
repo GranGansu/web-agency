@@ -1,9 +1,6 @@
 'use client';
 import { useRef, useState } from 'react';
 import Img from '../atoms/Img';
-/* import StarIcon from '@mui/icons-material/Star'; */
-/* import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'; */
-/* import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'; */
 import { motion } from 'framer-motion';
 
 export default function Testimonials({ className }) {

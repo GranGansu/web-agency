@@ -1,13 +1,10 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { Pagina, PaginaFull } from '../components/Homepage/Portfolio';
 import CMSection from '../components/atoms/CMSection';
-/* import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import OfflineBoltIcon from '@mui/icons-material/OfflineBolt'; */
 export const metadata = {
   title: 'Headless CMS - Prestashop Ecommerce',
   description: 'Creación páginas web',
-}
+};
 export default function Prestashop() {
   return (
     <div>
@@ -45,8 +42,8 @@ export default function Prestashop() {
 
         <div className=' px-4 sm:px-8 gap-20 flex flex-col'>
           <div className='grid sm:grid-cols-2 gap-8'>
-            <PaginaFull bg='speed.jpg' title='+ Velocidad' subtext={['10x más rápido que Wordpress', 'Score de 100 en Google']} url='velocidad' />
-            <PaginaFull bg='speed.jpg' title='- Límites' subtext={['Sin comisiones', 'Sin límite de usuarios']} url='limites' />
+            <PaginaFull bg='speed.jpg' title='+ Velocidad' subtext={['5x más rápido que Wordpress', 'Score +90 en Google Lighthouse']} url='velocidad' />
+            <PaginaFull bg='speed.jpg' title='- Límites' subtext={['Sin comisiones', 'Sin límite de usuarios', 'Sin límite de productos']} url='limites' />
             <PaginaFull className='sm:col-span-2' bg='speed.jpg' title='+ Seguridad' subtext={['Revisión periódica de errores y vulnerabilidades']} url='seguridad' />
           </div>
           <CMSection bg='falling.jpg' subtext='Panel de control' title='Web App' />

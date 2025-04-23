@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import FullURL from '../../atoms/FullURL';
-import { Refresh } from '@mui/icons-material';
 import Absolute from '../../atoms/Absolute';
 
 export default function WebOption({ full }) {
@@ -42,7 +41,8 @@ export default function WebOption({ full }) {
               className='relative z-50 text-black w-full bg-gray-100 rounded-xl border-4 border-red-300 p-4'>
               {visible && (
                 <div className='bg-red-100 w-full h-full top-0 left-0 absolute rounded-xl'>
-                  <Refresh className='w-full h-full spin opacity-50' />
+                <span className='material-icons spin opacity-50'>refresh</span>
+
                 </div>
               )}
               {/* <Image alt='nike shoes' src={`/img/item${image}.png`} width={150} height={150} className='w-full' /> */}
@@ -74,7 +74,8 @@ export default function WebOption({ full }) {
           className='relative z-50 text-black w-full bg-gray-100 rounded-xl border-4 border-primary p-4'>
           {visible && (
             <div className='bg-red-100 w-full h-full top-0 left-0 absolute rounded-xl'>
-              <Refresh className='w-full h-full spin opacity-50' />
+{/*               <Refresh className='w-full h-full spin opacity-50' /> */}
+              <span className='material-icons spin opacity-50'>refresh</span>
             </div>
           )}
           <Image alt='nike shoes' quality={50} src={`/img/item1.png`} width={150} height={150} className='w-full' priority/>

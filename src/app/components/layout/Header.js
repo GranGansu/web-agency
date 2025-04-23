@@ -1,5 +1,3 @@
-/* import { motion } from 'framer-motion'; */
-import AddIcon from '@mui/icons-material/Add';
 import Link from 'next/link';
 export default function Nav() {
   const items = [

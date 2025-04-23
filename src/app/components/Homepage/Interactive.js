@@ -1,10 +1,7 @@
 "use client"
 import {motion, useScroll, useTransform } from 'framer-motion';
-/* import RestartAltIcon from '@mui/icons-material/RestartAlt'; */
 import { useState } from 'react';
 import { questions } from '../lib/questions';
-/* import CheckIcon from '@mui/icons-material/Check';
-import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome'; */
 function Respuestas({ respuestas }) {
   return (
     <div className='text-black'>

@@ -2,7 +2,6 @@
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
-/* import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'; */
 import { styled } from '@mui/material/styles';
 import React from 'react';
 import { motion } from 'framer-motion';

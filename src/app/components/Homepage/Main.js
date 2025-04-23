@@ -1,4 +1,3 @@
-/* import { Fingerprint } from '@mui/icons-material'; */
 import WebAppz from '../layout/WebAppz';
 
 export default function Main() {
