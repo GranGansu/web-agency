@@ -35,8 +35,9 @@ export const PaginaFull = ({ title, bg, url, subtext, className }) => {
           <ul className=' text-2xl px-8'>
             {subtext.map((sub, i) => {
               return (
-                <li className={`${i == 1 && 'text-slate-500'}`} key={sub}>
+                <li className={`w-fit ${i == 1 &&'text-blue-400'}`} key={sub}>
                   {sub}
+                  {i == 1 && <p className='w-full h-1 bg-blue-100 rounded-full'></p>}
                 </li>
               );
             })}

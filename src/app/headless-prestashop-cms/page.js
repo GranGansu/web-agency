@@ -13,7 +13,9 @@ export default function Prestashop() {
           <div className='flex flex-col items-center justify-center text-center gap-4 pb-24 pt-4 sm:px-8 px-4'>
             {/* <Image src='/img/credit.svg' alt="creditojaja" width={400} height={400}></Image> */}
             {/*         <OfflineBoltIcon className='spin' sx={{ fontSize: 133 }} /> */}
-            <span className='material-icons spin text-[133px]'>offline_bolt</span>
+            <span className='material-icons spin' style={{ fontSize: '133px' }}>
+              offline_bolt
+            </span>
             <div>
               <p className='text-6xl font-bold'>Tu tienda online</p>
               <p className='text-3xl mt-2 text-accent'>{/* <ElectricBoltIcon />  */}Más rápida que nunca</p>
