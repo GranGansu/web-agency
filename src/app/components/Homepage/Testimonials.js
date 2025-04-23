@@ -1,9 +1,9 @@
-"use client"
+'use client';
 import { useRef, useState } from 'react';
 import Img from '../atoms/Img';
-import StarIcon from '@mui/icons-material/Star';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+/* import StarIcon from '@mui/icons-material/Star'; */
+/* import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos'; */
+/* import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'; */
 import { motion } from 'framer-motion';
 
 export default function Testimonials({ className }) {
@@ -37,7 +37,8 @@ export default function Testimonials({ className }) {
               ref.current.scrollBy(-5, 0);
             }}
             className='hover:border-accent hover:text-accent border-4 border-transparent p-2 hover:cursor-pointer rounded-full items-center justify-center hover:scale-105 hidden sm:flex'>
-            <ArrowBackIosIcon className='relative left-1' />
+           {/*  <ArrowBackIosIcon className='relative left-1' /> */}
+           <span className='material-icons'>arrow_back_ios</span>
           </div>
           <div ref={ref} className=' px-6 max-w-5xl flex gap-6 overflow-x-scroll py-10 snap-mandatory snap-x'>
             {opinions.map((op, key) => {
@@ -67,7 +68,8 @@ export default function Testimonials({ className }) {
                       </div>
                       <div className='flex text-xl self-start align-center items-center gap-x-1 z-10 text-primary font-bold border-blue-200 p-1  px-2  '>
                         {op.star.toString().length > 1 ? op.star : op.star + '.0'}
-                        <StarIcon className='text-primary'></StarIcon>
+                        {/* <StarIcon className='text-primary'></StarIcon> */}
+                        <span className='material-icons'>star</span>
                       </div>
                       <div className={`border-4 p-1 shadow bg-white rounded-full w-fit mb-2 transition-all ${active && 'border-primary'}`}>
                         <Img className={`w-36 z-10 transition-all rounded-full ${active && 'scale-105'}`} src={`${op.img}.jpg`}></Img>
@@ -89,7 +91,7 @@ export default function Testimonials({ className }) {
               ref.current.scrollBy(5, 0);
             }}
             className='hover:border-accent hover:text-accent border-4 border-transparent p-2 hover:cursor-pointer rounded-full items-center justify-center hover:scale-105 hidden sm:flex'>
-            <ArrowForwardIosIcon />
+            <span className='material-icons'>arrow_forward_ios</span>
           </div>
         </div>
 

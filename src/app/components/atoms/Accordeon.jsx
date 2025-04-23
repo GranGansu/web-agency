@@ -2,10 +2,10 @@
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
+/* import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'; */
 import { styled } from '@mui/material/styles';
 import React from 'react';
 import { motion } from 'framer-motion';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 export default function Accordeon(props) {
   const Acc = styled(Accordion)(() => ({
@@ -31,7 +31,7 @@ export default function Accordeon(props) {
       <AccordionSummary className=' h-16'>
         <div className='max-w-2xl text-left '>
           <b className={`sm:text-2xl text-xl font-thin text-left ${props.expanded && 'text-black/60'}`}>
-            {props.title} {!props.expanded && <ArrowDropDownIcon />}
+            {props.title} {!props.expanded && <span className='material-icons'>arrow_drop_down</span>}
           </b>
         </div>
       </AccordionSummary>
@@ -39,3 +39,4 @@ export default function Accordeon(props) {
     </Acc>
   );
 }
+ /* <ArrowDropDownIcon /> */

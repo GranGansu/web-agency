@@ -1,7 +1,7 @@
-"use client"
+'use client';
 import { Accordeon } from '../atoms';
 import { useState } from 'react';
-import CheckIcon from '@mui/icons-material/Check';
+/* import CheckIcon from '@mui/icons-material/Check'; */
 export default function FAQ() {
   const [expand, setExpand] = useState('');
   const preguntas = [
@@ -20,19 +20,20 @@ export default function FAQ() {
               <tr className='hover:bg-blue-100'>
                 <td className='px-2'>Indexado en Google</td>
                 <td className='flex justify-center items-center p-4'>
-                  <CheckIcon className='text-green-700 font-bold'></CheckIcon>
+                  <span className='material-icons'>check</span>
+                  {/*   <CheckIcon className='text-green-700 font-bold'></CheckIcon> */}
                 </td>
               </tr>
               <tr className='bg-gray-50 hover:bg-blue-100'>
                 <td className='px-2'>Dominio</td>
                 <td className='flex justify-center items-center p-4'>
-                  <CheckIcon className='text-green-700 font-bold'></CheckIcon>
+                  <span className='material-icons'>check</span>
                 </td>
               </tr>
               <tr className='hover:bg-blue-100'>
                 <td className='px-2'>Indexado en Google</td>
                 <td className='flex justify-center items-center p-4'>
-                  <CheckIcon className='text-green-700 font-bold'></CheckIcon>
+                  <span className='material-icons'>check</span>
                 </td>
               </tr>
             </tbody>
