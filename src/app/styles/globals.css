@@ -1,0 +1,140 @@
+@import 'material-icons/iconfont/material-icons.css';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.spin {
+  animation: spin;
+  animation-duration: 1s;
+  transition: all;
+  animation-iteration-count: 1;
+}
+
+.rotate-hue {
+  animation: hue;
+  animation-duration: 2s;
+  transition: all;
+  transition-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg);
+    zoom: 10%;
+  }
+
+  100% {
+    filter: hue-rotate(80deg);
+    zoom: 20%;
+
+  }
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+    filter: blur(2);
+  }
+
+  100% {
+    filter: blur(0);
+    rotate: 360deg
+  }
+}
+
+/* .landing-parent {
+  background: linear-gradient(179deg, black, #503d3d);
+} */
+
+.landing-page {
+  height: 100vh;
+  /*   background-color: linear-gradient(rgba(207, 22, 22, 0.1) 1px, red 1px); */
+  background-image: linear-gradient(rgba(255, 0, 0, 0.1) -1px, transparent -1px),
+    /* línea */
+    linear-gradient(90deg, red -8px, transparent 1px);
+  background-size: 80px 80px;
+  /* Grid cell size */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background-color: transparent;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+
+  }
+
+/*   body {
+    color: white;
+    background: black;
+  } 
+} */
+
+.custom-shape-divider-top-1696944470 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1696944470 svg {
+  position: relative;
+  display: block;
+  width: calc(276% + 1.3px);
+  height: 106px;
+}
+
+.custom-shape-divider-top-1696944470 .shape-fill {
+  fill: #FFFFFF;
+}
+
+.custom-shape-divider-bottom-1696944517 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1696944517 svg {
+  position: relative;
+  display: block;
+  width: calc(276% + 1.3px);
+  height: 106px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1696944517 .shape-fill {
+  fill: #FFFFFF;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

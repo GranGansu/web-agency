@@ -1,6 +1,14 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@/*": [
+        "./src/app/*"
+      ]
+    },
     "lib": [
       "dom",
       "dom.iterable",
@@ -17,13 +25,20 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-  ],
+    "**/*.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+, "src/app/components/Homepage/Interactive.js"  ],
   "exclude": [
     "node_modules",
     "cypress"
