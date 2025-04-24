@@ -1,6 +1,6 @@
-import Link from 'next/link';
 import { Pagina, PaginaFull } from '../components/Homepage/Portfolio';
 import CMSection from '../components/atoms/CMSection';
+import Nav from './Nav';
 export const metadata = {
   title: 'Headless CMS - Prestashop Ecommerce',
   description: 'Creación páginas web',
@@ -25,20 +25,7 @@ export default function Prestashop() {
         </div>
         <div className=' p-4 sticky top-0 z-[99] my-4'>
           <div className='flex items-center rounded-xl justify-center backdrop-blur-xl bg-white/50  py-4 '>
-            <ul className='flex gap-4'>
-              <li>
-                <Link href='#velocidad'>
-                  <span className='material-icons absolute left-0'>play_arrow</span>
-                  {/* <ArrowRightAltIcon className='text-primary' /> */} Velocidad
-                </Link>
-              </li>
-              <li>
-                <Link href='#seguridad'>Seguridad</Link>
-              </li>
-              <li>
-                <Link href='#limites'>Sin Límites</Link>
-              </li>
-            </ul>
+<Nav/>
           </div>
         </div>
 

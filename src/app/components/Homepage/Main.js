@@ -8,13 +8,13 @@ export default function Main() {
           <div className='landing-page absolute w-full h-full'></div>
         </div>
         <div className='text-black flex flex-col gap-y-2 items-center sm:mb-8 relative z-50 mt-8'>
-          <h1 className='text-5xl sm:text-6xl font-bold text-primary'>
-            Soluciones <span className='hover:text-red-500 material-icons text-[35px]'>fingerprint</span>{/*  <Fingerprint className='transition-all hover:text-red-500 duration-500' fontSize='large' /> */}
-          </h1>
-          <h2 className='text-5xl sm:text-6xl font-bold text-primary'>Digitales</h2>
+        <div className='flex items-end'>
+        <h1 className='text-5xl sm:text-6xl font-bold text-primary text-center sm:leading-tight'>
+            Soluciones <br></br><span className='text-5xl sm:text-6xl font-bold text-primary'>Digitales</span>
+          </h1> <span className='hover:text-red-500 material-icons text-[15px] text-black'>fingerprint</span>
+        </div>
           <h3 className='text-3xl mt-8 text-center'>Creamos tu web</h3>
-          <p className='text-black/70 text-md text-center'>Desarrollamos tu identidad</p>
-          <p className='text-black/70 text-md text-center'>Tu presencia online</p>
+          <p className='text-black/70 text-md text-center'>Te damos a conocer</p>
         </div>
         <WebAppz />
       </div>
