@@ -21,7 +21,7 @@ export default function WebOption({ full }) {
       className={`shadow-white/70 border-red-100  bg-gradiendt-to-b from-transparent via-red-400/60 to-transparent 
     sm:rounded-[0px] w-full overflow-hidden p-8 sm:px-16 gap-y-4 relative`}>
       {!full && (
-        <Absolute className='p-2'>
+        <Absolute className='p-2 opacity-40'>
           <div className='z-10 border border-gray-100 right-0 relative p-8 bg-white rounded-[20px] w-56 flex flex-col justify-between gap-y-4 shadow-xl'>
             <motion.div
               id='clickableURL'
@@ -38,7 +38,7 @@ export default function WebOption({ full }) {
              // transition={{ duration: 0.2, delay: 0.1 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className='relative z-50 text-black w-full bg-gray-100 rounded-xl border-4 border-red-300 p-4'>
+              className='relative z-50 aspect-square text-black w-full bg-gray-100 rounded-xl border-4 border-black/60 p-4'>
               {visible && (
                 <div className='bg-red-100 w-full h-full top-0 left-0 absolute rounded-xl'>
                 <span className='material-icons spin opacity-50'>refresh</span>
@@ -65,7 +65,7 @@ export default function WebOption({ full }) {
           onClick={() => {
             //setVisible(true);
           }}>
-          <span className='text-gray-400'>https://</span>wwwj.{url.toLowerCase()}.com
+          <span className='text-gray-400'>https://</span>www.{url.toLowerCase()}.com
         </motion.div>
         <motion.div
           //transition={{ duration: 0.2, delay: 0.1 }}

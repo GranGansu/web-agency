@@ -23,7 +23,7 @@ export default function WebAppz() {
           </HomeMain>
           <HomeMain key={1}  selected={true} initial={{ x: 20 }}>
             <WebOption />
-            <List listado={['Formularios', 'Recibe pagos con Tarjeta', 'Usuarios ilimitados', ' Adaptada a móviles y PC']} />
+            {/* <List listado={['Formularios', 'Recibe pagos con Tarjeta', 'Usuarios ilimitados', ' Adaptada a móviles y PC']} /> */}
           </HomeMain>
         </AnimatePresence>
       </div>

@@ -6,7 +6,7 @@ import Interactive from './Interactive';
 export const Pagina = ({ title, bg, subtext }) => {
   return (
     <div className='grid sm:grid-cols-2 items-center justify-center gap-4'>
-      <div className=' w-full cursor-pointer flex flex-col rounded-xl  justify-end bg-white relative h-96  box-border  '>
+      <div className=' w-full cursor-pointer flex flex-col rounded-xl  justify-end bg-red-100 p-8 relative h-96  box-border  '>
         {/*    <div className='absolute h-full w-full from-white/50 to-white/50 bg-gradient-to-t via-transparent z-[199]'></div> */}
         <Img w={400} h={400} q={50} src={bg} className='rounded-xl  absolute w-full h-full object-cover z-0 ' />
         <div className='rounded-xl p-8 absolute w-full h-full z-0 '>{/*  <Overlap /> */}</div>
@@ -15,7 +15,7 @@ export const Pagina = ({ title, bg, subtext }) => {
           <p className='text-black px-8'>{subtext}</p>
         </div>
       </div>
-      <div className='pl-4'>
+      <div className='p-8'>
         <p className='text-2xl font-bold'>{subtext}</p>
         <p>Acepta pagos online</p>
         <p>Anúnciate en Google!</p>
@@ -26,16 +26,16 @@ export const Pagina = ({ title, bg, subtext }) => {
 
 export const PaginaFull = ({ title, bg, url, subtext, className }) => {
   return (
-    <div className={`w-full gap-y-6 flex flex-col ${className}`} id={url}>
+    <div className={`w-full gap-y-6 flex rounded-xl border overflow-hidden flex-col ${className}`} id={url}>
       <div
-        className={`w-full cursor-pointer flex flex-col rounded-xl justify-center items-left relative box-border overflow-hidden border-2 text-black shadow py-12 bg-secondary/10`}>
+        className={`w-full cursor-pointer flex flex-col  justify-center items-left relative overflow-hidden  shadow-inner py-12`}>
         <div className='z-50 py-4 rounded '>
           {/* <p className='p-2 px-8 w-fit text-white text-2xl rounded-r-full bg-black shadow-xl mb-4'>{title}</p> */}
-          <p className=' mx-4 py-2 mb-4 text-4xl px-8 border-4 border-accent rounded-full w-fit'>{title}</p>
+          <p className=' mx-4 py-2 mb-4 text-4xl pl-4 font-bold  border-accent rounded-full w-fit'>{title}</p>
           <ul className=' text-2xl px-8'>
             {subtext.map((sub, i) => {
               return (
-                <li className={`w-fit ${i == 1 &&'text-blue-400'}`} key={sub}>
+                <li className={`w-fit ${i == 1 && 'text-[#2E86AB]'}`} key={sub}>
                   {sub}
                 </li>
               );
@@ -46,7 +46,33 @@ export const PaginaFull = ({ title, bg, url, subtext, className }) => {
     </div>
   );
 };
-
+export const PaginaMobile = ({ title, bg, url, subtext, className, icon }) => {
+  return (
+    <div className={`w-full gap-y-6 relative flex flex-col ${className}`} id={url}>
+      <div
+        className={`w-full cursor-pointer flex flex-col  justify-center items-left relative box-border overflow-hidden  text-black from-white to-white/90 bg-gradifent-to-br z-40`}>
+        <div className='z-50 rounded '>
+          <h1 className='p-2 px-8 py-6 w-fit text-black font-bold text-3xl sm:rounded-full hover:text-black bg-accenat  mb-4 flex items-center gap-4'>
+            <span className='material-icons text-yellow-600' style={{ fontSize: 50 }}>
+              {icon}
+            </span>
+            {title}
+          </h1>
+          {/*         <h1 className=' mx-4 py-2 mb-4 text-xl font-bold px-8 border-4 border-accent rounded-full w-fit'>{title}</h1> */}
+          <ul className='px-8 text-md text-gray-700'>
+            {subtext.map((sub, i) => {
+              return (
+                <li className='w-fit leading-7' key={sub}>
+                  {sub}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default function Portfolio() {
   return (
     <div className='p-2 sm:p-8'>

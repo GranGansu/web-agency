@@ -18,14 +18,14 @@ export default function Testimonials({ className }) {
   ];
   return (
     <div className={className + ' w-screen mx-auto py-20 flex flex-col sm:items-center  bg-primary'}>
-      <div className=' opacity-0 sm:opacity-30 absolute rotate-6 -left-4'>
+{/*       <div className=' opacity-0 sm:opacity-30 absolute rotate-6 -left-4'>
         <div className='h-1 bg-red-100 w-[10vw]  z-0 mt-10 rounded-full'></div>
         <div className='h-1 bg-red-100 w-[20vw]   z-0 mt-10 rounded-full'></div>
         <div className='h-1 bg-red-100 w-[5vw]   z-0 mt-10 rounded-full'></div>
         <div className='h-1 bg-red-100 w-[10vw]  z-0 mt-10 rounded-full'></div>
         <div className='h-1 bg-red-100 w-[20vw]   z-0 mt-10 rounded-full'></div>
         <div className='h-1 bg-red-100 w-[5vw]   z-0 mt-10 rounded-full'></div>
-      </div>
+      </div> */}
       <h2 className='text-3xl max-w-5xl font-bold w-fit pl-2 text-white ml-4 sm:ml-0'>Qué opinan nuestros clientes</h2>
       <div className='relative max-w-full'>
         <div className='flex items-center gap-x-2'>
@@ -65,10 +65,10 @@ export default function Testimonials({ className }) {
                       </div>
                       <div className='flex text-xl self-start align-center items-center gap-x-1 z-10 text-primary font-bold border-blue-200 p-1  px-2  '>
                         {op.star.toString().length > 1 ? op.star : op.star + '.0'}
-                        {/* <StarIcon className='text-primary'></StarIcon> */}
+  
                         <span className='material-icons'>star</span>
                       </div>
-                      <div className={`border-4 p-1 shadow bg-white rounded-full w-fit mb-2 transition-all ${active && 'border-primary'}`}>
+                      <div className={`border-4 p-1 shadow bg-white rounded-full w-fit mb-2 transition-all ${active && 'border-primardy'}`}>
                         <Img className={`w-36 z-10 transition-all rounded-full ${active && 'scale-105'}`} src={`${op.img}.jpg`}></Img>
                       </div>
                       <p className='font-bold z-10 text-xl'>{op.name}</p>

@@ -30,7 +30,7 @@ export default function Accordeon(props) {
       <AccordionSummary className=' h-16'>
         <div className='max-w-2xl text-left '>
           <b className={`sm:text-2xl text-xl font-thin text-left ${props.expanded && 'text-black/60'}`}>
-            {props.title} {!props.expanded && <span className='material-icons'>arrow_drop_down</span>}
+            {props.title} {!props.expanded && <span className='material-icons relative top-1'>arrow_drop_down</span>}
           </b>
         </div>
       </AccordionSummary>
