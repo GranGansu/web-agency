@@ -63,16 +63,16 @@ export default function Testimonials({ className }) {
                       <div className='absolute w-full opacity-90 h-1/3  right-0 bottom-0 rounded-xl bg-cover hidden'>
                         <div className='absolute w-full h-full from-white via-white rounded-xl z-0 to-transparent bg-gradient-to-br'></div>
                       </div>
-                      <div className='flex text-xl self-start align-center items-center gap-x-1 z-10 text-primary font-bold border-blue-200 p-1  px-2  '>
+                      <div className='flex text-4xl self-start align-center items-center gap-x-1 z-10 text-primary font-bold border-blue-200 p-1  px-2  '>
                         {op.star.toString().length > 1 ? op.star : op.star + '.0'}
   
-                        <span className='material-icons'>star</span>
+                        <span className='material-icons' style={{fontSize:40}}>star</span>
                       </div>
-                      <div className={`border-4 p-1 shadow bg-white rounded-full w-fit mb-2 transition-all ${active && 'border-primardy'}`}>
-                        <Img className={`w-36 z-10 transition-all rounded-full ${active && 'scale-105'}`} src={`${op.img}.jpg`}></Img>
+                      <div className={`border-8 p-1 shadow border-black bg-white rounded-full w-fit mb-2 transition-all ${active && 'border-primardy'}`}>
+                        <Img className={`w-36 z-10 transition-all rounded-full ${active && 'scale-95'}`} src={`${op.img}.jpg`}></Img>
                       </div>
-                      <p className='font-bold z-10 text-xl'>{op.name}</p>
-                      <p className='z-10 text-gray-500 text-center'>&ldquo;{op.message}&rdquo;</p>
+                      <p className='font-bold z-10 text-2xl'>{op.name}</p>
+                    {/*   <p className='z-10 text-gray-600 text-xl text-center'>&ldquo;{op.message}&rdquo;</p> */}
                     </>
                   ) : (
                     <div className='absolute w-full h-full'>
@@ -92,7 +92,7 @@ export default function Testimonials({ className }) {
           </div>
         </div>
 
-        <motion.div
+{/*         <motion.div
           style={{ background: 'linear-gradient(70deg, #d99090, transparent)' }}
           whileHover={{ background: 'linear-gradient(200deg, #d99090, transparent)' }}
           transition={{ duration: 0.2 }}
@@ -100,7 +100,7 @@ export default function Testimonials({ className }) {
           <p className='w-fit flex items-center text-gray-700 font-bold rounded-full p-2 px-5 pr-3 bg-white  border-2'>
             Valoración <span className='text-2xl text-green-600 ml-1 p-2 rounded-full'>{(total / opinions.length).toPrecision(3)}</span>
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

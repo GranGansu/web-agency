@@ -1,7 +1,9 @@
+import { Instagram, Mail, WheatIcon } from "lucide-react";
+
 export const social = [
-  { url: 'https://instagram.com/' + process.env.NEXT_PUBLIC_IG, title: 'instagram', handle: '@' + process.env.NEXT_PUBLIC_IG, icon:'tag' },
-  { url: 'http://wa.me/' + process.env.NEXT_PUBLIC_WHATSAPP, title: 'whatsapp', handle: '656828317', icon: 'message' },
-  { url: 'mailto:' + process.env.NEXT_PUBLIC_EMAIL, title: 'email', handle: 'soluciones@superbeam.es', icon: 'mail' },
+  { url: 'https://instagram.com/' + process.env.NEXT_PUBLIC_IG, title: 'instagram', handle: '@' + process.env.NEXT_PUBLIC_IG, iconLucide:<Instagram size={45}/>,icon:'tag' },
+  { url: 'http://wa.me/' + process.env.NEXT_PUBLIC_WHATSAPP, title: 'whatsapp', handle: '656828317', iconLucide:<WheatIcon size={45}/>,icon: 'message' },
+  { url: 'mailto:' + process.env.NEXT_PUBLIC_EMAIL, title: 'email', handle: 'soluciones@superbeam.es', iconLucide:<Mail size={45}/>,icon: 'mail' },
 ];
 export const nosotros = [
   { url: '/webmaster', title: 'Webmaster' },

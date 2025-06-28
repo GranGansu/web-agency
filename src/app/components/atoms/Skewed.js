@@ -4,10 +4,12 @@ export default function Skewed({ children }) {
   return (
     <>
       <Absolute>
-        <div className='z-[-10] w-full -skew-x-6 h-full rounded-xl bg-accent shadow'></div>
+        <div className='z-[10] w-full -skew-x-6 h-full rounded-xl  border-2 text-white shadow'></div>
+      </Absolute>
+      <Absolute className="z-[-20]">
+        <div className='z-[-20] w-full  border-red-500 translate-y-1 translate-x-1 -skew-x-2 h-full rounded-xl  border-2 text-white shadow'></div>
       </Absolute>
       {children}
-     
     </>
   );
 }

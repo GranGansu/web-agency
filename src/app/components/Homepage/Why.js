@@ -14,7 +14,7 @@ export default function Why() {
       title: 'Utilizamos las últimas tecnologías',
     },
   ];
-  const Item = ({ children, icon, sub }) => {
+/*   const Item = ({ children, icon, sub }) => {
     return (
       <li className='hover:border-accent  rounded cursor-pointer p-4 items-center relative flex gap-4'>
         <span className='material-icons' style={{ fontSize: 70 }}>
@@ -26,7 +26,7 @@ export default function Why() {
         </div>
       </li>
     );
-  };
+  }; */
   return (
     <section className='py-24 flex flex-col justify-center items-center sm:px-4 bg-primary'>
       <div className='max-w-6xl m-auto rounded flex gap-y-8 flex-col'>

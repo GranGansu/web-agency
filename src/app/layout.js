@@ -2,9 +2,10 @@ import { Lexend_Deca } from 'next/font/google';
 const lexend = Lexend_Deca({ preload: true, subsets: ['latin'], weight: '400' });
 import './styles/globals.css';
 import Footer from './components/layout/Footer';
-import Nav from './components/layout/Header';
+
 import Volver from './components/atoms/Volver';
 import Navigation from './components/layout/Navigation';
+import { TooltipProvider } from '@radix-ui/react-tooltip';
 
 export const metadata = {
   metadataBase: new URL('https://superbeam.es'),
@@ -18,8 +19,8 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`relative ${lexend.className}`}>
         <Navigation />
-        <Volver/>
-        {children}
+        <Volver />
+        <TooltipProvider delayDuration={0}>{children}</TooltipProvider>
         <Footer />
       </body>
     </html>

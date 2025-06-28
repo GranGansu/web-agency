@@ -50,15 +50,17 @@ export const PaginaMobile = ({ title, bg, url, subtext, className, icon }) => {
   return (
     <div className={`w-full gap-y-6 relative flex flex-col ${className}`} id={url}>
       <div
-        className={`w-full cursor-pointer flex flex-col  justify-center items-left relative box-border overflow-hidden  text-black from-white to-white/90 bg-gradifent-to-br z-40`}>
+        className={`w-full cursor-pointer flex flex-col  justify-center items-left relative box-border   text-black from-white to-white/90 bg-gradifent-to-br z-40`}>
         <div className='z-50 rounded '>
-          <h1 className='p-2 px-8 py-6 w-fit text-black font-bold text-3xl sm:rounded-full hover:text-black bg-accenat  mb-4 flex items-center gap-4'>
-            <span className='material-icons text-yellow-600' style={{ fontSize: 50 }}>
+          <div className='p-2 px-8 py-6 w-fit text-black font-bold text-3xl  hover:text-black bg-accenat  mb-4 flex items-center flex-col gap-4'>
+            <span className='material-icons text-yellow-600 rounded-full p-2 -translate-y-1/2' style={{ fontSize: 75 }}>
               {icon}
             </span>
             {title}
-          </h1>
+                      <p>dfgdfg</p>
+          </div>
           {/*         <h1 className=' mx-4 py-2 mb-4 text-xl font-bold px-8 border-4 border-accent rounded-full w-fit'>{title}</h1> */}
+
           <ul className='px-8 text-md text-gray-700'>
             {subtext.map((sub, i) => {
               return (

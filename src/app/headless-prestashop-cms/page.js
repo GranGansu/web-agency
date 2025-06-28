@@ -4,14 +4,15 @@ import CMSection from '../components/atoms/CMSection';
 import Heading from '../components/layout/Heading';
 import Nav from './Nav';
 import { CarouselComponent as Carousel } from '../components/organisms/Carousel';
-/* import { Button, LinearProgress, Stack } from '@mui/material'; */
-/* import Client from '../components/atoms/Client'; */
+
 import Image from 'next/image';
 import BrowserMockup from '../components/atoms/BrowserMockup';
 /* import Pricing from './Pricing'; */
 import Card from './Card';
-import { Accordion, AccordionContent, AccordionHeader, AccordionItem, AccordionTrigger } from '@radix-ui/react-accordion';
+
 import Acordeon from '../components/atoms/Accordion';
+import Absolute from '../components/atoms/Absolute';
+import Tooltips from '../components/atoms/Tooltip';
 
 export const metadata = {
   title: 'Headless CMS - Prestashop Ecommerce',
@@ -65,7 +66,17 @@ export default function Prestashop() {
           {/*           <Pagina bg='notifications.webp' subtext='Todas tus páginas bien administradas' title='Blog personal' /> */}
 
           {/*  <Pagina bg='falling.jpg' subtext='Panel de control' title='Web App' /> */}
-          <Card bg='mockup-templates-to-download-now.png' subtext='Moderno' title='Blog personal' />
+          {/* <Card bg='mockup-templates-to-download-now.png' subtext='Moderno' title='Blog personal' /> */}
+          <div className='w-full flex items-center justify-center py-18 bg-gradient-to-b from-transparent via-blue-50 to-transparent'>
+            <div className='max-h-full'>
+              {/* <Absolute className='w-2/3 top-4 rounded-xl bg-red-100'></Absolute> */}
+              <Carousel
+                array={[
+                  { title: 'Rápido', img: 'webapp.jpg' },
+                  { title: 'Moderno', img: 'mockup-templates-to-download-now.png' },
+                ]}></Carousel>
+            </div>
+          </div>
           <hr></hr>
           <div className='grid grid-cols-1 sm:grid-cols-2 gap-12 mx-auto items-center justify-center max-w-4xl'>
             <h3 className='text-3xl sm:col-span-2'>Incluido</h3>
@@ -84,30 +95,15 @@ export default function Prestashop() {
           </div>
           <div className='grid grid-cols-1 sm:grid-cols-3 gap-y-6 gap-x-4 mx-auto items-center justify-center w-full'>
             <h3 className='text-3xl sm:col-span-3'>Precios</h3>
-            <Acordeon items={[{ title: 'Es probable?', content: 'Sí es probable' },{ title: 'Shipping Information', content: 'We offer worldwide shipping through trusted courier partners. Standard delivery takes 3-5 business days, while express shipping ensures delivery within 1-2 business days. All orders are carefully packaged and fully insured. Track your shipment in real-time through our dedicated tracking portal.' }]}></Acordeon>
-            {/*             <Accordion>
-              <AccordionItem value='item-1'>
-                <AccordionHeader>
-                  <AccordionTrigger className='AccordionTrigger'>
-                    Se puede esto y esto?
-                    <span className='AccordionChevron material-icons' aria-hidden>
-                      arrow_drop_down
-                    </span>
-                  </AccordionTrigger>
-                </AccordionHeader>
-                <AccordionContent className='p-2 px-6'>Sí, claro que se puede</AccordionContent>
-              </AccordionItem>
-              <hr></hr>
-              <AccordionItem value='item-2'>
-                <AccordionTrigger className='AccordionTrigger'>
-                  No es lo que tenía entendido?
-                  <span className='AccordionChevron material-icons' aria-hidden>
-                    arrow_drop_down
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className='p-2 px-6'>Sí, lo es.</AccordionContent>
-              </AccordionItem>
-            </Accordion> */}
+            <Acordeon
+              items={[
+                { title: 'Es probable?', content: 'Sí es probable' },
+                {
+                  title: 'Shipping Information',
+                  content:
+                    'We offer worldwide shipping through trusted courier partners. Standard delivery takes 3-5 business days, while express shipping ensures delivery within 1-2 business days. All orders are carefully packaged and fully insured. Track your shipment in real-time through our dedicated tracking portal.',
+                },
+              ]}></Acordeon>
             {/*             <Pricing title='SUPREME' price={300} pros={['Sin límite', 'Sin comisión', 'Productos ilimitados']} />
             <Pricing title='STANDARD' price={100} pros={['Sin límite', 'Sin comisión', 'Productos ilimitados']} />
             <Pricing title='BASIC' price={50} pros={['Sin límite', 'Sin comisión', 'Productos ilimitados']} /> */}

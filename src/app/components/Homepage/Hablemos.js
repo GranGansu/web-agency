@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { social } from '../lib/social';
 import Link from 'next/link';
+import Tooltips from '../atoms/Tooltip';
+
 
 export default function Hablemos() {
   return (
@@ -9,15 +11,20 @@ export default function Hablemos() {
         <a id='hablemos'>
           <h3 className='text-5xl font-bold'>Hablemos, es gratis</h3>
         </a>
-        <div className='my-6 flex  gap-4 text-black text-2xl flex-wrap'>
+        <div className='my-6 grid sm:grid-cols-3 grid-cols-1  gap-4 text-black text-2xl '>
           {social.map((s) => {
             return (
-              <Link href={s.url} key={s.title}>
-                <div className='p-8 w-fit border-4 bg-primary/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'>
-                  <span className='material-icons text-3xl'>{s.icon}</span>
-                  {/*             <s.Icon style={{ fontSize: 'xxx-large' }} className='text-white text-6xl' fontSize='inherit'/> */}
-                </div>
-              </Link>
+              <Tooltips text={s.title} key={s.title} className={`${s.title==='whatsapp'&&'col-span-1 '}`}>
+                <Link href={s.url} >
+                  <div className='p-8  border-4 bg-accenat bg-primary/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'>
+                  {s.iconLucide}
+{/*                       <span className='material-icons text-white' style={{ fontSize: 45 }}>
+                      
+                        
+                      </span> */}
+                  </div>
+                </Link>
+              </Tooltips>
             );
           })}
           {/*           <a href='https://wa.me/34656828317'>
@@ -26,7 +33,7 @@ export default function Hablemos() {
             </p>
           </a> */}
         </div>
-        <ul className=' leading-relaxed text-gray-200 text-center text-lg hidden'>
+        {/*         <ul className=' leading-relaxed text-gray-200 text-center text-lg hidden'>
           <li>
             ¿Ya tienes una web y quieres <b>renovarla</b>?
           </li>
@@ -35,7 +42,7 @@ export default function Hablemos() {
           </li>
           <li>¿Web confusa? </li>
           <li>¿No sabes por dónde empezar? </li>
-        </ul>
+        </ul> */}
       </div>
       <div className='bg-primary w-full h-full absolute z-10 opacity-90'></div>
       <Image alt='' className='absolute h-full w-full object-fit z-0  opacity-90' width='1000' height='1000' src={'/img/dialog.svg'}></Image>

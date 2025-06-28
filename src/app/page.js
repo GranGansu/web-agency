@@ -14,7 +14,6 @@ export default function Home() {
     <div>
       <Main />
       <div className='relative flex flex-col z-[61] w-full'>
- {/*      <Component/> */}
         <Comission title='0%' sub='Comisiones por venta' />
         <Comission title='Meta' sub='Tecnologías avaladas' />
         <Premium />
