@@ -6,8 +6,8 @@ import Skewed from '../atoms/Skewed';
 
 export default function Footer() {
   return (
-    <footer className='relative w-full from-primary to-primary/90 bg-gradient-to-br pb-0 sm:pb-24 pt-8 sm:px-4 h-[100vh] sm:h-fit'>
-{/*       <Absolute className='z-0 opacity-10 overflow-hidden flex justify-end pr-6'>
+    <footer className='relative w-full from-primary to-primary/90 bg-gradient-to-br pb-0 pt-8  h-[100vh] sm:h-fit'>
+      {/*       <Absolute className='z-0 opacity-10 overflow-hidden flex justify-end pr-6'>
         <Image alt='footer wifi image' className='my-auto rotate-12 max-w-sm hue-rotate-30' src='/img/wifi.png' width={500} height={500} />
       </Absolute> */}
       <div className='z-10 relative flex flex-wrap justify-between py-8 gap-x-6 mx-auto w-fit sm:px-10 rounded-lg bg-cover'>
@@ -23,7 +23,7 @@ export default function Footer() {
             </Skewed>
           </div>
         </Link>
-        <div className='flex sm:flex-row flex-col gap-6 bg-white/0 border-primary rounded sm:py-4 px-4'>
+        <div className='flex sm:flex-row flex-col gap-6 bg-white/0 border-primary rounded sm:py-0 px-4'>
           <ul className='text-white text-md leading-8'>
             <li className='mb-2 text-black text-xl border-bg px-4 py-1 relative'>
               <Skewed>
@@ -57,22 +57,21 @@ export default function Footer() {
             })}
           </ul>
         </div>
-        
-        <ul className='grid grid-cols-3 justify-center mt-8 w-full overflow-hidden mb-0 pb-16 bg-primary text-xl leading-relaxed rounded py-4'>
-          {social.map((e) => {
-            return (
-              <li key={e.title} className=' py-6 bg-primary cursor-pointer p-2 relative'>
-                <Link href={e.url} className='flex flex-col items-center text-white text-sm px-2 capitalize'>
-                <span className='material-icons'>instagram</span>
-                {e.title}
-             {/*      <e.Icon className=' text-white' sx={{ fontSize: 34 }} /> */}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-{/*         <p className='text-sm mt-2 text-white/80 mx-auto'>Copyright superbeam.es 2025</p> */}
+
+        {/*         <p className='text-sm mt-2 text-white/80 mx-auto'>Copyright superbeam.es 2025</p> */}
       </div>
+      <ul className='grid grid-cols-3 justify-center mt-8 w-full overflow-hidden mb-0 pb-16 bg-primary text-xl leading-relaxed rounded py-4'>
+        {social.map((e) => {
+          return (
+            <li key={e.title} className=' py-6 bg-primary cursor-pointer p-2 relative'>
+              <Link href={e.url} className='flex flex-col items-center text-white text-sm px-2 capitalize'>
+                {e.iconLucide}
+                {e.title}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </footer>
   );
 }

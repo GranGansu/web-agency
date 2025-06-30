@@ -1,5 +1,6 @@
-import { Lexend_Deca } from 'next/font/google';
+import { Lexend_Deca, Barlow_Condensed } from 'next/font/google';
 const lexend = Lexend_Deca({ preload: true, subsets: ['latin'], weight: '400' });
+const barlow = Barlow_Condensed({ preload: true, subsets: ['latin'], weight: '400' });
 import './styles/globals.css';
 import Footer from './components/layout/Footer';
 
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
         <link rel='canonical' href='https://superbeam.es' />
         <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' />
       </head>
-      <body className={`relative ${lexend.className}`}>
+      <body className={`relative ${barlow.className}`}>
         <Navigation />
         <Volver />
         <TooltipProvider delayDuration={0}>{children}</TooltipProvider>

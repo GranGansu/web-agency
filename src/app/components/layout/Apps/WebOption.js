@@ -19,7 +19,7 @@ export default function WebOption({ full }) {
     <motion.div
       //style={{ background: 'radial-gradient(circle, #00000054, black,#3367ffb3,transparent,transparent, transparent)' }}
       className={`shadow-white/70 border-red-100  bg-gradiendt-to-b from-transparent via-red-400/60 to-transparent 
-    sm:rounded-[0px] w-full overflow-hidden p-8 sm:px-16 gap-y-4 relative`}>
+    sm:rounded-[0px] w-full overflow-hidden p-0 sm:px-16 gap-y-4 relative`}>
       {!full && (
         <Absolute className='p-2 opacity-40'>
           <div className='z-10 border border-gray-100 right-0 relative p-8 bg-white rounded-[20px] w-56 flex flex-col justify-between gap-y-4 shadow-xl'>
@@ -61,11 +61,11 @@ export default function WebOption({ full }) {
          // transition={{ duration: 0.2 }}
          // initial={{ opacity: 0 }}
          // animate={{ opacity: 1 }}
-          className='text-gray-600 w-full rounded-full shadow p-4'
+          className='text-gray-600 w-full rounded-full  p-4'
           onClick={() => {
             //setVisible(true);
           }}>
-          <span className='text-gray-400'>https://</span>www.{url.toLowerCase()}.com
+          <span className='text-gray-400 hidden'>https://</span>www.{url.toLowerCase()}.com
         </motion.div>
         <motion.div
           //transition={{ duration: 0.2, delay: 0.1 }}
