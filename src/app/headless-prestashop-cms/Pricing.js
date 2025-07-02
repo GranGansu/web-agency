@@ -1,25 +1,21 @@
 'use client';
-import { List, ListItemIcon, ListItem } from '@mui/material';
 
 export default function Pricing({ title, price, pros }) {
   return (
-    <div className='shadow sm:shadow-lg border  border-gray-200 p-4 px-6 rounded-xl w-full'>
-      <span className='text-center'>desde</span>
-      <p className='text-center font-bold text-5xl'>{price}€</p>
-      <p className='text-2xl rounded-full px-4 text-center bg-accentd text-white w-fit mx-auto mt-2'>{title}</p>
-      {/*    <hr className='my-4 '></hr> */}
-      <List>
+    <div className='border-2  border-[#F5BD4B] p-4 px-6 rounded-xl w-full shadow-md'>
+      {/*    <span className='text-center'>desde</span> */}
+      <p className='text-center text-gray-800 text-6xl'>{price}€</p>
+      <p className='text-2xl rounded-full px-4 text-center border-2 border-[#F5BD4B] text-black w-fit mx-auto mt-2 shadow'>{title}</p>
+      <ul className="mt-6">
         {pros.map((pro, key) => {
           return (
-            <ListItem key={key}>
-              <ListItemIcon>
-                <span className='material-icons'>check</span>
-              </ListItemIcon>
+            <li key={key} className="gap-2 flex">
+              <span className='material-icons text-black' style={{fontSize:20}}>check</span>
               {pro}
-            </ListItem>
+            </li>
           );
         })}
-      </List>
+      </ul>
     </div>
   );
 }

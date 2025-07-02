@@ -3,9 +3,9 @@
 import Link from 'next/link';
 import { useState } from 'react';
 const sections = [
-  { url: '#seguridad', title: 'Seguridad' },
-  { url: '#limites', title: 'Packs' },
-  { url: '#velocidad', title: 'Precios' },
+  { url: '#specs', title: 'Características' },
+  { url: '#faq', title: 'FAQ' },
+  { url: '#precios', title: 'Precios' },
 ];
 export default function Nav() {
   const [active, setActive] = useState(null);

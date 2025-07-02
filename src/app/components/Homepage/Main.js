@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import BrowserMockup from '../atoms/BrowserMockup';
 import Heading from '../layout/Heading';
-import WebAppz from '../layout/WebAppz';
+import { CarouselFree } from '../organisms/CarouselFree';
 
 export default function Main() {
   return (
@@ -12,7 +12,7 @@ export default function Main() {
             Soluciones <br />
             <span>Digitales</span>
           </h1>
-          {/*  <span className='hover:text-red-500 material-icons text-[15px] text-black'>fingerprint</span> */}
+       {/*     <span className='hover:text-red-500 material-icons text-[15px] text-black'>fingerprint</span> */}
         </div>
         <h2 className='text-xl sm:text-3xl mt-8 sm:text-right leading-tight px-8'>
           Creamos tu <span className='text-red-500'>web</span> y tu identidad digital. Ponemos cara a tu tienda online. <span className='font-bold '>Desarrollo a medida.</span>
@@ -21,11 +21,9 @@ export default function Main() {
       </div>
       <div className='p-4 z-10 relative'>
         <BrowserMockup>
-          <Image className='w-1/2 object-cover' src='/img/clothbag.png' height={500} width={500} alt='posh bag'></Image>
+          <CarouselFree array={[<Image key='jaja' className='w-1/2 object-cover' src='/img/clothbag.png' height={500} width={500} alt='posh bag'></Image>,<Image key='jaja2' className='w-1/2 object-cover' src='/img/ideas2.png' height={500} width={500} alt='posh bag'></Image>]}></CarouselFree>
         </BrowserMockup>
       </div>
-
-      {/* <WebAppz /> */}
     </Heading>
   );
 }

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Acordeon from '../atoms/Accordion';
 
 export default function FAQ() {
-/*   const [expand, setExpand] = useState(''); */
+  /*   const [expand, setExpand] = useState(''); */
   const preguntas = [
     {
       title: '¿Qué incluye una web?',
@@ -69,12 +69,21 @@ export default function FAQ() {
     },
     { title: '¿Puedo editarla por mi cuenta?', content: 'Tienes acceso al 100% de la web.' },
     { title: '¿Qué gastos mensuales?', content: 'Desde 10€/mes' },
-    { title: '¿Es un WordPress?', content: <p>No, utilizamos <b>Next.js</b>. Éste supera la velocidad de WordPress gracias a su renderizado estático y generación de páginas en tiempo de compilación, lo que reduce al mínimo las solicitudes al servidor. A diferencia de WordPress, que depende de PHP y bases de datos en cada carga, Next.js entrega contenido pre-renderizado desde un CDN, logrando tiempos de carga significativamente más rápidos.</p> },
+    {
+      title: '¿Es un WordPress?',
+      content: (
+        <p>
+          No, utilizamos <b>Next.js</b>. Éste supera la velocidad de WordPress gracias a su renderizado estático y generación de páginas en tiempo de compilación, lo que reduce al
+          mínimo las solicitudes al servidor. A diferencia de WordPress, que depende de PHP y bases de datos en cada carga, Next.js entrega contenido pre-renderizado desde un CDN,
+          logrando tiempos de carga significativamente más rápidos.
+        </p>
+      ),
+    },
     { title: '¿Cuánto cuesta mantenerla?', content: 'todo' },
   ];
   return (
-    <section id='preguntas'>
-    <Acordeon items={preguntas}/>
+    <section id='preguntas' className='bg-yellow-200 py-4'>
+      <Acordeon items={preguntas} />
     </section>
   );
 }

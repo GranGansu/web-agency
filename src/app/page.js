@@ -18,14 +18,15 @@ export default function Home() {
       <div className='relative flex flex-col z-[61] w-full'>
         <Comission title='0%' sub='Comisiones por venta' />
         <Comission
-          title='Meta'
-          sub='Tecnologías avaladas'
+          title='Tecnologías'
+          sub='Avanzadas'
           addendum={
-            <Absolute className=' '>
+            <Absolute className=' hidden'>
               <span className='px-2 py-1 text-md rounded-full bg-green-600 text-white '>Tecnologías</span>
             </Absolute>
           }
         />
+        <Comission title='Sin suscripciones' sub='Funciona desde el primer día' />
         <Premium />
         <FAQ />
         <Testimonials />

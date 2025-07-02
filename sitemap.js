@@ -7,7 +7,7 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: 'https://superbeam.es/headless-prestashop',
+      url: 'https://superbeam.es/headless-prestashop-cms',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,

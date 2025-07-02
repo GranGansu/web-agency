@@ -9,9 +9,10 @@ export default function Premium({ inverted }) {
         <div className='text-white mt-8'>
           <h1 className='text-3xl mb-2'>Siempre Premium</h1>
           <p className='text-white/70'>
-            Creamos y diseñamos con patrones de diseño estándar. <br></br>Utilizamos el mismo lenguaje que Meta.
+            Aquí no copiamos ni pegamos. Olvídate de plantillas recicladas y webs que se arrastran bajo cientos de plugins. Lo nuestro es código hecho a mano, con precisión
+            quirúrgica y actitud.
           </p>
-          <button className='p-4 py-2 mt-8 rounded-full bg-black border border-gray-500'>Elegir diseño</button>
+          <button className='px-6 py-2 mt-8 rounded-full border-2 border-white text-xl text-white'>Comencemos</button>
         </div>
       </div>
     </section>

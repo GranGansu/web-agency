@@ -55,13 +55,13 @@ export default function WebOption({ full }) {
         </Absolute>
       )}
 {/*       {visible && <FullURL setVisible={setVisible} setURL={setURL} defaultURL={url} />} */}
-      <div className='z-10 relative p-8 bg-white border border-gray-100 rounded-[20px] w-full flex flex-col justify-between gap-y-4 shadow-xl'>
+      <div className='z-10 relative p-4 bg-white border border-gray-100 rounded-[20px] w-full flex flex-col justify-between gap-y-4 shadow-xl'>
         <motion.div
           id='clickableURL'
          // transition={{ duration: 0.2 }}
          // initial={{ opacity: 0 }}
          // animate={{ opacity: 1 }}
-          className='text-gray-600 w-full rounded-full  p-4'
+          className='text-gray-600 w-full rounded-full  p-4 hidden'
           onClick={() => {
             //setVisible(true);
           }}>
@@ -71,17 +71,17 @@ export default function WebOption({ full }) {
           //transition={{ duration: 0.2, delay: 0.1 }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className='relative z-50 text-black w-full bg-gray-100 rounded-xl border-4 border-primary p-4'>
+          className='relative z-50 text-black w-full bg-[#f6f6f6] rounded-2xl overflow-hidden  p-4'>
           {visible && (
             <div className='bg-red-100 w-full h-full top-0 left-0 absolute rounded-xl'>
 {/*               <Refresh className='w-full h-full spin opacity-50' /> */}
               <span className='material-icons spin opacity-50'>refresh</span>
             </div>
           )}
-          <Image alt='nike shoes' quality={50} src={`/img/item1.png`} width={150} height={150} className='w-full' priority/>
+          <Image alt='nike shoes' quality={80} src={`/img/item1.png`} width={200} height={200} className='w-full' priority/>
         </motion.div>
         <motion.div transition={{ duration: 1, delay: 0.2 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className='text-black w-full'>
-          <div className='text-gray-600 w-full rounded-full shadow p-4 text-center text-xl hover:shadow-xl cursor-pointer'>Comprar</div>
+          <div className='font-bold w-full rounded-2xl shadow p-4 text-center text-xl bg-[#a2774c] text-white'>BUY</div>
         </motion.div>
       </div>
     </motion.div>

@@ -9,24 +9,15 @@ export default function Testimonials({ className }) {
   const [estado, setEstado] = useState(null);
   const [hover, setHover] = useState(null);
   const opinions = [
-    { name: 'James', star: 5.0, img: 'profile9', message: 'Buena web' },
-    { name: 'Amy', star: 5.0, img: 'profile8', message: 'Grandioso trabajo' },
-    { name: 'Amelie', star: 5.0, img: 'profile3', message: 'Grandioso trabajo y debería agradecer a todos' },
-    { name: 'Jeremy', star: 4.5, img: 'profile10', message: 'Nunca podría haberlo hecho mejor con otros, muy buena comunicación' },
+    { name: 'Juliette', star: 5.0, img: 'profile3', message: 'Grandioso trabajo y debería agradecer a todos' },
+    { name: 'Chris', star: 5.0, img: 'profile9', message: 'Buena web' },
+    { name: 'Elena', star: 5.0, img: 'profile8', message: 'Grandioso trabajo' },
     { name: 'Susana', star: 4.8, img: 'profile7', message: 'Grandioso trabajo' },
     { name: 'Matías', star: 4.8, img: 'profile6', message: 'Grandioso trabajo' },
   ];
   return (
     <div className={className + ' w-screen mx-auto py-20 flex flex-col sm:items-center  bg-primary'}>
-{/*       <div className=' opacity-0 sm:opacity-30 absolute rotate-6 -left-4'>
-        <div className='h-1 bg-red-100 w-[10vw]  z-0 mt-10 rounded-full'></div>
-        <div className='h-1 bg-red-100 w-[20vw]   z-0 mt-10 rounded-full'></div>
-        <div className='h-1 bg-red-100 w-[5vw]   z-0 mt-10 rounded-full'></div>
-        <div className='h-1 bg-red-100 w-[10vw]  z-0 mt-10 rounded-full'></div>
-        <div className='h-1 bg-red-100 w-[20vw]   z-0 mt-10 rounded-full'></div>
-        <div className='h-1 bg-red-100 w-[5vw]   z-0 mt-10 rounded-full'></div>
-      </div> */}
-      <h2 className='text-3xl max-w-5xl font-bold w-fit pl-2 text-white ml-4 sm:ml-0'>Qué opinan nuestros clientes</h2>
+      <h2 className='text-5xl max-w-5xl font-bold w-fit pl-2 text-white ml-4 sm:ml-0'>Qué opinan ellos</h2>
       <div className='relative max-w-full'>
         <div className='flex items-center gap-x-2'>
           <div
@@ -55,7 +46,7 @@ export default function Testimonials({ className }) {
                       return prev === key ? null : key;
                     });
                   }}
-                  className={`bg-white text-black relative   snap-center snap-normal p-4 px-8 rounded-xl  flex-col flex justify-evenly flex-shrink-0 items-center overflow-hidden col-span-2 w-72 sm:col-span-1 cursor-pointer shadow-md min-h-[400px] ${
+                  className={`from-gray-800 border-2 border-gray-400 to-primary bg-gradient-to-b text-white relative   snap-center snap-normal p-4 px-8 rounded-xl  flex-col flex justify-evenly flex-shrink-0 items-center overflow-hidden col-span-2 w-72 sm:col-span-1 cursor-pointer shadow-md min-h-[400px] ${
                     key === 9 && ' sm:col-span-2 sm:border-1 sm:border-yellow-300 items-center'
                   }${key === 9 && ' sm:col-span-1 col-span-2 border-2 border-yellow-300 sm:border text-center items-center'}`}>
                   {estado !== key ? (
@@ -63,20 +54,22 @@ export default function Testimonials({ className }) {
                       <div className='absolute w-full opacity-90 h-1/3  right-0 bottom-0 rounded-xl bg-cover hidden'>
                         <div className='absolute w-full h-full from-white via-white rounded-xl z-0 to-transparent bg-gradient-to-br'></div>
                       </div>
-                      <div className='flex text-4xl self-start align-center items-center gap-x-1 z-10 text-primary font-bold border-blue-200 p-1  px-2  '>
+                      <div className='flex text-[60px] self-start align-center items-center gap-x-1 z-10 font-bold border-blue-200 p-1  px-2  text-white -rotate-6 -mb-6'>
                         {op.star.toString().length > 1 ? op.star : op.star + '.0'}
   
-                        <span className='material-icons' style={{fontSize:40}}>star</span>
+                        <span className='material-icons' >star</span>
                       </div>
                       <div className={`border-8 p-1 shadow border-black bg-white rounded-full w-fit mb-2 transition-all ${active && 'border-primardy'}`}>
-                        <Img className={`w-36 z-10 transition-all rounded-full ${active && 'scale-95'}`} src={`${op.img}.jpg`}></Img>
+                        <Img q={90} className={`w-36 z-10 transition-all rounded-full ${active && 'scale-95'}`} src={`${op.img}.jpg`}></Img>
                       </div>
                       <p className='font-bold z-10 text-2xl'>{op.name}</p>
                     {/*   <p className='z-10 text-gray-600 text-xl text-center'>&ldquo;{op.message}&rdquo;</p> */}
                     </>
                   ) : (
-                    <div className='absolute w-full h-full'>
-                      <Img src={'mockup3.jpg'} className='object-cover w-full h-full'></Img>
+                    <div className='absolute w-full h-full flex flex-col items-center justify-center text-2xl'>
+                     {/*  <Img src={'mockup3.jpg'} className='object-cover w-full h-full'></Img> */}
+                     <span className='material-icons' style={{fontSize:40}}>format_quote</span>
+                      <p className='text-center'>{op.message}</p>
                     </div>
                   )}
                 </div>
