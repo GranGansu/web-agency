@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <link rel='canonical' href='https://superbeam.es' />
         <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons' />
       </head>
-      <body className={`relative ${space_Grotesk.className}`}>
+      <body className={`relative ${manrope.className}`}>
         <Navigation />
         <Volver />
         <TooltipProvider delayDuration={0}>{children}</TooltipProvider>

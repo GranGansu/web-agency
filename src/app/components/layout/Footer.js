@@ -55,7 +55,7 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <ul className='grid grid-cols-3 gap-3 justify-center  w-full sm:rounded-t-xl overflow-hidden max-w-4xl mx-auto pb-16 text-xl leading-relaxed rounded py-4 px-4'> 
+      <ul className='grid grid-cols-3 gap-3 justify-center  w-full  overflow-hidden max-w-4xl mx-auto pb-16 text-xl leading-relaxed  py-4 px-4 '> 
         {social.map((e, key) => {
           return (
             <li key={e.title} className={` py-6 border-gray-600 cursor-pointer p-2 relative ${key!==social.length-1&&'borfder-r'}`}>

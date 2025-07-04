@@ -14,6 +14,7 @@ module.exports = {
   				foreground: 'hsl(var(--secondary-foreground))'
   			},
   			bg: '#a4a4a40a',
+			mainheadless:'#5C0029',
   			accenat: '#FFED66',
   			accentd: '#DE6B48',
   			accent: {

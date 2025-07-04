@@ -20,11 +20,6 @@ export default function Home() {
         <Comission
           title='Tecnologías'
           sub='Avanzadas'
-          addendum={
-            <Absolute className=' hidden'>
-              <span className='px-2 py-1 text-md rounded-full bg-green-600 text-white '>Tecnologías</span>
-            </Absolute>
-          }
         />
         <Comission title='Sin suscripciones' sub='Funciona desde el primer día' />
         <Premium />

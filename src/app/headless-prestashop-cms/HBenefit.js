@@ -10,7 +10,7 @@ export default function HBenefit({ e, className }) {
           <Absolute className='z-50'>
             <p className='text-4xl text-white p-6 text-left rounded-full'>{e.title}</p>
           </Absolute>
-          <Absolute className='z-40 from-black via-transparent to-transparent bg-gradient-to-b'></Absolute>
+          <Absolute className='z-40 from-black/70 via-transparent to-transparent bg-gradient-to-b'></Absolute>
           <Image width={500} height={500} alt={e} className='w-full h-[50vh] object-cover rounded-xl' src={'/img/' + e.img} />
         </CardContent>
       </Card>

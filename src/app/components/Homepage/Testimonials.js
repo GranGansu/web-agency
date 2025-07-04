@@ -46,7 +46,7 @@ export default function Testimonials({ className }) {
                       return prev === key ? null : key;
                     });
                   }}
-                  className={`from-gray-800 border-2 border-gray-400 to-primary bg-gradient-to-b text-white relative   snap-center snap-normal p-4 px-8 rounded-xl  flex-col flex justify-evenly flex-shrink-0 items-center overflow-hidden col-span-2 w-72 sm:col-span-1 cursor-pointer shadow-md min-h-[400px] ${
+                  className={`from-gray-800 bordder-2 border-gray-400 to-primary bg-gradient-to-b text-white relative   snap-center snap-normal p-4 px-8 rounded-xl  flex-col flex justify-evenly flex-shrink-0 items-center overflow-hidden col-span-2 w-72 sm:col-span-1 cursor-pointer shadow-md min-h-[400px] ${
                     key === 9 && ' sm:col-span-2 sm:border-1 sm:border-yellow-300 items-center'
                   }${key === 9 && ' sm:col-span-1 col-span-2 border-2 border-yellow-300 sm:border text-center items-center'}`}>
                   {estado !== key ? (
@@ -57,9 +57,9 @@ export default function Testimonials({ className }) {
                       <div className='flex text-[60px] self-start align-center items-center gap-x-1 z-10 font-bold border-blue-200 p-1  px-2  text-white -rotate-6 -mb-6'>
                         {op.star.toString().length > 1 ? op.star : op.star + '.0'}
   
-                        <span className='material-icons' >star</span>
+                        <span className='material-icons opacity-10 absolute right-0 w-full top-0' style={{fontSize:190}} >message</span>
                       </div>
-                      <div className={`border-8 p-1 shadow border-black bg-white rounded-full w-fit mb-2 transition-all ${active && 'border-primardy'}`}>
+                      <div className={`bordedr-8 p-1 z-50 shadow border-black bg-white rounded-full w-fit mb-2 transition-all ${active && 'border-primardy'}`}>
                         <Img q={90} className={`w-36 z-10 transition-all rounded-full ${active && 'scale-95'}`} src={`${op.img}.jpg`}></Img>
                       </div>
                       <p className='font-bold z-10 text-2xl'>{op.name}</p>

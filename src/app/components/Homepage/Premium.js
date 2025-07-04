@@ -1,11 +1,9 @@
-import Image from 'next/image';
-import WebOption from '../layout/Apps/WebOption';
-
+import WebApp from '../atoms/WebApp'
 export default function Premium({ inverted }) {
   return (
     <section className='w-full bg-premium p-8 py-32'>
       <div className='grid sm:grid-cols-2 items-center'>
-        <WebOption full={true} />
+        <WebApp />
         <div className='text-white mt-8'>
           <h1 className='text-3xl mb-2'>Siempre Premium</h1>
           <p className='text-white/70'>

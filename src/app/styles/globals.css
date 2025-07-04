@@ -81,7 +81,7 @@ body {
 } */
 
 .landing-page {
-  height: 100vh;
+ /*  height: 100vh; */
   /*   background-color: linear-gradient(rgba(207, 22, 22, 0.1) 1px, red 1px); */
   background-image: linear-gradient(rgba(255, 0, 0, 0.1) -1px, transparent -1px),
     /* línea */

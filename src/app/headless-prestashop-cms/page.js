@@ -1,19 +1,19 @@
 import Link from 'next/link';
-import { Pagina, PaginaFull as Spec } from '../components/Homepage/Portfolio';
-import CMSection from '../components/atoms/CMSection';
+import { PaginaFull as Spec } from '../components/Homepage/Portfolio';
 import Heading from '../components/layout/Heading';
 import Nav from './Nav';
-import { CarouselComponent as Carousel } from '../components/organisms/Carousel';
 import Image from 'next/image';
 import BrowserMockup from '../components/atoms/BrowserMockup';
 import Pricing from './Pricing';
-import Card from './Card';
 import Blob from './Client';
 import Acordeon from '../components/atoms/Accordion';
-import Absolute from '../components/atoms/Absolute';
-import Tooltips from '../components/atoms/Tooltip';
 import Section from './Section';
 import HBenefit from './HBenefit';
+import Container from '../components/atoms/Container';
+import HBenefitText from './HBenefitText';
+import { ecommerceFAQ } from '../lib/questions';
+import { ContainerIcon, Sparkles, DiamondPlus } from 'lucide-react';
+import Absolute from '@/components/atoms/Absolute';
 export const metadata = {
   title: 'Headless CMS - Prestashop Ecommerce',
   description: 'Creación páginas web',
@@ -41,81 +41,108 @@ export default function Prestashop() {
 
       <div id='start' className='flex flex-col justify-center bg-opacity-40 mb-8 relative'>
         <div className=' p-4 sticky top-0 z-[99] my-4'>
-          <div className='flex items-center rounded-xl justify-center backdrop-blur-xl bg-white/50  py-4 '>
-            <Nav />
-          </div>
-        </div>
-        <div className=' px-4 sm:px-8 gap-20 flex flex-col'>
-          <div className='grid sm:grid-cols-2 gap-8'>
-            <Spec
-              className='from-black to-black/80 bg-gradient-to-br text-white'
-              title='+ Velocidad'
-              subtext={['5x más rápido que Wordpress', 'Score +90 en Google Lighthouse']}
-              url='velocidad'
-            />
-            <Spec className='bg-gray-50 text-black' title='- Límites' subtext={['Sin comisiones', 'Sin límite de usuarios', 'Sin límite de productos']} url='limites' />
-            <Spec
-              className='sm:col-span-1 from-black to-black/80 bg-gradient-to-br text-white'
-              title='+ Seguridad'
-              subtext={['Revisión periódica de errores y vulnerabilidades']}
-              url='seguridad'
-            />
-            <Spec className='sm:col-span-1 bg-gray-50 text-black' title='24hs' subtext={['Abierto siempre']} url='disponibilidad' />
-          </div>
-          <hr></hr>
-          {/*        <CMSection bg='falling.jpg' subtext='Panel de control' title='Web App' /> */}
-          {/*           <Pagina bg='notifications.webp' subtext='Todas tus páginas bien administradas' title='Blog personal' /> */}
-
-          {/*  <Pagina bg='falling.jpg' subtext='Panel de control' title='Web App' /> */}
-          {/*        <Card bg='mockup-templates-to-download-now.png' subtext='Moderno' title='Blog personal' /> */}
-          <div className='w-full max-w-4xl mx-auto grid sm:grid-cols-2 grid-cols-1 gap-8 items-center justify-center py-18'>
-            <HBenefit className="sm:col-span-2" e={{ title: 'Moderno', img: 'mockup-templates-to-download-now.png' }}></HBenefit>
-            <HBenefit e={{ title: 'Actualizable', img: 'falling.jpg' }}></HBenefit>
-            <HBenefit e={{ title: 'Veloz', img: 'falling.jpg' }}></HBenefit>
-          </div>
-          <hr></hr>
-
-          <Section title='Incluido' id="specs">
-            <div className='grid sm:grid-cols-2 gap-y-8'>
-              <BrowserMockup border='border-[#F5BD4B]' title='Resultados en Google'>
-                <Image className='object-cover w-full h-full box-border rounded-xl' width={500} height={500} src='/img/gsearch.webp' alt=''></Image>
-              </BrowserMockup>
-              <BrowserMockup border='border-[#F5BD4B]' title='Perfil en Google Business'>
-                <Image className='object-cover  box-border  w-full h-full rounded-xl' width={500} height={500} src='/img/gmaps.jpeg' alt=''></Image>
-              </BrowserMockup>
-              <BrowserMockup border='border-[#F5BD4B]' title='Merchant Center'>
-                <Image className='object-cover box-border  w-full h-full rounded-xl' width={500} height={500} src='/img/gshopping2.jpg' alt=''></Image>
-              </BrowserMockup>
-              <BrowserMockup border='border-[#F5BD4B]' title='Instagram Shopping'>
-                <Image className='object-cover box-border  w-full h-full rounded-xl' width={500} height={500} src='/img/shopping.jpg' alt=''></Image>
-              </BrowserMockup>
+          <Container>
+            <div className='flex items-center rounded-xl justify-center backdrop-blur-xl bg-white/50 border  py-4 '>
+              <Nav />
             </div>
-          </Section>
-          <Section title='FAQ' id="faq">
-            <div className='w-full px-4'>
-              <Acordeon
-                overallColor='overflow-hidden w-full border rounded-xl border-[#F5BD4B]'
-                accentColor='bg-yellow-300'
-                items={[
-                  { title: 'Es probable?', content: 'Sí es probable' },
-                  { title: 'Otra pregunta más?', content: 'Preguntando se averiguarn las respuestas' },
-                  {
-                    title: 'Shipping Information',
-                    content:
-                      'We offer worldwide shipping through trusted courier partners. Standard delivery takes 3-5 business days, while express shipping ensures delivery within 1-2 business days. All orders are carefully packaged and fully insured. Track your shipment in real-time through our dedicated tracking portal.',
-                  },
-                ]}
+          </Container>
+        </div>
+        <Container className="px-4 sm:px-0">
+          <div className='gap-20 flex flex-col'>
+            <div className='grid sm:grid-cols-2 gap-8'>
+              <Spec
+                className='from-black to-black/80 bg-gradient-to-br text-white'
+                title='+ Velocidad'
+                subtext={['5x más rápido que Wordpress', 'Score +90 en Google Lighthouse']}
+                url='velocidad'
               />
+              <Spec className='bg-gray-50 text-black' title='- Límites' subtext={['Sin comisiones', 'Sin límite de usuarios', 'Sin límite de productos']} url='limites' />
+              <Spec
+                className='sm:col-span-1 from-black to-black/80 bg-gradient-to-br text-white'
+                title='+ Seguridad'
+                subtext={['Revisión periódica de errores y vulnerabilidades']}
+                url='seguridad'
+              />
+              <Spec className='sm:col-span-1 bg-gray-50 text-black' title='24hs' subtext={['Abierto siempre']} url='disponibilidad' />
             </div>
-          </Section>
-          <Section title='Precios' id="precios">
-            <div className='grid sm:grid-cols-3 gap-4 gap-y-8 mx-4'>
-              <Pricing title='BASE' price={1000} pros={['Sin límites', 'Sin comisiones', 'Productos ilimitados']} />
-              <Pricing title='STANDARD' price={2000} pros={['Sin límite', 'Sin comisión', 'Productos ilimitados', 'Pagos con tarjeta']} />
-              <Pricing title='SUPREME' price={3500} pros={['Sin límite', 'Sin comisión', 'Productos ilimitados']} />
+            <hr className='border-mainheadless'></hr>
+
+            <div className='w-full mx-auto grid sm:grid-cols-2 grid-cols-1 gap-12 items-center justify-center relative'>
+     {/*        <Absolute className="bg-red-100 -rodtate-12"></Absolute> */}
+              {/*  <HBenefit className='sm:col-span-2' e={{ title: 'Moderno', img: 'mockup-templates-to-download-now.png' }}></HBenefit> */}
+{/*                   <HBenefit e={{ title: 'Actualizable', img: 'falling.jpg' }}></HBenefit>
+            <HBenefit e={{ title: 'Ultra-ligero', img: 'falling.jpg' }}></HBenefit>  */}
+              <HBenefitText
+                className='sm:col-spafn-2'
+                bg="from-green-200 svia-green-200"
+                e={{
+                  title: 'Ultra-moderno',
+                  icon: <ContainerIcon size={150} className='rotate-6 text-white/60'/>,
+                  description: 'Últimas tecnologías',
+                  main: '2025',
+                  intro: 'Actualizado',
+                }}></HBenefitText>
+              <HBenefitText
+               bg="from-red-200 svia-red-200"
+                e={{
+                  title: 'Ultra-ligero',
+                  icon: <Sparkles size={150} className='rotate-6 text-white/60'/>,
+                  description: 'Menos peso que una sandía',
+                  main: '1Mb',
+                  intro: 'Carga completa',
+                }}></HBenefitText>
+                 <HBenefit className='sm:col-span-2' e={{ title: '', img: 'mockup-templates-to-download-now.png' }}></HBenefit>
+              <HBenefitText
+               bg="from-yellow-200 svia-yellow-200"
+                e={{
+                  title: 'Ultra-veloz',
+                  icon: <DiamondPlus size={150} className='rotate-6 text-white/60'/>,
+                  description: 'Más rápido que un halcón',
+                  main: '-2000ms',
+                  intro: 'Carga completa',
+                }}></HBenefitText>
+                              <HBenefitText
+               bg="from-yellow-200 svia-yellow-200"
+                e={{
+                  title: 'Ultra-veloz',
+                  icon: <DiamondPlus size={150} className='rotate-6 text-white/60'/>,
+                  description: 'Más rápido que un halcón',
+                  main: '-2000ms',
+                  intro: 'Carga completa',
+                }}></HBenefitText>
             </div>
-          </Section>
-        </div>
+            <hr className='border-mainheadless'></hr>
+
+            <Section title='Incluido' id='specs'>
+              <div className='grid sm:grid-cols-2 gap-8'>
+                <BrowserMockup border='border-mainheadless' title='Resultados en Google'>
+                  <Image className='object-cover w-full h-full box-border rounded-xl' width={500} height={500} src='/img/gsearch.webp' alt=''></Image>
+                </BrowserMockup>
+                <BrowserMockup border='border-mainheadless' title='Perfil en Google Business'>
+                  <Image className='object-cover  box-border  w-full h-full rounded-xl' width={500} height={500} src='/img/gmaps.jpeg' alt=''></Image>
+                </BrowserMockup>
+                <BrowserMockup border='border-mainheadless' title='Merchant Center'>
+                  <Image className='object-cover box-border  w-full h-full rounded-xl' width={500} height={500} src='/img/gshopping2.jpg' alt=''></Image>
+                </BrowserMockup>
+                <BrowserMockup border='border-mainheadless' title='Instagram Shopping'>
+                  <Image className='object-cover box-border  w-full h-full rounded-xl' width={500} height={500} src='/img/shopping.jpg' alt=''></Image>
+                </BrowserMockup>
+              </div>
+            </Section>
+            <Section title='FAQ' id='faq'>
+              <div className='w-full'>
+                <Acordeon overallColor='overflow-hidden w-full border-4 rounded-xl border-mainheadless' accentColor='bg-yellow-300' items={ecommerceFAQ} />
+              </div>
+            </Section>
+            <Section title='Precios' id='precios'>
+              <div className='grid sm:grid-cols-3 gap-4 gap-y-8 '>
+                <Pricing title='Base' price={1000} pros={['Sin límites', 'Sin comisiones', 'Productos ilimitados']} />
+                <Pricing title='Estándar' price={2000} pros={['Sin límite', 'Sin comisión', 'Productos ilimitados', 'Pagos con tarjeta']} />
+                <Pricing title='Supreme' price={3500} pros={['Sin límite', 'Sin comisión', 'Productos ilimitados']} />
+              </div>
+            </Section>
+          </div>
+        </Container>
       </div>
     </div>
   );
