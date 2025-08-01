@@ -20,7 +20,7 @@ export default function Nav() {
             onClick={() => {
               setActive(i);
             }}>
-            <Link className={`flex items-center ${current&&'font-bold'}`} href={s.url}>
+            <Link className={`flex items-center   font-bold ${current?'text-black':'text-black/60'}`} href={s.url}>
               {/* {active === i && <span className='material-icons'>play_arrow</span>} */}
               {s.title}
             </Link>

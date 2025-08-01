@@ -4,6 +4,14 @@ module.exports = {
     content: ['./src/app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
   	extend: {
+		fontFamily:{
+			roboto: ['var(--font-roboto)'],
+			manrope: ['var(--font-manrope)'],
+			lexend: ['var(--font-lexend)'],
+			barlow: ['var(--font-barlow)'],
+			jost: ['var(--font-jost)'],
+			kumb: ['var(--font-kumb)'],
+		},
   		colors: {
   			primary: {
   				DEFAULT: 'hsl(var(--primary))',
@@ -57,7 +65,10 @@ module.exports = {
   			code: 'url(/img/happy.jpg)',
   			cartoon: 'url(/img/cartoon.jpg)',
   			rainbow: 'url(/img/rainbow.png)',
-  			speed: 'url(/img/speed.jpg)'
+  			speed: 'url(/img/speed.jpg)',
+  			stars: 'url(/img/stars.jpg)',
+  			planeta: 'url(/img/planeta.jpg)',
+  			stock: 'url(/img/stock.webp)',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

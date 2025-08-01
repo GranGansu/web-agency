@@ -39,8 +39,8 @@ export default function Hablemos() {
           <li>¿No sabes por dónde empezar? </li>
         </ul>  */}
       </div>
-      <div className='bg-primary w-full h-full absolute z-10 opacity-60'></div>
-      <Image alt='' className='absolute h-full w-full object-fit z-0  opacity-90' width='1000' height='1000' src={'/img/dialog.svg'}></Image>
+{/*       <div className='bg-primary w-full h-full absolute z-10 opacity-60'></div>
+      <Image alt='' className='absolute h-full w-full object-fit z-0  opacity-90' width='1000' height='1000' src={'/img/dialog.svg'}></Image> */}
     </section>
   );
 }

@@ -7,9 +7,9 @@ export default function Acordeon({ items, overallColor, accentColor }) {
     <Accordion collapsible className={overall}>
       {items.map((item) => {
         return (
-          <AccordionItem className={`data-[state=open]:bg-yellow-300`} key={item.title} value={item.title} >
+          <AccordionItem className={`data-[state=open]:${accent} font-lexend`} key={item.title} value={item.title} >
             <AccordionHeader>
-              <AccordionTrigger className={`AccordionTrigger flex justify-start w-full py-10 sm:py-8 text-xl hover:bg-yellow-300`}>
+              <AccordionTrigger className={`AccordionTrigger flex justify-start w-full py-10 sm:py-8 text-xl hover:${accent}`}>
                 <span className='sm:hover:underline'>{item.title}</span>
                 <span className='AccordionChevron material-icons' aria-hidden>
                   arrow_drop_down

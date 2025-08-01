@@ -6,11 +6,11 @@ export default function HBenefit({ e, className }) {
   return (
     <div className={className}>
       <Card className='border-0 shadow-none'>
-        <CardContent className={`flex p-0 rounded-xl shadow-lg relative overflow-hidden`}>
+        <CardContent className={`flex p-0 rounded-xl shadow-xl relative overflow-hidden`}>
           <Absolute className='z-50'>
             <p className='text-4xl text-white p-6 text-left rounded-full'>{e.title}</p>
           </Absolute>
-          <Absolute className='z-40 from-black/70 via-transparent to-transparent bg-gradient-to-b'></Absolute>
+         {/*  <Absolute className='z-40 frodm-black/70 via-transparent to-transparent bg-gradient-to-b'></Absolute> */}
           <Image width={500} height={500} alt={e} className='w-full h-[50vh] object-cover rounded-xl' src={'/img/' + e.img} />
         </CardContent>
       </Card>

@@ -76,7 +76,7 @@ export const homeFAQ = [
   { title: '¿Cuánto cuesta mantenerla?', content: 'todo' },
 ];
 export const ecommerceFAQ = [
-  { title: 'Es probabfle?', content: 'Sí es probable' },
+  { title: 'Qué tecnologías usáis?', content: <p>Usamos <b>Prestashop</b> + <b>Next.js</b> para crear nuestras tiendas online. Los productos se administran en Prestashop, y utilizamos Next.js para optimizar la carga del sitio.</p> },
   { title: 'Otra pregunta más?', content: 'Preguntando se averiguarn las respuestas' },
   {
     title: 'Shipping Information',
