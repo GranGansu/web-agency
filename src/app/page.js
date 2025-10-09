@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <div>
       <Main />
-
       <div className='relative flex flex-col z-[61] w-full'>
         <Comission title='0%' sub='Comisiones por venta' />
         <Comission title='Tecnologías' sub='Avanzadas' />
@@ -25,11 +24,7 @@ export default function Home() {
             quirúrgica y actitud.'
           img='/img/premium.jpg'
         />
-        <Premium
-          title='Desarrollo a medida'
-          sub='           Perfeccionamos detalles.'
-          img='/img/like.jpg'
-        />
+        <Premium title='Desarrollo a medida' sub='           Perfeccionamos detalles.' img='/img/like.jpg' />
         <FAQ />
         <Testimonials />
         <Hablemos />
