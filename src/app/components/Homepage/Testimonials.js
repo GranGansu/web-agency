@@ -9,11 +9,11 @@ export default function Testimonials({ className }) {
   const [estado, setEstado] = useState(null);
   const [hover, setHover] = useState(null);
   const opinions = [
-    { name: 'Juliette', star: 5.0, img: 'profile3', message: 'Grandioso trabajo y debería agradecer a todos' },
-    { name: 'Chris', star: 5.0, img: 'profile9', message: 'Buena web' },
-    { name: 'Elena', star: 5.0, img: 'profile8', message: 'Grandioso trabajo' },
-    { name: 'Susana', star: 4.8, img: 'profile7', message: 'Grandioso trabajo' },
-    { name: 'Matías', star: 4.8, img: 'profile6', message: 'Grandioso trabajo' },
+    { name: 'Júlia', star: 5.0, img: 'profile3', message: 'Muy agradecida por la paciencia!' },
+    { name: 'Chris', star: 5.0, img: 'profile9', message: 'Buscaba alguien serio que nos ayudara a encontrar una solución de web scraping, y nos crearon una herramienta en tiempo récord.' },
+    { name: 'Elena', star: 5.0, img: 'profile8', message: 'Gracias a esta agencia mi consulta por fin tiene una página web en condiciones' },
+    { name: 'Susana', star: 4.8, img: 'profile7', message: '¡Muy profesionales y dedicados!' },
+    { name: 'Matías', star: 4.8, img: 'profile6', message: 'La App funciona mejor de lo que esperaba' },
   ];
   return (
     <div className={className + ' w-screen mx-auto py-20 flex flex-col sm:items-center  bg-primary'}>

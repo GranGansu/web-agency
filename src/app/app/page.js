@@ -7,6 +7,10 @@ import { Smartphone, Code, Rocket, Moon, Sun, QrCode, Nfc, ShieldUser, Shirt, Wa
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { social } from '../components/lib/social';
+import FAQ from '@/components/Homepage/FAQ2';
+import { appFAQ } from '@/lib/questions';
+import Section from '@/headless-prestashop-cms/Section';
+
 export default function HomePage() {
   const [theme, setTheme] = useState('light');
 
@@ -48,7 +52,7 @@ export default function HomePage() {
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className='mt-10'>
-          <Link href={social[1].url} className='bg-gray-800 rounded-full text-lg p-8 py-4 text-white hover:bg-blue-800'>
+          <Link href={social[1].url+'?text=Buenos días, quiero haceros una consulta sobre el desarrollo de aplicaciones'} className='bg-gray-800 rounded-full text-lg p-8 py-4 text-white hover:bg-blue-800'>
             Quiero una App
           </Link>
         </motion.div>
@@ -104,7 +108,14 @@ export default function HomePage() {
           </Card>
         </div>
       </section>
-
+              <section className='py-24 px-6 max-w-6xl mx-auto' id='enhance'>
+                <div>
+                  <h3 className='text-3xl'>Revisiones <b className='text-accenat'>ilimitadas</b></h3>
+                  <p className='mb-8'>Si eres un perfeccionista, o necesitas la mayor atención al detalle, retocamos de forma ilimitada el resultado final.</p>
+                  <h3 className='text-3xl'>Copias de seguridad</h3>
+                  <p className='mb-8'>Copias y más copias. Nunca se pueden tener suficientes copias de seguridad.</p>
+                </div>
+              </section>
       {/* CTA Section */}
       <section className='bg-gray-800 dark:bg-blue-700 text-white text-center py-20 px-6 transition-colors duration-300'>
         <h2 className='text-4xl font-normal mb-6 '>
@@ -113,9 +124,12 @@ export default function HomePage() {
         <p className='max-w-2xl mx-auto text-blue-100 mb-8'>
           Te preparamos un <i className='text-white'>preview</i> de tu aplicación sin coste ni obligación.
         </p>
-        <Link href={social[1].url} className='bg-gray-700 rounded-full text-lg p-8 py-4 text-white hover:bg-blue-800'>
+        <Link href={social[1].url+'?text=Buenos días, quiero consultaros sobre el boceto gratuito'} className='bg-gray-700 rounded-full text-lg p-8 py-4 text-white hover:bg-blue-800'>
           Comencemos
         </Link>
+      </section>
+      <section>
+        <FAQ faq={appFAQ}></FAQ>
       </section>
     </main>
   );

@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { social } from '../lib/social';
 
 
 export default function Premium({ title, sub, img }) {
@@ -15,7 +17,7 @@ export default function Premium({ title, sub, img }) {
         <div className='text-white mt-8'>
           <h1 className='text-3xl mb-2'>{title}</h1>
           <p className='text-white/70'>{sub}</p>
-          <button className='px-6 py-2 mt-8 rounded-full border-2 border-white text-xl text-white'>Comencemos</button>
+          <Link href={social[1].url+'?text=Buenos días, quiero averiguar sobre el desarrollo de una web'} className='px-6 py-2 mt-8 rounded-full border-2 border-white block w-fit text-xl text-white'>Comencemos</Link>
         </div>
       </div>
     </section>

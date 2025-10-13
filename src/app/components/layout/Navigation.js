@@ -4,7 +4,7 @@ import Link from 'next/link';
 import MobileSheet from '../atoms/Sheet';
 import Absolute from '../atoms/Absolute';
 import BadgeOwn from '../atoms/Badge';
-import { Grid2X2CheckIcon, HardDriveDownloadIcon, ShoppingCart, AppWindowIcon } from 'lucide-react';
+import { Grid2X2CheckIcon, Smartphone, ShoppingCart, AppWindowIcon } from 'lucide-react';
 
 export default function Navigation() {
   return (
@@ -37,8 +37,8 @@ export default function Navigation() {
       <div className='sm:hidden py-2 flex items-center bg-black text-white '>
         <MobileSheet
           links={[
-            { link: '/headless-prestashop-cms', icon: <ShoppingCart />, color: 'border-red-500', sub: 'Empieza a vender online', title: 'ecommerce' },
-            { link: '/app', icon: <AppWindowIcon />, color: 'border-blue-500', sub: 'Android & iOS', title: 'Apps' },
+            { link: '/headless-prestashop-cms', icon: <ShoppingCart className='text-blue-600' />, color: 'border-red-500', sub: 'Empieza a vender online', title: 'ecommerce' },
+            { link: '/app', icon: <Smartphone className='text-blue-600' />, color: 'border-blue-500', sub: 'Android & iOS', title: 'Apps' },
            // { link: '/headless-prestashop-cmssd', icon: <Grid2X2CheckIcon />, color: 'border-blue-500', sub: 'Migramos todo', title: 'BBDD' },
           ]}
         />

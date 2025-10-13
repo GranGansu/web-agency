@@ -16,7 +16,7 @@ export default function Acordeon({ items, overallColor, accentColor }) {
                 </span>
               </AccordionTrigger>
             </AccordionHeader>
-            <AccordionContent className='py-4 pb-8 px-6 max-w-2xl'>
+            <AccordionContent className='py-0  px-3 ml-5 mb-5 max-w-2xl border-l border-yellow-400'>
             <span className='hidden bg-yellow-300'></span>
           {/*     <span class='material-icons bg-black relative top-1 text-gray-300'>chevron_right</span> */}
               {item.content}

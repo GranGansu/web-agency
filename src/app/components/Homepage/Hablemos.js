@@ -22,7 +22,7 @@ export default function Hablemos() {
               </Tooltips>
             );
           })}
-          {/*           <a href='https://wa.me/34656828317'>
+          {/*           <a href='https://wa.me/684733998'>
             <p className='p-8 w-fit border-4 bg-red-400/50 shadow-xl text-white hover:scale-105 rounded-2xl uppercase font-bold text-2xl'>
               <WhatsAppIcon style={{ fontSize: 'xxx-large' }} className='text-white text-6xl' fontSize='inherit'></WhatsAppIcon>
             </p>

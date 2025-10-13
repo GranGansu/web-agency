@@ -39,18 +39,18 @@ export default function Prestashop() {
         </div>
       </Heading> */}
       <div className='bg-black'>
-      <Heading id='ecomm' lastLayer='' absoluteClass='' mainClass='text-white'>
-        <div className='z-20 col-span-2 flex flex-col w-full items-center justify-center text-center gap-8 pb-24 pt-4 sm:pt-8 sm:px-8 px-4'>
-          <div className='font-kumb uppercase'>
-            <h1 className='sm:text-8xl text-5xl font-bold text-white'>
-              Tu tienda <span className='block font-extralight -mt-2'>online</span>
-            </h1>
-            <div className='bg-gradient-to-r from-[#F35353] -rotate-6 mt-6 to-white/10 bg-clip-text w-fit'>
-              <p className='sm:text-9xl text-5xl  text-transparent  font-extrabold'>Más rápida</p>
+        <Heading id='ecomm' lastLayer='' absoluteClass='' mainClass='text-white'>
+          <div className='z-20 col-span-2 flex flex-col w-full items-center justify-center text-center gap-8 pb-24 pt-4 sm:pt-8 sm:px-8 px-4'>
+            <div className='font-kumb uppercase'>
+              <h1 className='sm:text-8xl text-5xl font-bold text-white'>
+                Tu tienda <span className='block font-extralight -mt-2'>online</span>
+              </h1>
+              <div className='bg-gradient-to-r from-[#F35353] -rotate-6 mt-6 to-white/10 bg-clip-text w-fit'>
+                <p className='sm:text-9xl text-5xl  text-transparent  font-extrabold'>Más rápida</p>
+              </div>
             </div>
           </div>
-        </div>
-      </Heading>
+        </Heading>
       </div>
 
       <div id='start' className='flex flex-col justify-center bg-opacity-40 mb-8 relative'>
@@ -82,25 +82,25 @@ export default function Prestashop() {
               <NuCard main='<2000ms' title='Ultra-veloz' img='burning.jpg' />
             </div>
             <FullSection>
-              <div className='grid grid-cols-2 w-full ' style={{ perspective: '1000px' }}>
-                <div className=' flex flex-col gap-6  justify-center'>
-                  <div className='p-2'>
-                    <p className='font-bold'>Múltiples configurationes</p>
-                    <p className='text-sm'>Reescribe todas las configuraciones de forma sencilla</p>
-                  </div>
-                  <div className='p-2'>
-                    <p className='font-bold'>Múltiples configurationes</p>
-                    <p className='text-sm'>Reescribe todas las configuraciones de forma sencilla</p>
-                  </div>
-                  <div className='p-2'>
-                    <p className='font-bold'>Múltiples configurationes</p>
-                    <p className='text-sm'>Reescribe todas las configuraciones de forma sencilla</p>
-                  </div>
-                </div>
+              <div className='grid grid-cols-2 w-full mb-12' style={{ perspective: '1000px' }}>
                 <div className='self-center place-self-center'>
                   <PhoneMockup absolute={<Image className='w-full object-cover h-full' alt='' width={400} height={600} src='/img/mockup-templates-to-download-now.png'></Image>}>
                     <Play size={120}></Play>
                   </PhoneMockup>
+                </div>
+                <div className=' flex flex-col gap-6  justify-center'>
+                  <div className='p-2'>
+                    <p className='font-bold'>Mobile first</p>
+                    <p className='text-sm'>Diseños pensados y adaptados a móviles.</p>
+                  </div>
+                  <div className='p-2'>
+                    <p className='font-bold'>Añadimos las funciones que hagan falta</p>
+                    <p className='text-sm'>Si lo has visto y existe, lo incorporamos.</p>
+                  </div>
+                  <div className='p-2'>
+                    <p className='font-bold'>Diseños premium</p>
+                    <p className='text-sm'>Diseñamos siguiendo las tendencias actuales.</p>
+                  </div>
                 </div>
               </div>
               <div className='grid grid-cols-2 w-full  ' style={{ perspective: '1000px' }}>

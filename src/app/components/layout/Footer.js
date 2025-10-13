@@ -4,7 +4,7 @@ import Skewed from '../atoms/Skewed';
 
 export default function Footer() {
   return (
-    <footer className='relative flex flex-col w-full from-primary to-primary/90 bg-gradient-to-br pb-0 pt-8  h-[100vh] sm:h-fit'>
+    <footer className='relative flex flex-col w-full from-primary to-primary/90 bg-gradient-to-br pb-0 pt-8  h-[100vh] sm:h-fit' id='footer'>
       <Link href='/' className=' px-4  mx-auto h-fit sm:px-0 flex gap-2 relative '>
         <div className='relative p-8 text-center'>
             <span className='relative z-10 text-white text-4xl font-bold font-lexend'>

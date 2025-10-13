@@ -20,11 +20,12 @@ export default function Main() {
         Creamos tu web y tu identidad digital. Ponemos cara a tu tienda online. <span className='font-bold'>Desarrollo a medida.</span>
       </h2>
       <div className='text-lg flex gap-4 justify-center flex-col sm:flex-row sm:justify-start mt-6'>
-        <button className='sm:p-4 sm:px-5 p-3 px-10 rounded-full flex gap-2  bg-black  text-white w-fit'>
-    
-          <Signal/> Web
-        </button>
-        <Link href='/headless-prestashop-cms' className='sm:p-4 sm:px-5 p-3 px-10 rounded-full bg-white/20 backdrop-blur-sm shadow flex gap-2  text-white w-fit text-center box-content'>
+        <Link href='/app' className='sm:p-4 sm:px-5 p-3 px-10 rounded-full flex gap-2  bg-black  text-white w-fit'>
+          App
+        </Link>
+        <Link
+          href='/headless-prestashop-cms'
+          className='sm:p-4 sm:px-5 p-3 px-10 rounded-full bg-white/20 backdrop-blur-sm shadow flex gap-2  text-white w-fit text-center box-content'>
           <ShoppingBag /> Tienda online
         </Link>
       </div>
