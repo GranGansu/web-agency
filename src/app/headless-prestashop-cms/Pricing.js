@@ -6,7 +6,7 @@ export default function Pricing({ title, price, pros }) {
   return (
     <div className='  rounded-xl w-full relative border'>
       <div className='bg-gray-50/60  rounded-t-xl  border-b font-roboto flex flex-col items-center justify-center p-6 py-12 text-black text-3xl'>
-        <p className='text-black/70'>{title}</p>
+        <p className='text-black/60 font-thin'>{title}</p>
         <p className='text-center text-black font-bold text-6xl font-roboto'>{price}€</p>
       </div>
       <div className='p-4 h-full flex flex-col justify-between gap-y-6'>

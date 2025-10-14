@@ -82,46 +82,46 @@ export default function Prestashop() {
               <NuCard main='<2000ms' title='Ultra-veloz' img='burning.jpg' />
             </div>
             <FullSection>
-              <div className='grid grid-cols-2 w-full mb-12' style={{ perspective: '1000px' }}>
-                <div className='self-center place-self-center'>
-                  <PhoneMockup absolute={<Image className='w-full object-cover h-full' alt='' width={400} height={600} src='/img/mockup-templates-to-download-now.png'></Image>}>
+              <div className='grid sm:grid-cols-2  w-full mb-12' style={{ perspective: '1000px' }}>
+                    <div className='self-center w-full sm:px-8 place-self-center mb-4 sm:mb-2'>
+                  <PhoneMockup absolute={<Image className='w-full object-cover h-full' alt='' width={400} height={600} src='/img/phone-outline.jpg'></Image>}>
                     <Play size={120}></Play>
                   </PhoneMockup>
                 </div>
                 <div className=' flex flex-col gap-6  justify-center'>
                   <div className='p-2'>
-                    <p className='font-bold'>Mobile first</p>
-                    <p className='text-sm'>Diseños pensados y adaptados a móviles.</p>
+                    <p className='font-bold text-2xl'>Mobile first</p>
+                    <p className='text-sm text-gray-600'>Diseños pensados y adaptados a móviles.</p>
                   </div>
                   <div className='p-2'>
-                    <p className='font-bold'>Añadimos las funciones que hagan falta</p>
-                    <p className='text-sm'>Si lo has visto y existe, lo incorporamos.</p>
+                    <p className='font-bold text-2xl'>Añadimos las funciones que hagan falta</p>
+                    <p className='text-sm text-gray-600'>Si lo has visto y existe, lo incorporamos.</p>
                   </div>
                   <div className='p-2'>
-                    <p className='font-bold'>Diseños premium</p>
-                    <p className='text-sm'>Diseñamos siguiendo las tendencias actuales.</p>
+                    <p className='font-bold text-2xl'>Diseños premium</p>
+                    <p className='text-sm text-gray-600'>Diseñamos siguiendo las tendencias actuales.</p>
                   </div>
                 </div>
               </div>
-              <div className='grid grid-cols-2 w-full  ' style={{ perspective: '1000px' }}>
-                <div className='self-center place-self-center'>
-                  <PhoneMockup absolute={<Image className='w-full object-cover h-full' alt='' width={400} height={600} src='/img/stock.webp'></Image>}>
+              <div className='grid sm:grid-cols-2 w-full  ' style={{ perspective: '1000px' }}>
+                <div className='self-center w-full sm:px-8 place-self-center mb-4 sm:mb-2'>
+                  <PhoneMockup absolute={<Image className='w-full h-full object-cover' alt='' width={600} height={600} src='/img/orders.jpg'></Image>}>
                     <Play size={120}></Play>
                   </PhoneMockup>
                 </div>
-                <div className=' flex flex-col gap-6 items-center justify-center'>
+                <div className=' flex flex-col gap-6  justify-center'>
                   <div className='p-2'>
-                    <p className='font-bold'>Múltiples configurationes</p>
-                    <p className='text-sm'>Reescribe todas las configuraciones de forma sencilla</p>
+                    <p className='font-bold text-3xl mb-2'>Múltiples métodos de pago</p>
+                    <p className='text-sm'>Acepta pagos con tarjeta, transferencia, PayPal y más.</p>
                   </div>
-                  <div className='p-2'>
+{/*                   <div className='p-2'>
                     <p className='font-bold'>Todas las pantallas</p>
                     <p className='text-sm'>Reescribe todas las configuraciones de forma sencilla</p>
                   </div>
                   <div className='p-2'>
                     <p className='font-bold'>Múltiples configurationes</p>
                     <p className='text-sm'>Reescribe todas las configuraciones de forma sencilla</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </FullSection>
@@ -161,9 +161,9 @@ export default function Prestashop() {
             </FullSection>
             <Section title='Precios' id='precios'>
               <div className='grid sm:grid-cols-3 gap-8 gap-y-8 '>
-                <Pricing title='Base' price={1000} pros={['Sin límites', 'Sin comisiones', 'Productos ilimitados']} />
-                <Pricing title='Estándar' price={2000} pros={['Sin límite', 'Sin comisión', 'Productos ilimitados', 'Pagos con tarjeta']} />
-                <Pricing title='Supreme' price={3500} pros={['Sin límite', 'Sin comisión', 'Productos ilimitados']} />
+                <Pricing title='Base' price={999} pros={['Sin límites', 'Sin comisiones', 'Productos ilimitados','Plantilla base']} />
+                <Pricing title='Estándar' price={2100} pros={['Sin límite', 'Sin comisiones', 'Productos ilimitados','Plantilla adaptada', 'Carga de productos','Dominio .es / .com']} />
+                <Pricing title='Supreme' price={3500}  pros={['Sin límite', 'Sin comisiones', 'Productos ilimitados','Plantilla premium', 'Carga de productos','Dominio .es / .com','Funciones customizadas','Soporte 24hs vía email/whatsapp']} />
               </div>
             </Section>
           </div>

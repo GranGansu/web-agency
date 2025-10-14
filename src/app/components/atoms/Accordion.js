@@ -9,15 +9,15 @@ export default function Acordeon({ items, overallColor, accentColor }) {
         return (
           <AccordionItem className={`data-[state=open]:${accent} font-lexend`} key={item.title} value={item.title} >
             <AccordionHeader>
-              <AccordionTrigger className={`AccordionTrigger flex justify-start w-full py-10 sm:py-8 text-xl hover:${accent}`}>
+              <AccordionTrigger className={`AccordionTrigger text-left flex justify-between sm:justify-start w-full py-10 sm:py-8 text-xl hover:${accent}`}>
                 <span className='sm:hover:underline'>{item.title}</span>
                 <span className='AccordionChevron material-icons' aria-hidden>
                   arrow_drop_down
                 </span>
               </AccordionTrigger>
             </AccordionHeader>
-            <AccordionContent className='py-0  px-3 ml-5 mb-5 max-w-2xl border-l border-yellow-400'>
-            <span className='hidden bg-yellow-300'></span>
+            <AccordionContent className='py-0 px-3 ml-5 mb-5 max-w-2xl border-l border-yellow-400'>
+         {/*    <span className='hidden bg-yellow-300'></span> */}
           {/*     <span class='material-icons bg-black relative top-1 text-gray-300'>chevron_right</span> */}
               {item.content}
             </AccordionContent>

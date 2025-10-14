@@ -104,7 +104,7 @@ export const appFAQ = [
   },
   {
     title: 'Cómo funciona lo del boceto gratuito?',
-    content: 'Sin coste te creamos una maqueta ilutrando qué forma cobraría la aplicación, dándote una proyección visual de tu idea.',
+    content: 'Sin coste te creamos una maqueta ilustrando qué forma cobraría la aplicación, dándote una proyección visual de tu idea.',
   },
   {
     title: 'Qué tipo de proyectos aceptáis?',
