@@ -8,11 +8,10 @@ const kumb = Kumbh_Sans({ preload: true, subsets: ['latin'], weight: ['100','400
 const space_Grotesk = Space_Grotesk({ preload: true, subsets: ['latin'], weight: '400' });
 import './styles/globals.css';
 import Footer from './components/layout/Footer';
-
 import Volver from './components/atoms/Volver';
 import Navigation from './components/layout/Navigation';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
-
+import { Analytics } from "@vercel/analytics/next"
 export const metadata = {
   metadataBase: new URL('https://superbeam.es'),
 };
@@ -28,6 +27,7 @@ export default function RootLayout({ children }) {
         <Volver />
         <TooltipProvider delayDuration={0}>{children}</TooltipProvider>
         <Footer />
+         <Analytics />
       </body>
     </html>
   );
